@@ -1,6 +1,12 @@
 # -*- coding: utf-8 -*-
 from __future__ import unicode_literals
 
+import random
+
+from numpy import argsort
+from numpy.random import shuffle
+from numpy.random import seed
+
 '''
 储存以单词 word 或标注 slot 或目的 intent
 的字典. 支持添加, 查询等操作.
@@ -28,7 +34,7 @@ class Alphabet(object):
 		elif isinstance(elems, str):
 			# 注意字典中的元素不能重复加入, 重复者被忽略.
 			if elems not in self.word_list:
-				self.word2index[elems] = len(self.word_list)
+				self.word2index[elems] = len(self.word_list) + 1
 				self.index2word[self.word2index[elems]] = elems
 				self.word_list.append(elems)
 		else:
@@ -91,7 +97,7 @@ class Alphabet(object):
 	'''
 	将数据保存到指定路径下, 有默认值.
 	'''
-	def save(self, file_dir='../save/alphabets/'):
+	def save(self, file_dir):
 		self.write_list(self.word_list, file_dir + self.name + '-word_list.txt')
 		self.write_dict(self.word2index, file_dir + self.name + '-word2index.txt')
 		self.write_dict(self.index2word, file_dir + self.name + '-index2word.txt')
@@ -99,7 +105,7 @@ class Alphabet(object):
 	'''
 	加载已缓存在硬盘上的数据到对象.
 	'''
-	def load(self, file_dir='../save/alphabets/'):
+	def load(self, file_dir='./save/alphabets/'):
 		self.word_list = self.read_list(file_dir + self.name + '-word_list.txt')
 		self.word2index = self.read_dict(file_dir + self.name + '-word2index.txt')
 		self.index2word = self.read_dict(file_dir + self.name + '-index2word.txt')
@@ -111,6 +117,13 @@ class Alphabet(object):
 		return "元素字典 " + self.name + " 包含以下元素: \n" + str(self.word_list) +\
 			   "\n\n其中映射 元素 -> 序号 如下: \n" + str(self.word2index) +\
 			   "\n\n其中映射 序列 -> 元素 如下: \n" + str(self.index2word) + '\n'
+
+
+	'''
+	返回字典中词的总数.
+	'''
+	def __len__(self):
+		return len(self.word_list)
 
 	'''
 	读写文件的辅助函数.
@@ -155,70 +168,201 @@ class Alphabet(object):
 		return ret_dict
 
 
-'''
-读取原始数据, 其数据格式要求文件中每行格式:
+class Dataset(object):
 
-	BOS word1 word2 ... wordn EOS tag1 tag2 ... tagn intent
+	def __init__(self, name="dataset", 
+		         word_alphabet=None, label_alphabet=None, intent_alphabet=None,
+		         train_set=None, test_set=None, 
+		         random_state = 0):
+		
+		self.name = name
+		
+		self.word_alphabet = word_alphabet
+		self.label_alphabet = label_alphabet
+		self.intent_alphabet = intent_alphabet
 
-'''
-def read_data(file_path):
-	sentence_list = []
-	labels_list = []
-	intent_list = []
+		self.train_set = train_set
+		self.test_set = test_set
 
-	with open(file_path, 'r') as fr:
-		for line in fr.readlines():
-			items = line.strip().split('EOS')
+		# 将训练集随机化.
+		self.random_state = random_state
 
-			sentence_list.append(items[0].split()[1:-1])
-			labels_list.append(items[1].split()[:-1])
-			intent_list.append(items[1].split()[-1])
+	'''
+	返回 alphabets.
+	'''
+	def get_alphabets(self):
+		return self.word_alphabet, self.label_alphabet, self.intent_alphabet
 
-	return sentence_list, labels_list, intent_list
+	'''
+	type: ['train', 'test']
+	返回训练集(测试集).
+	'''
+	def get_dataset(self, type_):
+		assert type_ in ['train', 'test']
+
+		if type_ == 'train':
+			return self.train_set
+		else:
+			return self.test_set
+
+	'''
+	读取文件数据, 其数据格式要求文件中每行格式:
+
+		BOS word1 word2 ... wordn EOS tag1 tag2 ... tagn intent
+
+	'''
+	def read_data(self, file_path):
+		sentence_list = []
+		labels_list = []
+		intent_list = []
+
+		with open(file_path, 'r') as fr:
+			for line in fr.readlines():
+				items = line.strip().split('EOS')
+
+				sentence_list.append(items[0].split()[1:-1])
+				labels_list.append(items[1].split()[1:-2])
+				intent_list.append(items[1].split()[-1])
+
+		return sentence_list, labels_list, intent_list
+
+	'''
+		搭建 word, label 和 intent 的字典, 注意这个 file_path 是 name.all.txt
+		的文件路径.
+	'''
+	def build_alphabets(self, file_path, name='atis', save_dir='./save/alphabets/'):
+		sentence_list, labels_list, intent_list = self.read_data(file_path)
+
+		self.word_alphabet = Alphabet(name + '-word')
+		self.label_alphabet = Alphabet(name + '-label')
+		self.intent_alphabet = Alphabet(name + '-intent')
+
+		for sentence in sentence_list:
+			self.word_alphabet.add_words(sentence)
+		for labels in labels_list:
+			self.label_alphabet.add_words(labels)
+		self.intent_alphabet.add_words(intent_list)
+
+		if save_dir is not None:
+			self.word_alphabet.save('./save/alphabets/')
+			self.label_alphabet.save('./save/alphabets/')
+			self.intent_alphabet.save('./save/alphabets/')
+
+	'''
+	构建训练集(测试集).
+	type: ['train', 'test']
+	'''
+	def build_dataset(self, file_path, type_):
+		assert type_ in ['train', 'test']
+
+		sentence_list, labels_list, intent_list = self.read_data(file_path)
+
+		if type_ == "train":
+			seed(self.random_state)
+			index_list = list(range(0, len(sentence_list)))
+			shuffle(index_list)
+
+			new_sent, new_label, new_intent = [], [], []
+			for idx in index_list:
+				new_sent.append(sentence_list[idx])
+				new_label.append(labels_list[idx])
+				new_intent.append(intent_list[idx])
+
+			sentence_list, labels_list, intent_list = new_sent, new_label, new_intent
+
+		curr_dict = {'sentence_list': sentence_list,
+					 'labels_list': labels_list,
+					 'intent_list': intent_list}
+
+		if type_ == 'train':
+			self.train_set = curr_dict
+			self.batch_start = 0
+			self.train_len = len(sentence_list)
+		else:
+			self.test_set = curr_dict
+			self.test_len = len(sentence_list)
+
+	'''
+	抽象的构建, 给定总集, 训练集, 测试集快速构建一个对象.
+	'''
+	def quick_build(self, train_path='./data/atis.train.txt', 
+						  test_path='./data/atis.test.txt',
+						  all_path='./data/atis.all.txt'):
+
+		self.build_alphabets(all_path)
+		self.build_dataset(train_path, 'train')
+		self.build_dataset(test_path, 'test')
 
 
-'''
-搭建 word, label 和 intent 的字典.
-'''
-def build_alphabets(sentence_list, labels_list, intent_list, name='atis', save=True):
-	word_dict = Alphabet(name + '-word')
-	label_dict = Alphabet(name + '-label')
-	intent_dict = Alphabet(name + '-intent')
+	'''
+	对训练样例加 padding 0, 并且按序列长度排序排布.
+	'''
+	def add_padding(self, data_list, data_list_):
+		max_length = 0
+		len_list = []
+		for data in data_list:
+			length = len(data)
 
-	for sentence in sentence_list:
-		word_dict.add_words(sentence)
-	for labels in labels_list:
-		label_dict.add_words(labels)
-	intent_dict.add_words(intent_list)
+			max_length = max(max_length, length)
+			len_list.append(length)
 
-	word_dict.save()
-	label_dict.save()
-	intent_dict.save()
+		idx_list = argsort(len_list).tolist()[::-1]
 
-	return word_dict, label_dict, intent_dict
+		ret_sent, ret_slot, ret_len = [], [], []
+		for idx in idx_list:
+			ret_len.append(len_list[idx])
+			ret_slot.append(data_list_[idx])
+			ret_slot[-1].extend([0] * (max_length - ret_len[-1]))
+			ret_sent.append(data_list[idx])
+			ret_sent[-1].extend([0] * (max_length - ret_len[-1]))
 
-'''
-构建数据集, 将列表中的字符串均换成对应的序号. 这个方法连同以上均是
-普适的, 可用来构建训练集, 测试集.
-'''
-def build_dataset(sentence_list, labels_list, intent_list, 
-				  word_dict, label_dict, intent_dict):
-	sentence_list_ = []
-	labels_list_ = []
+		return ret_sent, ret_slot, ret_len
 
-	for sentence in sentence_list:
-		sentence_list_.append(word_dict.indexs(sentence))
-	for labels in labels_list:
-		labels_list_.append(label_dict.indexs(labels))
-	intent_list_ = intent_dict.indexs(intent_list)
+	'''
+	有随机性的返回训练集的一个 batch. 另外, 如果 digitalize=False,
+	那么返回的 batch 中列表的元素不是数字，而是原始的字符串.
+	'''
+	def get_batch(self, batch_size=100, digitalize=True):
+		batch_start = self.batch_start
+		if batch_start + batch_size > self.train_len:
+			batch_end = self.train_len
+			self.batch_start = 0
+		else:
+			batch_end = self.batch_start + batch_size
+			self.batch_start = batch_end
 
-	return sentence_list_, labels_list_, intent_list_
+		sentence_batch = self.train_set['sentence_list'][batch_start : batch_end]
+		labels_batch = self.train_set['labels_list'][batch_start : batch_end]
+		intent_batch = self.train_set['intent_list'][batch_start : batch_end]
+
+		if digitalize:
+			sentence_batch = self.word_alphabet.indexs(sentence_batch)
+			labels_batch = self.label_alphabet.indexs(labels_batch)
+			intent_batch = self.intent_alphabet.indexs(intent_batch)
+
+		sentence_batch, labels_batch, seq_lengths = self.add_padding(sentence_batch, labels_batch)
+
+		return sentence_batch, labels_batch, seq_lengths, intent_batch
+
+	'''
+	由于测试样例是用来检测泛化能力的, 因此一次性全部返回.
+	'''
+	def get_test(self, digitalize=True):
+		sentence_list = self.test_set['sentence_list']
+		labels_list = self.test_set['labels_list']
+		intent_list = self.test_set['intent_list']
+
+		if digitalize:
+			sentence_list = self.word_alphabet.indexs(sentence_list)
+			labels_list = self.label_alphabet.indexs(labels_list)
+			intent_list = self.intent_alphabet.indexs(intent_list)
+
+		sentence_list, labels_list, seq_lengths = self.add_padding(sentence_list, labels_list)
+
+		return sentence_list, labels_list, seq_lengths, intent_list
 
 
-if __name__ == "__main__":
-	a, b, c = read_data('../data/atis.all.txt')
-	a_dict, b_dict, c_dict = build_alphabets(a, b, c)
-	print(build_dataset(a, b, c, a_dict, b_dict, c_dict)[2])
+
 
 
 
