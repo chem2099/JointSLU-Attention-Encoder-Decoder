@@ -22,4 +22,9 @@ if __name__ == "__main__":
 
 	print(label_var.size())
 
-	print(encoder(sent_var, seq_lens).size())
+	hiddens, last_hidden = encoder(sent_var, seq_lens)
+
+	decoder = Decoder(500, 12, len(label_dict), len(intent_dict))
+
+	import torch
+	print(decoder(last_hidden, hiddens, seq_lens)[1])

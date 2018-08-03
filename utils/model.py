@@ -2,16 +2,21 @@
 from __future__ import unicode_literals
 
 import torch.nn as nn
+from torch import mm as matrix_m
+from torch import cat as catencation
+from torch import randn as torch_randn
+from torch import mean as torch_mean
 from torch.nn.utils.rnn import pack_padded_sequence, pad_packed_sequence
-
+from torch.nn.functional import sigmoid, softmax, log_softmax
 
 '''
-编码器, 其中 input_dim 是字典中词的总数.
+编码器, 其中 input_dim 是字典中词的总数. 注意隐层只能是偶数,
+否则可能报错.
 '''
 class Encoder(nn.Module):
 
 	def __init__(self, input_dim, embedding_dim, hidden_dim, 
-				 num_layers=1, bidirectional=False):
+				 num_layers=3, bidirectional=False):
 		
 		super(Encoder, self).__init__()
 
@@ -50,25 +55,98 @@ class Encoder(nn.Module):
 		lstm_out, (h_last, c_last) = self.lstm(packed_input, None)
 		padded_output, _ = pad_packed_sequence(lstm_out)
 
-		# 使用 batch_first.
-		return padded_output.transpose(0, 1)
+		last_start = self.hidden_dim * (self.num_layers - 1)
+		if self.bidirectional:
+			last_start *= 2
+
+		# 使用 batch_first. 注意隐层的大小是 num_layers * hidden.
+		# lstm.transpose(0, 1).contiguous().view(batch_size, -1).
+		return padded_output.transpose(0, 1), \
+			   (h_last.transpose(0, 1).contiguous().view(x.size(0), -1)[:, last_start:],\
+			   	c_last.transpose(0, 1).contiguous().view(x.size(0), -1)[:, last_start:])
 
 
-
-
-
-
-
-
-
-
-
-
-
+'''
+解码器. 其中 lstm_hidden_size 应该和 Encoder 中 LSTM 的隐层维度一样.
+'''
 class Decoder(nn.Module):
 
-	def __init__(self):
-		pass
+	def __init__(self, lstm_hidden_size,
+					   slot_embedding_size, slot_output_size,
+					   intent_output_size):
 
-	def forward(self, x):
-		pass
+		super(Decoder, self).__init__()
+
+		self.lstm_hidden_size = lstm_hidden_size
+		self.slot_embedding_size = slot_embedding_size
+		self.slot_output_size = slot_output_size
+		self.intent_output_size = intent_output_size
+
+		# 输入尺度: slot_embedding + encoder_hidden_dimension + attention_dimension.
+		self.lstm_cell = nn.LSTMCell(slot_embedding_size + 3 * lstm_hidden_size, lstm_hidden_size)
+		# 输出预测 slot 分布的全连接层.
+		self.slot_output = nn.Linear(lstm_hidden_size, slot_output_size)
+		# 输出预测 intent 分布的全连接层.
+		self.intent_output = nn.Linear(lstm_hidden_size, intent_output_size)
+
+		# 注意力机制.
+		self.attention = nn.Linear(lstm_hidden_size * 2, 1)
+
+		# slot 的嵌入矩阵.
+		self.slot_embedding = nn.Embedding(slot_output_size, slot_embedding_size)
+		# 初始化零响应 slot 的参数.
+		self.init_slot = nn.Parameter(torch_randn(1, slot_embedding_size), requires_grad=True)
+
+	'''
+	如果使用注意力机制, 就不能继续 batch.
+	'''
+	def forward(self, lstm_hiddens, encoder_hiddens, seq_lens):
+
+		ret_slot_softmax = []
+		ret_intent = []
+		for batch_idx in range(0, encoder_hiddens.size(0)):
+			prev_lstm_hidden = (lstm_hiddens[0][batch_idx:batch_idx+1, :],
+								lstm_hiddens[1][batch_idx:batch_idx+1, :])
+			prev_slot_embedding = self.init_slot
+
+			slot_softmax = []
+			for word_idx in range(0, seq_lens[batch_idx]):
+				curr_encoder_hideen = encoder_hiddens[batch_idx, word_idx:word_idx+1, :]
+
+				# 重复 prev_lstm_hidden.
+				repeat_lstm_hidden = catencation([prev_lstm_hidden[0]]*seq_lens[batch_idx], dim=0)
+				# 将 repeat_lstm_hidden 和 curr_encoder_hidden 拼接起来.
+				combined_attention_input = catencation([repeat_lstm_hidden, 
+							encoder_hiddens[batch_idx, :seq_lens[batch_idx], :]], dim=1)
+				attention_param = self.attention(combined_attention_input).transpose(0, 1).contiguous()
+				# 用 softmax 归一化.
+				attention_param = softmax(attention_param)
+
+				# 取出第 batch 个 Encoder 隐向量簇.
+				curr_encoder_hiddens = encoder_hiddens[batch_idx, :seq_lens[batch_idx], :]
+				# 计算 attention 向量.
+				curr_attention = matrix_m(attention_param, curr_encoder_hiddens)
+
+				# 合并 s_{i - 1}, y_{i - 1}, h_i, c_i]
+				combined_lstm_input = catencation([prev_lstm_hidden[0], prev_slot_embedding,
+												   curr_encoder_hideen, curr_attention], dim=1)
+				prev_lstm_hidden = self.lstm_cell(combined_lstm_input, prev_lstm_hidden)
+
+				# 输出 slot 的分布.
+				slot_output = self.slot_output(prev_lstm_hidden[0])
+
+				# 记录 slot 的输出分布.
+				slot_softmax.append(log_softmax(slot_output))
+				# 更新 prev_slot_embedding.
+				_, max_idx = softmax(slot_output).topk(1)
+				prev_slot_embedding = self.slot_embedding(max_idx).squeeze(0)
+
+			# 将 slot_softmax 的值都拼接起来.
+			ret_slot_softmax.append(catencation(slot_softmax, dim=0))	
+
+			# 预测 intent, 先做池化操作.
+			mean_encoder_hiddens = torch_mean(encoder_hiddens[batch_idx, :, :], dim=0)
+			ret_intent.append(log_softmax(self.intent_output(mean_encoder_hiddens)))
+
+		return ret_slot_softmax, ret_intent
+
