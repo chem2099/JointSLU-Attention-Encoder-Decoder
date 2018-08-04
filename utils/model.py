@@ -5,7 +5,7 @@ import torch.nn as nn
 from torch import mm as matrix_m
 from torch import cat as catencation
 from torch import randn as torch_randn
-from torch import max as torch_max
+from torch import mean as torch_mean
 from torch.nn.utils.rnn import pack_padded_sequence, pad_packed_sequence
 from torch.nn.functional import sigmoid, softmax, log_softmax
 
@@ -110,6 +110,7 @@ class Decoder(nn.Module):
 			prev_slot_embedding = self.init_slot
 
 			slot_softmax = []
+			context_vectors = []
 			for word_idx in range(0, seq_lens[batch_idx]):
 				curr_encoder_hideen = encoder_hiddens[batch_idx, word_idx:word_idx+1, :]
 
@@ -126,6 +127,7 @@ class Decoder(nn.Module):
 				curr_encoder_hiddens = encoder_hiddens[batch_idx, :seq_lens[batch_idx], :]
 				# 计算 attention 向量.
 				curr_attention = matrix_m(attention_param, curr_encoder_hiddens)
+				context_vectors.append(curr_attention)
 
 				# 合并 s_{i - 1}, y_{i - 1}, h_i, c_i]
 				combined_lstm_input = catencation([prev_lstm_hidden[0], prev_slot_embedding,
@@ -145,8 +147,11 @@ class Decoder(nn.Module):
 			ret_slot_softmax.append(catencation(slot_softmax, dim=0))	
 
 			# 预测 intent, 先做池化操作.
-			max_encoder_hiddens, _ = torch_max(encoder_hiddens[batch_idx, :seq_lens[batch_idx], :], dim=0)
-			ret_intent.append(log_softmax(self.intent_output(max_encoder_hiddens)))
+
+			context_matrix = catencation(context_vectors, dim=0)
+			combined_pooling_matrix = catencation([context_matrix, encoder_hiddens[batch_idx, :seq_lens[batch_idx], :]], dim=1)
+			reduce_pooling = torch_mean(combined_pooling_matrix, dim=0)
+			ret_intent.append(log_softmax(self.intent_output(reduce_pooling)))
 
 		return ret_slot_softmax, catencation(ret_intent, dim=0)
 

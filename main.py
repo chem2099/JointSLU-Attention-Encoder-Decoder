@@ -9,6 +9,9 @@ from utils.process import *
 
 if __name__ == "__main__":
 	data = Dataset(random_state=20)
+	# data.quick_build(train_path='./data/atis.part.txt', 
+	# 			     test_path='./data/atis.part.txt',
+	# 			     all_path='./data/atis.part.txt')
 	data.quick_build()
 	word_dict, label_dict, intent_dict = data.get_alphabets()
 

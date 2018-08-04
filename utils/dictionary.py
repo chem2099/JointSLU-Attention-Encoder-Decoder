@@ -299,7 +299,7 @@ class Dataset(object):
 	'''
 	对训练样例加 padding 0, 并且按序列长度排序排布.
 	'''
-	def add_padding(self, data_list, data_list_):
+	def add_padding(self, data_list, data_list_, data_list__):
 		max_length = 0
 		len_list = []
 		for data in data_list:
@@ -310,14 +310,15 @@ class Dataset(object):
 
 		idx_list = argsort(len_list).tolist()[::-1]
 
-		ret_sent, ret_slot, ret_len = [], [], []
+		ret_sent, ret_slot, ret_len, ret_intent = [], [], [], []
 		for idx in idx_list:
 			ret_len.append(len_list[idx])
 			ret_slot.append(data_list_[idx])
+			ret_intent.append(data_list__[idx])
 			ret_sent.append(data_list[idx])
 			ret_sent[-1].extend([0] * (max_length - ret_len[-1]))
 
-		return ret_sent, ret_slot, ret_len
+		return ret_sent, ret_slot, ret_len, ret_intent
 
 	'''
 	有随机性的返回训练集的一个 batch. 另外, 如果 digitalize=False,
@@ -341,7 +342,8 @@ class Dataset(object):
 			labels_batch = self.label_alphabet.indexs(labels_batch)
 			intent_batch = self.intent_alphabet.indexs(intent_batch)
 
-		sentence_batch, labels_batch, seq_lengths = self.add_padding(sentence_batch, labels_batch)
+		sentence_batch, labels_batch, seq_lengths, intent_batch = self.add_padding(sentence_batch, 
+																   labels_batch, intent_batch)
 
 		return sentence_batch, labels_batch, seq_lengths, intent_batch
 
@@ -358,7 +360,8 @@ class Dataset(object):
 			labels_list = self.label_alphabet.indexs(labels_list)
 			intent_list = self.intent_alphabet.indexs(intent_list)
 
-		sentence_list, labels_list, seq_lengths = self.add_padding(sentence_list, labels_list)
+		sentence_list, labels_list, seq_lengths, intent_list = self.add_padding(sentence_list, 
+			                                                    labels_list, intent_list)
 
 		return sentence_list, labels_list, seq_lengths, intent_list
 

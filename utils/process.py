@@ -81,7 +81,6 @@ def train(encoder, decoder, dataset, optim_mode,
 		# 这里事实上只支持 NLLLoss 损失.
 		total_loss = criterion(intent_pred, intent_var)
 		for (slot_pred, label_var) in zip(slot_pred_list, labels_var_list):
-			# print(slot_pred.size(), label_var.size())
 			total_loss += criterion(slot_pred, label_var)
 
 		# 使用平均损失.
