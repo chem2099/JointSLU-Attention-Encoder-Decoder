@@ -35,3 +35,24 @@ Attention-based RNN 模型。代码运行的环境是：Win10 + Pytorch 0.1 + Py
 查看。需要注意两点，一方面注意 -h 打印的提示信息，复现模型的泛化效果对参数的设定十分敏感。例如虽然支持 GPU + C-
 UDA 加速，但 batch 最好不要太大。太大的 batch 会拖慢训练速度，降低泛化能力，甚至会爆掉 PC 的内存。因此，你不应该
 偏离默认参数太远。另一方面，代码中有丰富的中文注释，方便您查看或者修改其中的设定，如输出延时等。
+
+## 格式控制
+复用此代码，格式是很重要的。虽然很多错误都有中文提示，下面就几个重要的格式说明一下。
+
+##### 导入数据集
+默认的数据集在相对目录 “./data/” 下。其中包含三个文件 train.txt、test.txt 和 all.txt。前两者顾名思议，后者即简单的将前
+两者 “拼” 起来。文件中每一行代表一个样例，依次包括句子、标注序列 slot 和目的标记 label。例如：
+	
+		BOS fly from boston to New York EOS O O B.City O B.City I.City Flight_Fly
+		
+其中，BOS 和 EOS 是占位符，且 BOS 对应了开头一个标注 O。而最后的 Flight_Fly 是目的标记，其余不言自明。因此，我们
+事实上需要 word、slot 和 label 三个字典。而每轮训练后，在相对地址 “./save/alphabets” 中记录了这些字典的信息。
+
+##### 输出预测文件
+执行 main.py 除了训练模型，还有预测给定数据到文件。默认时，是输出测试集的 **n_best** 预测到目录 "./save/prediction" 中
+去。比较麻烦的是，如果想导入自己的求测数据，你需要查看函数 predict 的 API 并修改 main.py 的主程序代码。
+
+## 信息反馈
+由于编写仓促，许多地方必有所不足、纰漏。还望您及时 pull request，或者联系我的邮箱：
+		
+		liyangming98@gmail.com
