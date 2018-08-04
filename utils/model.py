@@ -154,4 +154,3 @@ class Decoder(nn.Module):
 			ret_intent.append(log_softmax(self.intent_output(reduce_pooling)))
 
 		return ret_slot_softmax, catencation(ret_intent, dim=0)
-

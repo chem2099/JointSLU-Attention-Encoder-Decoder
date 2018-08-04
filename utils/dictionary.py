@@ -364,19 +364,4 @@ class Dataset(object):
 			                                                    labels_list, intent_list)
 
 		return sentence_list, labels_list, seq_lengths, intent_list
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+		

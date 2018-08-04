@@ -16,7 +16,7 @@ import time
 def train(encoder, decoder, dataset, optim_mode,
 		  batch_size, learning_rate, 
 		  train_epoch, print_each, save_each, validate_each,
-		  model_save_dir, embedding_save_path):
+		  model_save_dir):
 	
 	total_time_start = time.time()
 
@@ -28,7 +28,6 @@ def train(encoder, decoder, dataset, optim_mode,
 		encoder = encoder.cuda()
 		decoder = decoder.cuda()
 
-		print("训练开始, 训练轮数 {}， 学习率 {:.6f}, batch 尺寸 {}".format(train_epoch, learning_rate, batch_size))
 		print("模型 Encoder, Decoder 已加入 GPU, 共用时 {:.6f} 秒.\n\n".format(time.time() - time_start))
 
 	criterion = NLLLoss()
@@ -99,6 +98,9 @@ def train(encoder, decoder, dataset, optim_mode,
 		if epoch % print_each == 0:
 			print('在第 {} 轮 batch 的平均损失为 {:.6f}.\n'.format(epoch, total_loss.cpu().data.numpy()[0]))
 
+			if epoch % validate_each != 0:
+				time.sleep(5)
+
 		if epoch % save_each == 0:
 			torch.save(encoder, model_save_dir + 'encoder.pth')
 			torch.save(decoder, model_save_dir + 'decoder.pth')
@@ -112,6 +114,8 @@ def train(encoder, decoder, dataset, optim_mode,
 			
 			time_con = time.time() - time_start
 			print('在 {} 轮 batch 中, 用于在测试集上评测的时间为 {:.6f} 秒.'.format(epoch, time_con))
+
+			time.sleep(5)
 
 		print('\n')
 
@@ -213,12 +217,81 @@ def slot_f1_measure(pred_list, label_list, alphabet):
 
 	return F
 
-def predict():
-	pass
 
+'''
+对测试集的样例做预测. 或者按照格式
+	
+	sentence_list, labels_list, seq_lens, intent_list
+
+给出一个 tuple. 注意 sentence_list 中的样本随着 index 增大
+其长度不增. 另外, 注意 give_predictions >= 2, 否则报错.
+'''
+def predict(dataset, encoder=None, decoder=None, sample_tuple=None, 
+			name=None, give_predictions=5):
+	
+	time_start = time.time()
+
+	if encoder is None or decoder is None:
+		encoder = torch.load('./save/model/encoder_.pth')
+		decoder = torch.load('./save/model/decoder_.pth')
+
+	if sample_tuple is None:
+		sentence_list, labels_list, seq_lens, intent_list = dataset.get_test()
+	else:
+		sentence_list, labels_list, seq_lens, intent_list = sample_tuple
+
+	sent_var = Variable(torch.LongTensor(sentence_list))
+	if torch.cuda.is_available():
+		sent_var = sent_var.cuda()
+		encoder = encoder.cuda()
+		decoder = decoder.cuda()
+
+	all_hiddens, last_hidden = encoder(sent_var, seq_lens)
+	slot_pred_list, intent_pred = decoder(last_hidden, all_hiddens, seq_lens)
+
+	slot_prediction = []
+	for slot_pred in slot_pred_list:
+		_, idxs = slot_pred.topk(give_predictions, dim=1)
+		slot_prediction.append(idxs.cpu().data.numpy().tolist())
+
+	_, idxs = intent_pred.topk(give_predictions, dim=1)
+	intent_prediction = idxs.cpu().data.numpy().tolist()
+
+	if name is None:
+		file_path = './save/prediction/test.txt'
+	else:
+		file_path = './save/prediction/' + name + '.txt'
+
+	word_dict, label_dict, intent_dict = dataset.get_alphabets()
+
+	with open(file_path, 'a') as fr:
+		for idx in range(0, len(sentence_list)):
+			sentence = word_dict.words(sentence_list[idx])
+			real_slots = label_dict.words(labels_list[idx])
+			real_intent = intent_dict.words(intent_list[idx])
+
+			predict_slots = label_dict.words(slot_prediction[idx])
+			predict_intents = intent_dict.words(intent_prediction[idx])
+
+			for jdx in range(0, seq_lens[idx]):
+				# print(sentence[jdx], real_slots[jdx])
+				fr.write(sentence[jdx] + '\t' + real_slots[jdx] + ' ')
+				for slot in predict_slots[jdx]:
+					fr.write(slot + ' ')
+
+				fr.write('\n')
+
+			fr.write(real_intent + ' ')
+			for intent in predict_intents:
+				fr.write(intent + ' ')
+
+			fr.write('\n\n')
+
+	time_con = time.time() - time_start
+	print('预测文件放在路径 {} 下, 共消耗时间 {:.6f} 秒.'.format(file_path, time_con))
+				
 def ravel_list(l):
 	new_l = []
 	for elem in l:
 		new_l.extend(elem)
 	return new_l
-
