@@ -56,3 +56,5 @@ UDA 加速，但 batch 最好不要太大。太大的 batch 会拖慢训练速�
 由于编写仓促，许多地方必有所不足、纰漏。还望您及时 pull request，或者联系我的邮箱：
 		
 		liyangming98@gmail.com
+
+最后，开源精神万岁，非常感谢学长 @yizhen 一直以来的帮助。
