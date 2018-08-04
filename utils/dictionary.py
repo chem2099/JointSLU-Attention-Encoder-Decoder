@@ -83,6 +83,8 @@ class Alphabet(object):
 				ret_list.append(self.words(index))
 
 			return ret_list
+		elif idxs == 0.0:
+			return '<padding>'
 		elif isinstance(idxs, int):
 			return self.index2word[idxs]
 		else:
@@ -220,8 +222,8 @@ class Dataset(object):
 			for line in fr.readlines():
 				items = line.strip().split('EOS')
 
-				sentence_list.append(items[0].split()[1:-1])
-				labels_list.append(items[1].split()[1:-2])
+				sentence_list.append(items[0].split()[1:])
+				labels_list.append(items[1].split()[1:-1])
 				intent_list.append(items[1].split()[-1])
 
 		return sentence_list, labels_list, intent_list
@@ -312,7 +314,6 @@ class Dataset(object):
 		for idx in idx_list:
 			ret_len.append(len_list[idx])
 			ret_slot.append(data_list_[idx])
-			ret_slot[-1].extend([0] * (max_length - ret_len[-1]))
 			ret_sent.append(data_list[idx])
 			ret_sent[-1].extend([0] * (max_length - ret_len[-1]))
 
@@ -322,7 +323,7 @@ class Dataset(object):
 	有随机性的返回训练集的一个 batch. 另外, 如果 digitalize=False,
 	那么返回的 batch 中列表的元素不是数字，而是原始的字符串.
 	'''
-	def get_batch(self, batch_size=100, digitalize=True):
+	def get_batch(self, batch_size=500, digitalize=True):
 		batch_start = self.batch_start
 		if batch_start + batch_size > self.train_len:
 			batch_end = self.train_len

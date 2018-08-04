@@ -5,7 +5,7 @@ import torch.nn as nn
 from torch import mm as matrix_m
 from torch import cat as catencation
 from torch import randn as torch_randn
-from torch import mean as torch_mean
+from torch import max as torch_max
 from torch.nn.utils.rnn import pack_padded_sequence, pad_packed_sequence
 from torch.nn.functional import sigmoid, softmax, log_softmax
 
@@ -87,7 +87,7 @@ class Decoder(nn.Module):
 		# 输出预测 slot 分布的全连接层.
 		self.slot_output = nn.Linear(lstm_hidden_size, slot_output_size)
 		# 输出预测 intent 分布的全连接层.
-		self.intent_output = nn.Linear(lstm_hidden_size, intent_output_size)
+		self.intent_output = nn.Linear(lstm_hidden_size * 2, intent_output_size)
 
 		# 注意力机制.
 		self.attention = nn.Linear(lstm_hidden_size * 2, 1)
@@ -138,15 +138,15 @@ class Decoder(nn.Module):
 				# 记录 slot 的输出分布.
 				slot_softmax.append(log_softmax(slot_output))
 				# 更新 prev_slot_embedding.
-				_, max_idx = softmax(slot_output).topk(1)
+				_, max_idx = softmax(slot_output).topk(1, dim=1)
 				prev_slot_embedding = self.slot_embedding(max_idx).squeeze(0)
 
 			# 将 slot_softmax 的值都拼接起来.
 			ret_slot_softmax.append(catencation(slot_softmax, dim=0))	
 
 			# 预测 intent, 先做池化操作.
-			mean_encoder_hiddens = torch_mean(encoder_hiddens[batch_idx, :, :], dim=0)
-			ret_intent.append(log_softmax(self.intent_output(mean_encoder_hiddens)))
+			max_encoder_hiddens, _ = torch_max(encoder_hiddens[batch_idx, :seq_lens[batch_idx], :], dim=0)
+			ret_intent.append(log_softmax(self.intent_output(max_encoder_hiddens)))
 
-		return ret_slot_softmax, ret_intent
+		return ret_slot_softmax, catencation(ret_intent, dim=0)
 

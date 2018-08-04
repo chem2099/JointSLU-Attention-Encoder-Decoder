@@ -3,28 +3,19 @@ from __future__ import unicode_literals
 
 from utils.dictionary import *
 from utils.model import *
+from utils.process import *
 
-import torch
-from torch.autograd import Variable
 
 
 if __name__ == "__main__":
 	data = Dataset(random_state=20)
 	data.quick_build()
-
 	word_dict, label_dict, intent_dict = data.get_alphabets()
-	sent_batch, label_batch, seq_lens, _ = data.get_batch()
 
-	encoder = Encoder(len(word_dict), 64, 500, 3, True)
+	encoder = Encoder(len(word_dict), 200, 128, 1, True)
+	decoder = Decoder(128, 12, len(label_dict), len(intent_dict))
 
-	sent_var = Variable(torch.LongTensor(sent_batch))
-	label_var = Variable(torch.LongTensor(label_batch))
-
-	print(label_var.size())
-
-	hiddens, last_hidden = encoder(sent_var, seq_lens)
-
-	decoder = Decoder(500, 12, len(label_dict), len(intent_dict))
-
-	import torch
-	print(decoder(last_hidden, hiddens, seq_lens)[1])
+	train(encoder, decoder, data,"adagrad",
+		  32, 1e-1,
+		  800, 1, 30, 10,
+		  './save/model/', None)
