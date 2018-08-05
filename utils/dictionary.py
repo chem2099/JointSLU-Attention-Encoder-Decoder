@@ -174,7 +174,7 @@ class Dataset(object):
 
 	def __init__(self, name="dataset", 
 		         word_alphabet=None, label_alphabet=None, intent_alphabet=None,
-		         train_set=None, test_set=None, 
+		         train_set=None, test_set=None, dev_set=None,
 		         random_state = 0):
 		
 		self.name = name
@@ -185,6 +185,7 @@ class Dataset(object):
 
 		self.train_set = train_set
 		self.test_set = test_set
+		self.dev_set = dev_set
 
 		# 将训练集随机化.
 		self.random_state = random_state
@@ -200,12 +201,14 @@ class Dataset(object):
 	返回训练集(测试集).
 	'''
 	def get_dataset(self, type_):
-		assert type_ in ['train', 'test']
+		assert type_ in ['train', 'test', 'dev']
 
 		if type_ == 'train':
 			return self.train_set
-		else:
+		elif type_ == 'test':
 			return self.test_set
+		else:
+			return self.dev_set
 
 	'''
 	读取文件数据, 其数据格式要求文件中每行格式:
@@ -255,7 +258,7 @@ class Dataset(object):
 	type: ['train', 'test']
 	'''
 	def build_dataset(self, file_path, type_):
-		assert type_ in ['train', 'test']
+		assert type_ in ['train', 'test', 'dev']
 
 		sentence_list, labels_list, intent_list = self.read_data(file_path)
 
@@ -280,20 +283,25 @@ class Dataset(object):
 			self.train_set = curr_dict
 			self.batch_start = 0
 			self.train_len = len(sentence_list)
-		else:
+		elif type_ == 'test':
 			self.test_set = curr_dict
 			self.test_len = len(sentence_list)
+		else:
+			self.dev_set = curr_dict
+			self.dev_len = len(sentence_list)
 
 	'''
 	抽象的构建, 给定总集, 训练集, 测试集快速构建一个对象.
 	'''
 	def quick_build(self, train_path='./data/atis.train.txt', 
 						  test_path='./data/atis.test.txt',
-						  all_path='./data/atis.all.txt'):
+						  all_path='./data/atis.all.txt',
+						  dev_path='./data/atis.dev.txt'):
 
 		self.build_alphabets(all_path)
 		self.build_dataset(train_path, 'train')
 		self.build_dataset(test_path, 'test')
+		self.build_dataset(dev_path, 'dev')
 
 
 	'''
@@ -364,4 +372,21 @@ class Dataset(object):
 			                                                    labels_list, intent_list)
 
 		return sentence_list, labels_list, seq_lengths, intent_list
-		
+
+	'''
+	同 get_test 一样.
+	'''
+	def get_dev(self, digitalize=True):
+		sentence_list = self.dev_set['sentence_list']
+		labels_list = self.dev_set['labels_list']
+		intent_list = self.dev_set['intent_list']
+
+		if digitalize:
+			sentence_list = self.word_alphabet.indexs(sentence_list)
+			labels_list = self.label_alphabet.indexs(labels_list)
+			intent_list = self.intent_alphabet.indexs(intent_list)
+
+		sentence_list, labels_list, seq_lengths, intent_list = self.add_padding(sentence_list, 
+			                                                    labels_list, intent_list)
+
+		return sentence_list, labels_list, seq_lengths, intent_list	

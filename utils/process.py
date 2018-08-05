@@ -121,7 +121,8 @@ def train(encoder, decoder, dataset, optim_mode,
 
 	total_time_con = time.time() - total_time_start
 	print('本次训练 + 测试共计用时 {:.6f} 秒.'.format(total_time_con))
-	
+
+	return devset_evaluation(encoder, decoder, dataset)
 
 def test(encoder, decoder, dataset):
 
@@ -157,6 +158,51 @@ def test(encoder, decoder, dataset):
 	intent_acc = accuracy(intent_prediction, intent_list)
 
 	return slot_acc, slot_f1, intent_acc
+
+
+def devset_evaluation(encoder, decoder, dataset):
+
+	time_start = time.time()
+
+	if torch.cuda.is_available():
+		encoder = encoder.cuda()
+		decoder = decoder.cuda()
+
+	sentence_list, labels_list, seq_lens, intent_list = dataset.get_dev()
+
+	sent_var = Variable(torch.LongTensor(sentence_list))
+	if torch.cuda.is_available():
+		sent_var = sent_var.cuda()
+
+	# encoder 和 decoder 的前向计算过程.
+	all_hiddens, last_hidden = encoder(sent_var, seq_lens)
+	slot_pred_list, intent_pred = decoder(last_hidden, all_hiddens, seq_lens)
+
+	# 得到 slot 的预测.
+	slot_prediction = []
+	for slot_pred in slot_pred_list:
+		_, idxs = slot_pred.topk(1, dim=1)
+		slot_prediction.append(idxs.cpu().data.transpose(0, 1).numpy().tolist()[0])
+
+	# 得到 intent 的预测.
+	_, idxs = intent_pred.topk(1, dim=1)
+	intent_prediction = idxs.cpu().data.transpose(0, 1).numpy().tolist()[0]
+
+	# 计算 slot 的 acc 和 f1.
+	slot_acc = accuracy(ravel_list(slot_prediction), ravel_list(labels_list))
+	slot_f1 = slot_f1_measure(slot_prediction, labels_list, dataset.get_alphabets()[1])
+
+	# 计算 intent 的 acc 和 f1.
+	intent_acc = accuracy(intent_prediction, intent_list)
+
+	time_con = time.time() - time_start
+
+	print('\n开发集(dev)的时间总开销(加载, 前向计算等)为 {:.6f} 秒.'.format(time_con))
+	print('其中在 slot filling 的任务上, 准确率为 {:.6f}, F1 得分为 {:.6f},'.format(slot_acc, slot_f1))
+	print('在 intent detection 的任务上, 准确率为 {:.6f}.'.format(intent_acc))
+
+	return slot_acc, slot_f1, intent_acc
+
 
 def accuracy(pred_list, real_list):
 	count = 0

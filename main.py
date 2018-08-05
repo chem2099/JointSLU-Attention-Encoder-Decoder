@@ -16,6 +16,8 @@ parser.add_argument('--test_file', '-te', type=str, default='./data/atis.test.tx
 					help='测试数据文件所处的路径.')
 parser.add_argument('--all_file', '-al', type=str, default='./data/atis.all.txt',
 					help='全体数据文件所处的路径.')
+parser.add_argument('--dev_file', '-de', type=str, default='./data/atis.dev.txt',
+					help='最终评测模型文件所处的路径.')
 parser.add_argument('--optimizer', '-op', type=str, default='adagrad',
 					help='选择优化算法, 只能选择 sgd, adam 和 adagrad.')
 parser.add_argument('--batch_size', '-bs', type=int, default=32,
@@ -50,6 +52,7 @@ args = parser.parse_args()
 train_file = args.train_file
 test_file = args.test_file
 all_file = args.all_file
+dev_file = args.dev_file
 optimizer = args.optimizer
 batch_size = args.batch_size
 learning_rate = args.learning_rate
@@ -81,13 +84,16 @@ if __name__ == "__main__":
 	time_start = time.time()
 	data.quick_build(train_path=train_file, 
 				     test_path=test_file,
-				     all_path=all_file)
-	print('训练集, 测试集, 全集数据读取完毕, 共耗时 {:.6} 秒.\n'.format(time.time() - time_start))
+				     all_path=all_file,
+				     dev_path=dev_file)
+	print('训练集, 测试集, 全集数据, 开发集全部读取完毕, 共耗时 {:.6} 秒.\n'.format(time.time() - time_start))
 	# data.quick_build()
 	word_dict, label_dict, intent_dict = data.get_alphabets()
 
 	encoder = Encoder(len(word_dict), word_embedding, hidden_size, num_layers, bidirectional)
 	decoder = Decoder(hidden_size, slot_embedding, len(label_dict), len(intent_dict))
+
+	# print(len(data.get_dataset('dev')['sentence_list']))
 
 	train(encoder, decoder, data, optimizer,
 		  batch_size, learning_rate,
@@ -95,4 +101,11 @@ if __name__ == "__main__":
 		  model_save)
 
 	predict(data, encoder=encoder, decoder=decoder, name='self-test', give_predictions=2)
+	predict(data, encoder=encoder, decoder=decoder 
+			sample_tuple=data.get_dev(), name='self-dev', give_predictions=1)
+
+	# import torch
+	# encoder = torch.load('./save/model/encoder.pth')
+	# decoder = torch.load('./save/model/decoder.pth')
+	# devset_evaluation(encoder, decoder, data)
 
