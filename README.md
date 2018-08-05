@@ -16,7 +16,7 @@ Attention-based RNN 模型。代码运行的环境是：Win10 + Pytorch 0.1 + Py
 
 ## 仓库结构
 文件 .gitignore 和 .editorconfig 均是用来配置仓库环境的，可以忽略。而三个大文件夹：
-> + **data** 包括了训练数据，测试数据，全集数据的默认储存地址(当命令行参数未给出时)。
+> + **data** 包括了训练数据、测试数据、全集数据、开发数据的默认储存地址(当命令行参数未给出时)。
 > + **save** 包括了训练模型过程中保存的模型、预测数据以及 word, slot, intent 的信息。
 > + **utils** 包含了本次复现需要的所有辅助代码，例如模型 model.py、训练 process.py。
 
@@ -40,8 +40,8 @@ UDA 加速，但 batch 最好不要太大。太大的 batch 会拖慢训练速�
 复用此代码，格式是很重要的。虽然很多错误都有中文提示，下面就几个重要的格式说明一下。
 
 ##### 导入数据集
-默认的数据集在相对目录 “./data/” 下。其中包含三个文件 train.txt、test.txt 和 all.txt。前两者顾名思议，后者即简单的将前
-两者 “拼” 起来。文件中每一行代表一个样例，依次包括句子、标注序列 slot 和目的标记 label。例如：
+默认的数据集在相对目录 “./data/” 下。其中包含三个文件 train.txt、test.txt、dev.txt、all.txt。后者即简单的将前
+三者 “拼” 起来。文件中每一行代表一个样例，依次包括句子、标注序列 slot 和目的标记 label。例如：
 	
 		BOS fly from boston to New York EOS O O B.City O B.City I.City Flight_Fly
 		
