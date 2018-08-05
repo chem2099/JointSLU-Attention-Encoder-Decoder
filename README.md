@@ -2,18 +2,6 @@
 该仓库的代码复现了论文 **Attention-Based Recurrent Neural Network Models for Joint Intent Detection and Slot Filling** 中提到的
 Attention-based RNN 模型。代码运行的环境是：Win10 + Pytorch 0.1 + Python 3.6。
 
-
-在 Win10 中如果 Pytorch 和 Python 的版本和要求不一样，可以通过 Anaconda 配置安装一个新环境。命令可以如下：
-
-    conda create -n NewEnv python=3.6
-    conda activate NewEnv
-    pip install -upgrade pip
-    conda install --offline pytorch-0.2.1-py36he6bf560_0.2.1cu80.tar.bz2
-    
-注意，参数 offline 说明你必须先预下载官方包到本地。当然你也可以通过 pip 直接在线安装，不过需要以管理员模式运行命令
-行 cmd。本仓库的代码不具备很高的可复用性，但是可以根据命令行参数，按照要求的格式，选择预备好的训练集，测试集、
-开发集和全集(即训练集+测试集+开发集)，调节模型的参数以 demo 论文中提到模型的效果。
-
 ## 仓库结构
 文件 .gitignore 和 .editorconfig 均是用来配置仓库环境的，可以忽略。而三个大文件夹：
 > + **data** 包括了训练数据、测试数据、全集数据、开发数据的默认储存地址(当命令行参数未给出时)。
