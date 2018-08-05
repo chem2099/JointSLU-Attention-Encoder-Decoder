@@ -2,6 +2,10 @@
 该仓库的代码复现了论文 **Attention-Based Recurrent Neural Network Models for Joint Intent Detection and Slot Filling** 中提到的
 Attention-based RNN 模型。代码运行的环境是：Win10 + Pytorch 0.1 + Python 3.6。
 
+注意仓库中的 bash 脚本文件 param_select.sh, 它可用于在服务器中 GridSearch 最佳超参数组合组合之用。与之对应的是
+win10 版本中没有的命令行参数 model_selection，它在脚本执行 main.py 时被设置为 True，停止在训练过程中输出各个步
+骤的时间开销以及每间隔步的测试集(test)评分。但保留了每间隔步的 batch 损失以及最终开发集(dev)的评分。
+
 ## 仓库结构
 文件 .gitignore 和 .editorconfig 均是用来配置仓库环境的，可以忽略。而三个大文件夹：
 > + **data** 包括了训练数据、测试数据、全集数据、开发数据的默认储存地址(当命令行参数未给出时)。
