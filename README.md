@@ -2,6 +2,10 @@
 该仓库的代码复现了论文 **Attention-Based Recurrent Neural Network Models for Joint Intent Detection and Slot Filling** 中提到的
 Attention-based RNN 模型。代码运行的环境是：Win10 + Pytorch 0.1 + Python 3.6。
 
+注意，目前已经支持 Ubuntu14.04(16.04) + Pytorch 0.3 + Python 2.7，请不匹配 Win10 的同学切换到 Linux 分支下：
+		
+		git checkout -b Linux origin:Linux # 将 clone 下来的代码分支化.
+		git push origin Linux:Linux # 将更新重新推送
 
 在 Win10 中如果 Pytorch 和 Python 的版本和要求不一样，可以通过 Anaconda 配置安装一个新环境。命令可以如下：
 
