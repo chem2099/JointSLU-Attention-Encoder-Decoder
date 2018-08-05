@@ -47,7 +47,7 @@ parser.add_argument('--random_state', '-rs', type=int, default=20,
 parser.add_argument('--hidden_size', '-hz', type=int, default=128,
 					help='在 Encoder 和 Decoder 中 LSTM 隐层维度的大小.')
 parser.add_argument('--model_selection', '-mse', type=bool, default=False,
-					help='When choosing parameter in server, set it True.')
+					help='当在服务器上跑数据调参的时候, 应该设为 True, 避免在输出上时间.')
 
 args = parser.parse_args()
 
