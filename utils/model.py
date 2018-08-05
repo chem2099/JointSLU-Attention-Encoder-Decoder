@@ -48,6 +48,8 @@ class Encoder(nn.Module):
  	'''
 	def forward(self, x, seq_lens):
 		# 得到连续词向量.
+		# print x.size()
+		# exit(0)
 		embedded_x = self.embedding(x)
 
 		# batch 打包和解包.
@@ -121,7 +123,7 @@ class Decoder(nn.Module):
 							encoder_hiddens[batch_idx, :seq_lens[batch_idx], :]], dim=1)
 				attention_param = self.attention(combined_attention_input).transpose(0, 1).contiguous()
 				# 用 softmax 归一化.
-				attention_param = softmax(attention_param)
+				attention_param = softmax(attention_param, dim=1)
 
 				# 取出第 batch 个 Encoder 隐向量簇.
 				curr_encoder_hiddens = encoder_hiddens[batch_idx, :seq_lens[batch_idx], :]
@@ -138,9 +140,9 @@ class Decoder(nn.Module):
 				slot_output = self.slot_output(prev_lstm_hidden[0])
 
 				# 记录 slot 的输出分布.
-				slot_softmax.append(log_softmax(slot_output))
+				slot_softmax.append(log_softmax(slot_output, dim=1))
 				# 更新 prev_slot_embedding.
-				_, max_idx = softmax(slot_output).topk(1, dim=1)
+				_, max_idx = softmax(slot_output, dim=1).topk(1, dim=1)
 				prev_slot_embedding = self.slot_embedding(max_idx).squeeze(0)
 
 			# 将 slot_softmax 的值都拼接起来.
@@ -150,7 +152,7 @@ class Decoder(nn.Module):
 
 			context_matrix = catencation(context_vectors, dim=0)
 			combined_pooling_matrix = catencation([context_matrix, encoder_hiddens[batch_idx, :seq_lens[batch_idx], :]], dim=1)
-			reduce_pooling = torch_mean(combined_pooling_matrix, dim=0)
-			ret_intent.append(log_softmax(self.intent_output(reduce_pooling)))
+			reduce_pooling = torch_mean(combined_pooling_matrix, dim=0).view(1, -1)
+			ret_intent.append(log_softmax(self.intent_output(reduce_pooling), dim=1))
 
 		return ret_slot_softmax, catencation(ret_intent, dim=0)

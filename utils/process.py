@@ -78,7 +78,8 @@ def train(encoder, decoder, dataset, optim_mode,
 
 		time_start = time.time()
 		# 这里事实上只支持 NLLLoss 损失.
-		total_loss = criterion(intent_pred, intent_var)
+		# print intent_pred.size(), intent_var.size()
+		total_loss = criterion(intent_pred.view(intent_var.size(0), -1), intent_var)
 		for (slot_pred, label_var) in zip(slot_pred_list, labels_var_list):
 			total_loss += criterion(slot_pred, label_var)
 
@@ -137,6 +138,7 @@ def test(encoder, decoder, dataset):
 		sent_var = sent_var.cuda()
 
 	# encoder 和 decoder 的前向计算过程.
+	# print sent_var.size()
 	all_hiddens, last_hidden = encoder(sent_var, seq_lens)
 	slot_pred_list, intent_pred = decoder(last_hidden, all_hiddens, seq_lens)
 

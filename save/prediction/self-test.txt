@@ -10948,3 +10948,2837 @@ list	O O B-fromloc.city_name
 la	B-city_name B-fromloc.airport_name B-airline_name 
 atis_city atis_flight atis_aircraft 
 
+i	O B-arrive_time.period_of_day I-depart_time.period_of_day 
+want	O B-arrive_time.period_of_day B-meal 
+to	O B-fare_basis_code B-arrive_time.period_of_day 
+travel	O B-arrive_time.period_of_day B-aircraft_code 
+from	O B-arrive_time.period_of_day B-time_relative 
+kansas	B-fromloc.city_name B-arrive_time.period_of_day B-aircraft_code 
+city	I-fromloc.city_name B-arrive_time.period_of_day B-airline_name 
+to	O B-fromloc.airport_code B-time_relative 
+chicago	B-toloc.city_name I-toloc.airport_name B-airline_name 
+round	B-round_trip B-connect B-return_date.today_relative 
+trip	I-round_trip B-connect B-meal_description 
+leaving	O B-stoploc.city_name B-meal_description 
+wednesday	B-depart_date.day_name B-economy I-toloc.airport_name 
+june	B-depart_date.month_name I-return_date.date_relative I-depart_time.period_of_day 
+sixteenth	B-depart_date.day_number I-return_date.date_relative I-fromloc.city_name 
+arriving	O I-return_date.date_relative I-today_relative 
+in	O I-return_date.date_relative I-time 
+chicago	B-toloc.city_name I-return_date.date_relative I-time 
+at	O I-transport_type I-time 
+around	B-arrive_time.time_relative I-transport_type I-return_date.day_number 
+7	B-arrive_time.time I-transport_type B-airline_name 
+o'clock	I-arrive_time.time I-transport_type B-airline_name 
+in	O I-transport_type B-stoploc.city_name 
+the	O I-transport_type B-return_date.today_relative 
+evening	B-arrive_time.period_of_day B-return_date.today_relative B-meal_description 
+and	O I-fromloc.city_name B-arrive_date.month_name 
+returning	O I-transport_type B-return_date.today_relative 
+the	O I-fromloc.city_name I-transport_type 
+next	B-return_date.date_relative I-transport_type B-arrive_date.month_name 
+day	O B-stoploc.city_name I-transport_type 
+arriving	O B-stoploc.city_name B-return_date.day_number 
+in	O B-return_date.day_number I-toloc.airport_name 
+kansas	B-toloc.city_name I-toloc.airport_name B-airline_name 
+city	I-toloc.city_name I-transport_type B-connect 
+at	O I-transport_type B-stoploc.city_name 
+around	B-arrive_time.time_relative I-transport_type B-stoploc.city_name 
+7	B-arrive_time.time I-transport_type B-stoploc.city_name 
+o'clock	I-arrive_time.time I-transport_type B-stoploc.city_name 
+in	O I-transport_type B-stoploc.city_name 
+the	O B-return_date.today_relative I-transport_type 
+evening	B-arrive_time.period_of_day B-arrive_date.month_name I-transport_type 
+which	O B-arrive_date.month_name B-airline_name 
+airlines	O B-airline_name B-arrive_time.period_of_day 
+fly	O B-arrive_date.month_name B-return_date.month_name 
+that	O B-airline_name B-arrive_date.month_name 
+route	O I-class_type B-arrive_date.month_name 
+atis_flight atis_flight_no atis_aircraft#atis_flight#atis_flight_no 
+
+may	O B-connect I-toloc.airport_name 
+i	O B-connect B-meal_description 
+please	O B-meal_description B-connect 
+see	O I-transport_type B-airline_name 
+airlines	O B-airline_name B-return_date.today_relative 
+and	O B-return_date.today_relative B-airline_name 
+flight	O I-transport_type B-return_date.today_relative 
+numbers	O B-meal_description B-return_date.today_relative 
+from	O I-transport_type I-fromloc.city_name 
+new	B-fromloc.city_name I-transport_type I-arrive_time.end_time 
+york	I-fromloc.city_name I-transport_type I-arrive_time.end_time 
+to	O B-fare_basis_code I-transport_type 
+toronto	B-toloc.city_name B-fare_basis_code B-arrive_date.month_name 
+on	O B-arrive_time.period_of_day B-state_name 
+the	O B-airline_name B-arrive_time.period_of_day 
+same	B-depart_date.date_relative B-airline_name I-return_date.day_number 
+date	O B-airline_name B-cost_relative 
+june	B-depart_date.month_name I-fromloc.city_name B-airline_name 
+seventeenth	B-depart_date.day_number I-fromloc.city_name B-return_date.today_relative 
+also	O I-transport_type B-return_date.today_relative 
+arriving	O I-fromloc.city_name B-return_date.today_relative 
+in	O B-return_date.today_relative I-transport_type 
+toronto	B-toloc.city_name B-arrive_time.period_of_day I-transport_type 
+before	B-arrive_time.time_relative B-arrive_time.period_of_day B-airline_name 
+noon	B-arrive_time.time B-arrive_time.period_of_day B-airline_name 
+thank	O B-arrive_time.period_of_day B-airline_name 
+you	O B-arrive_time.period_of_day B-airline_name 
+atis_airline#atis_flight_no atis_flight#atis_airfare atis_flight#atis_airline 
+
+i	O B-economy B-fromloc.state_code 
+would	O B-connect B-meal_description 
+like	O B-stoploc.city_name B-meal_description 
+the	O B-return_date.day_name B-cost_relative 
+flights	O I-class_type I-flight_stop 
+available	O B-fare_basis_code B-return_date.day_name 
+from	O B-state_name B-arrive_time.period_of_day 
+boston	B-fromloc.city_name B-return_date.day_name B-aircraft_code 
+to	O B-return_date.day_name I-class_type 
+denver	B-toloc.city_name B-class_type I-class_type 
+arriving	O B-meal_description B-fare_basis_code 
+in	O I-transport_type B-return_date.day_number 
+denver	B-toloc.city_name I-transport_type I-return_date.day_number 
+on	O I-arrive_date.day_number I-transport_type 
+9	B-arrive_time.time B-economy B-meal_description 
+o'clock	I-arrive_time.time I-depart_time.period_of_day I-depart_time.end_time 
+wednesday	B-arrive_date.day_name I-fromloc.airport_name I-depart_time.end_time 
+morning	B-arrive_time.period_of_day I-transport_type I-fromloc.city_name 
+on	O I-transport_type I-arrive_date.day_number 
+or	B-or B-economy I-transport_type 
+by	B-arrive_time.time_relative I-depart_time.period_of_day B-arrive_date.today_relative 
+9	B-arrive_time.time I-depart_time.period_of_day I-fromloc.city_name 
+o'clock	I-arrive_time.time B-days_code I-arrive_date.day_number 
+wednesday	B-arrive_date.day_name B-cost_relative I-fromloc.airport_name 
+morning	B-arrive_time.period_of_day B-arrive_time.period_mod B-cost_relative 
+atis_flight atis_flight#atis_airfare atis_airfare 
+
+can	O I-depart_time.period_of_day B-economy 
+you	O B-airline_name I-today_relative 
+please	O B-days_code B-cost_relative 
+tell	O B-meal_description B-cost_relative 
+me	O B-airline_name I-transport_type 
+the	O B-airline_name I-return_date.day_number 
+type	O I-return_date.day_number B-meal_description 
+of	O I-return_date.day_number I-fromloc.city_name 
+aircraft	O I-fromloc.city_name B-meal_description 
+used	O I-fromloc.city_name I-fromloc.airport_name 
+flying	O I-transport_type B-arrive_date.month_name 
+from	O I-transport_type I-fromloc.city_name 
+atlanta	B-fromloc.city_name I-transport_type B-meal_description 
+to	O I-transport_type B-meal_description 
+denver	B-toloc.city_name B-meal_description I-transport_type 
+on	O I-fromloc.city_name I-transport_type 
+eastern	B-airline_name I-transport_type B-arrive_date.month_name 
+flight	O I-transport_type I-fromloc.city_name 
+825	B-flight_number I-fromloc.city_name I-transport_type 
+leaving	O I-transport_type I-fromloc.city_name 
+at	O I-transport_type I-fromloc.city_name 
+555	B-depart_time.time I-transport_type I-fromloc.city_name 
+atis_aircraft atis_flight#atis_airline atis_meal 
+
+show	O B-meal_description B-return_date.day_name 
+me	O B-meal_description I-transport_type 
+any	O B-return_time.period_of_day I-transport_type 
+show	O I-transport_type B-meal_description 
+me	O I-transport_type B-airline_name 
+what	O I-transport_type B-airline_name 
+the	O B-airline_name I-transport_type 
+first	B-class_type B-airline_name B-economy 
+class	I-class_type B-cost_relative B-airline_name 
+fares	O B-cost_relative B-airline_name 
+are	O B-cost_relative B-meal_description 
+of	O B-meal_description I-depart_time.time_relative 
+the	O I-return_date.day_number B-airline_name 
+flights	O B-airline_name I-return_date.day_number 
+from	O I-fromloc.city_name I-return_date.day_number 
+pittsburgh	B-fromloc.city_name I-transport_type I-fromloc.city_name 
+to	O I-transport_type B-arrive_date.month_name 
+san	B-toloc.city_name I-transport_type I-return_date.day_number 
+francisco	I-toloc.city_name I-return_date.day_number I-transport_type 
+on	O I-fromloc.city_name I-return_date.day_number 
+monday	B-depart_date.day_name I-fromloc.city_name B-return_date.day_number 
+atis_airfare atis_aircraft#atis_flight#atis_flight_no atis_meal 
+
+find	O I-depart_time.end_time B-arrive_time.period_of_day 
+me	O B-meal_description I-depart_time.end_time 
+the	O B-return_date.day_number B-arrive_time.period_of_day 
+earliest	B-flight_mod B-airline_name I-depart_time.end_time 
+flight	O B-return_date.day_name B-return_date.today_relative 
+from	O B-return_date.day_name B-return_date.today_relative 
+boston	B-fromloc.city_name B-return_date.day_name B-depart_date.year 
+to	O B-return_date.day_name B-class_type 
+atlanta	B-toloc.city_name B-flight_time B-class_type 
+and	O I-transport_type B-meal_description 
+the	O I-fromloc.city_name I-transport_type 
+latest	B-flight_mod I-transport_type I-fromloc.city_name 
+return	O I-transport_type I-fromloc.city_name 
+from	O I-transport_type I-fromloc.city_name 
+atlanta	B-fromloc.city_name I-transport_type I-fromloc.city_name 
+to	O I-transport_type I-fromloc.city_name 
+boston	B-toloc.city_name I-transport_type I-fromloc.city_name 
+within	O I-transport_type B-return_date.today_relative 
+the	O B-return_date.today_relative I-fromloc.city_name 
+same	B-depart_date.date_relative B-cost_relative I-return_date.day_number 
+day	O B-cost_relative B-meal_description 
+atis_flight atis_flight#atis_airline atis_flight#atis_airfare 
+
+very	O I-fromloc.city_name I-depart_time.period_of_day 
+well	O B-connect I-depart_time.period_of_day 
+i'm	O B-connect B-stoploc.city_name 
+working	O B-connect B-stoploc.city_name 
+on	O B-stoploc.city_name B-meal_description 
+scenario	O I-depart_time.period_of_day B-stoploc.city_name 
+three	O I-fromloc.city_name I-depart_time.period_of_day 
+i'm	O I-depart_time.period_of_day I-fromloc.airport_name 
+interested	O I-fromloc.airport_name I-fromloc.city_name 
+in	O I-fromloc.airport_name B-transport_type 
+a	O I-fromloc.city_name B-arrive_time.period_of_day 
+flight	O I-transport_type B-return_date.today_relative 
+on	O I-transport_type I-fromloc.city_name 
+a	O I-fromloc.city_name I-arrive_date.day_number 
+727	B-aircraft_code I-fromloc.city_name B-arrive_date.month_name 
+from	O B-return_date.today_relative I-transport_type 
+washington	B-fromloc.city_name B-arrive_time.period_of_day B-connect 
+dc	B-fromloc.state_code B-time_relative B-arrive_time.period_of_day 
+to	O B-arrive_date.month_name B-arrive_time.period_of_day 
+atlanta	B-toloc.city_name B-arrive_time.period_of_day I-transport_type 
+georgia	B-toloc.state_name B-arrive_time.period_of_day B-airline_name 
+atis_flight atis_flight#atis_airfare atis_flight#atis_airline 
+
+now	O B-meal_description I-depart_time.period_of_day 
+i'd	O B-airline_name I-depart_time.end_time 
+like	O I-depart_time.period_of_day I-depart_time.end_time 
+a	O I-depart_time.end_time I-return_date.day_number 
+schedule	B-flight_time I-return_date.day_number I-depart_time.end_time 
+for	O B-meal_description B-return_date.day_name 
+the	O I-fromloc.city_name B-airline_name 
+flights	O I-transport_type B-arrive_date.month_name 
+on	O I-transport_type B-time_relative 
+tuesday	B-depart_date.day_name I-transport_type B-time_relative 
+morning	B-depart_time.period_of_day I-transport_type B-economy 
+from	O I-transport_type I-arrive_time.end_time 
+oakland	B-fromloc.city_name I-transport_type I-arrive_date.day_number 
+no	O I-arrive_date.day_number B-economy 
+from	O I-arrive_time.end_time B-cost_relative 
+dallas	B-fromloc.city_name I-transport_type I-arrive_time.end_time 
+fort	I-fromloc.city_name I-arrive_date.day_number I-transport_type 
+worth	I-fromloc.city_name I-transport_type I-return_date.date_relative 
+to	O I-transport_type B-return_date.day_name 
+atlanta	B-toloc.city_name I-transport_type B-time_relative 
+atis_flight_time atis_flight#atis_airline atis_cheapest 
+
+i	O B-depart_date.year B-economy 
+would	O B-stoploc.city_name B-connect 
+like	O B-stoploc.city_name B-fromloc.state_code 
+to	O B-connect I-class_type 
+originate	O B-stoploc.city_name B-return_date.day_name 
+my	O B-stoploc.city_name I-class_type 
+flight	O I-class_type B-arrive_date.today_relative 
+in	O B-arrive_time.period_of_day I-depart_time.period_of_day 
+washington	B-fromloc.city_name B-arrive_time.period_of_day B-fare_basis_code 
+dc	B-fromloc.state_code B-arrive_time.period_of_day B-time_relative 
+stop	O B-arrive_time.period_of_day B-time_relative 
+in	O B-time_relative B-arrive_time.period_of_day 
+denver	B-stoploc.city_name B-arrive_time.period_of_day B-time_relative 
+with	O B-airline_name I-toloc.airport_name 
+the	O B-return_date.today_relative B-airline_name 
+destination	O I-toloc.airport_name B-arrive_date.month_name 
+city	O I-transport_type B-return_date.today_relative 
+of	O I-transport_type I-fromloc.city_name 
+san	B-toloc.city_name I-fromloc.city_name I-transport_type 
+francisco	I-toloc.city_name I-transport_type B-arrive_date.today_relative 
+atis_flight atis_flight#atis_airline atis_meal 
+
+is	O I-depart_time.end_time B-arrive_time.period_mod 
+there	O I-depart_time.end_time B-return_date.day_number 
+one	O B-return_date.day_number B-return_date.today_relative 
+airline	O B-return_date.day_number B-airline_name 
+that	O B-airline_name B-return_date.day_number 
+flies	O B-return_date.day_number B-stoploc.airport_name 
+from	O B-stoploc.airport_name I-depart_time.end_time 
+burbank	B-fromloc.city_name B-stoploc.airport_name I-class_type 
+to	O I-depart_time.end_time B-stoploc.airport_name 
+milwaukee	B-toloc.city_name B-return_date.day_number I-return_date.day_number 
+milwaukee	B-fromloc.city_name B-return_date.day_number I-class_type 
+to	O I-class_type B-return_date.day_number 
+st.	B-toloc.city_name B-cost_relative B-arrive_date.today_relative 
+louis	I-toloc.city_name I-depart_time.time_relative B-cost_relative 
+and	O I-depart_time.period_of_day I-fromloc.airport_name 
+from	O B-toloc.state_name B-stoploc.airport_name 
+st.	B-fromloc.city_name B-cost_relative B-toloc.airport_code 
+louis	I-fromloc.city_name I-depart_time.end_time B-cost_relative 
+to	O I-depart_time.end_time B-arrive_date.today_relative 
+burbank	B-toloc.city_name B-arrive_date.today_relative B-meal_description 
+atis_airline atis_aircraft#atis_flight#atis_flight_no atis_flight#atis_airline 
+
+what's	O B-meal_description B-cost_relative 
+the	O B-return_date.day_number B-airline_name 
+price	O B-airline_name B-return_date.day_number 
+of	O I-return_date.day_number B-return_date.day_name 
+the	O B-return_date.day_name B-days_code 
+least	B-cost_relative B-return_date.day_name B-airline_name 
+expensive	I-cost_relative B-city_name I-class_type 
+first	B-class_type I-class_type B-meal_description 
+class	I-class_type B-cost_relative B-return_date.day_name 
+round	B-round_trip B-cost_relative I-class_type 
+trip	I-round_trip I-class_type I-depart_time.time_relative 
+ticket	O I-depart_time.period_of_day I-toloc.airport_name 
+on	O I-depart_time.period_of_day B-return_date.day_name 
+us	B-airline_name B-return_date.day_name B-toloc.state_name 
+air	I-airline_name I-toloc.airport_name I-class_type 
+from	O B-meal_description I-transport_type 
+cleveland	B-fromloc.city_name I-transport_type B-time_relative 
+to	O I-transport_type B-time_relative 
+miami	B-toloc.city_name B-time_relative I-transport_type 
+atis_airfare atis_airfare atis_flight#atis_airfare 
+
+what	O I-class_type B-meal_description 
+is	O B-meal_description I-fromloc.airport_name 
+the	O I-fromloc.airport_name I-transport_type 
+first	B-flight_mod B-airline_name I-fromloc.airport_name 
+flight	O B-return_date.day_name B-airline_name 
+from	O B-return_date.day_name I-class_type 
+atlanta	B-fromloc.city_name I-class_type I-transport_type 
+to	O B-return_date.day_name B-meal_description 
+boston	B-toloc.city_name B-meal_description B-return_date.day_name 
+on	O I-transport_type I-depart_time.period_of_day 
+thursday	B-depart_date.day_name I-return_date.day_number I-transport_type 
+september	B-depart_date.month_name I-fromloc.city_name B-days_code 
+fifth	B-depart_date.day_number I-fromloc.city_name B-arrive_date.today_relative 
+that	O I-fromloc.city_name I-toloc.city_name 
+leaves	O I-transport_type I-toloc.city_name 
+after	B-depart_time.time_relative I-transport_type I-fromloc.city_name 
+8	B-depart_time.time I-transport_type B-return_date.day_number 
+am	I-depart_time.time I-fromloc.city_name B-return_date.day_number 
+atis_flight atis_flight#atis_airline atis_flight#atis_airfare 
+
+what	O B-meal_description B-return_date.month_name 
+are	O I-transport_type B-arrive_time.period_of_day 
+the	O I-return_date.day_number I-transport_type 
+times	B-flight_time I-fromloc.city_name B-meal_description 
+that	O I-fromloc.city_name B-return_date.today_relative 
+you	O B-return_date.today_relative I-fromloc.city_name 
+have	O B-stoploc.city_name B-arrive_time.period_of_day 
+planes	O B-arrive_date.today_relative I-class_type 
+leaving	O B-stoploc.city_name I-fromloc.city_name 
+from	O B-stoploc.city_name B-return_date.day_number 
+san	B-fromloc.city_name I-return_date.day_number B-cost_relative 
+francisco	I-fromloc.city_name I-return_date.day_number B-airline_name 
+going	O I-fromloc.city_name B-days_code 
+to	O I-fromloc.city_name B-arrive_date.today_relative 
+pittsburgh	B-toloc.city_name B-arrive_date.today_relative I-fromloc.city_name 
+on	O B-stoploc.city_name I-fromloc.city_name 
+july	B-depart_date.month_name I-transport_type B-return_date.day_number 
+seventh	B-depart_date.day_number I-fromloc.city_name B-stoploc.city_name 
+atis_flight_time atis_aircraft#atis_flight#atis_flight_no atis_flight#atis_airfare 
+
+can	O I-depart_time.period_of_day B-depart_date.year 
+you	O B-days_code B-return_date.day_name 
+list	O B-days_code B-return_date.day_name 
+flights	O I-fromloc.airport_name B-airline_name 
+from	O I-transport_type B-airline_name 
+boston	B-fromloc.city_name I-transport_type I-fromloc.city_name 
+to	O B-toloc.state_name I-transport_type 
+washington	B-toloc.city_name B-connect B-cost_relative 
+with	O B-cost_relative B-stoploc.city_name 
+the	O B-cost_relative I-class_type 
+lowest	B-cost_relative B-cost_relative I-toloc.airport_name 
+one	B-round_trip I-class_type B-airline_name 
+way	I-round_trip I-depart_time.period_of_day I-class_type 
+fares	O I-depart_time.period_of_day B-cost_relative 
+that	O I-return_date.day_number I-depart_time.period_of_day 
+leave	O I-return_date.day_number B-meal_description 
+on	O B-meal_description I-fromloc.city_name 
+saturday	B-depart_date.day_name I-transport_type B-meal_description 
+atis_flight atis_flight#atis_airfare atis_flight#atis_airline 
+
+give	O I-toloc.state_name B-meal_description 
+me	O I-toloc.state_name B-meal_description 
+all	O I-fromloc.airport_name B-return_date.day_name 
+the	O I-fromloc.airport_name I-fromloc.city_name 
+flights	O I-fromloc.airport_name I-fromloc.city_name 
+from	O I-fromloc.city_name I-return_date.day_number 
+new	B-fromloc.city_name B-toloc.airport_code I-transport_type 
+york	I-fromloc.city_name B-toloc.airport_code B-arrive_time.period_of_day 
+to	O B-arrive_time.period_of_day I-fromloc.airport_name 
+miami	B-toloc.city_name I-fromloc.airport_name B-arrive_time.period_of_day 
+round	B-round_trip I-fromloc.airport_name B-toloc.airport_code 
+trip	I-round_trip I-fromloc.airport_name B-airline_name 
+with	O B-airline_name B-arrive_date.month_name 
+costs	O B-arrive_date.month_name B-return_date.day_name 
+less	B-cost_relative B-arrive_date.month_name I-toloc.airport_name 
+than	O B-arrive_date.month_name B-airport_code 
+466	B-fare_amount B-arrive_date.month_name B-return_date.month_name 
+dollars	I-fare_amount B-arrive_date.month_name B-return_date.month_name 
+atis_flight atis_meal atis_flight#atis_airfare 
+
+show	O B-meal_description I-flight_time 
+me	O B-time_relative B-meal 
+the	O B-time_relative B-airline_name 
+least	B-cost_relative B-cost_relative B-meal_description 
+expensive	I-cost_relative B-meal_description B-cost_relative 
+flight	O B-airline_name I-toloc.state_name 
+leaving	O I-toloc.city_name B-airline_name 
+miami	B-fromloc.city_name I-class_type B-cost_relative 
+on	O I-return_date.day_number B-cost_relative 
+sunday	B-depart_date.day_name I-fromloc.city_name I-return_date.day_number 
+after	B-depart_time.time_relative B-return_date.today_relative I-fromloc.city_name 
+12	B-depart_time.time B-arrive_time.period_of_day I-transport_type 
+o'clock	I-depart_time.time B-arrive_time.period_of_day I-transport_type 
+noon	I-depart_time.time B-arrive_time.period_of_day B-time_relative 
+and	O B-time_relative B-airline_name 
+arriving	O B-arrive_date.month_name B-return_date.today_relative 
+cleveland	B-toloc.city_name B-arrive_date.month_name I-toloc.airport_name 
+atis_flight atis_airfare atis_aircraft#atis_flight#atis_flight_no 
+
+hi	O I-depart_time.period_of_day B-meal_description 
+i	O I-depart_time.period_of_day B-cost_relative 
+need	O I-fromloc.city_name B-cost_relative 
+to	O I-fromloc.city_name B-arrive_date.month_name 
+get	O I-transport_type B-arrive_date.today_relative 
+a	O I-fromloc.city_name B-arrive_date.today_relative 
+flight	O I-transport_type I-toloc.city_name 
+from	O I-fromloc.city_name I-transport_type 
+memphis	B-fromloc.city_name I-transport_type I-fromloc.city_name 
+to	O I-fromloc.city_name I-transport_type 
+salt	B-toloc.city_name B-arrive_date.month_name I-transport_type 
+lake	I-toloc.city_name B-arrive_time.period_of_day B-arrive_date.month_name 
+city	I-toloc.city_name B-arrive_time.period_of_day I-fromloc.city_name 
+departing	O B-arrive_date.month_name B-arrive_time.period_of_day 
+before	B-depart_time.time_relative B-arrive_date.month_name B-arrive_time.period_of_day 
+10	B-depart_time.time B-arrive_date.month_name B-arrive_time.period_of_day 
+am	I-depart_time.time B-arrive_date.month_name I-toloc.airport_name 
+atis_flight atis_flight#atis_airfare atis_airfare 
+
+i	O I-depart_time.period_of_day B-economy 
+need	O B-cost_relative B-airline_name 
+a	O B-cost_relative I-depart_time.end_time 
+first	B-class_type B-cost_relative B-airline_name 
+class	I-class_type B-cost_relative B-meal_description 
+ticket	O B-airline_name B-cost_relative 
+on	O B-airline_name I-return_date.day_number 
+united	B-airline_name I-return_date.day_number I-fromloc.city_name 
+airlines	I-airline_name I-fromloc.city_name B-meal_description 
+from	O I-fromloc.city_name B-return_date.today_relative 
+denver	B-fromloc.city_name B-return_date.today_relative I-fromloc.city_name 
+to	O I-transport_type B-arrive_time.period_of_day 
+baltimore	B-toloc.city_name I-return_date.day_number I-transport_type 
+scheduled	O B-days_code B-airline_name 
+for	O B-meal_description I-fromloc.city_name 
+december	B-depart_date.month_name I-fromloc.city_name B-fromloc.state_code 
+seventeenth	B-depart_date.day_number B-time_relative B-return_date.day_number 
+atis_airfare atis_flight#atis_airfare atis_airfare 
+
+i	O I-depart_time.period_of_day B-meal_description 
+want	O I-fromloc.city_name B-cost_relative 
+a	O B-connect B-return_date.today_relative 
+flight	O B-connect B-return_date.today_relative 
+from	O B-stoploc.city_name B-meal_description 
+los	B-fromloc.city_name B-return_date.today_relative B-cost_relative 
+angeles	I-fromloc.city_name B-connect I-depart_time.end_time 
+to	O B-meal_description B-connect 
+pittsburgh	B-toloc.city_name I-fromloc.city_name I-depart_time.end_time 
+that	O B-arrive_time.time I-transport_type 
+arrives	O B-cost_relative B-toloc.airport_code 
+before	B-arrive_time.time_relative I-depart_time.end_time B-cost_relative 
+3	B-arrive_time.time I-depart_time.end_time B-meal_description 
+pm	I-arrive_time.time B-stoploc.city_name I-return_date.day_number 
+on	O I-return_date.day_number B-stoploc.city_name 
+tuesday	B-arrive_date.day_name I-fromloc.city_name B-days_code 
+atis_flight atis_flight#atis_airfare atis_airfare 
+
+i'd	O B-meal_description I-airline_name 
+like	O I-depart_time.period_of_day B-meal_description 
+to	O B-stoploc.airport_name B-return_date.day_name 
+book	O I-return_date.day_number B-stoploc.airport_name 
+the	O I-fromloc.city_name I-return_date.day_number 
+cheapest	B-cost_relative I-transport_type B-return_date.today_relative 
+one	B-round_trip I-transport_type B-return_date.today_relative 
+way	I-round_trip I-transport_type B-days_code 
+flight	O I-transport_type B-days_code 
+from	O I-transport_type B-return_date.today_relative 
+denver	B-fromloc.city_name I-fromloc.city_name I-transport_type 
+to	O I-transport_type B-return_date.day_number 
+pittsburgh	B-toloc.city_name I-fromloc.city_name I-transport_type 
+on	O I-transport_type B-arrive_date.month_name 
+july	B-depart_date.month_name I-transport_type I-fromloc.city_name 
+fifteenth	B-depart_date.day_number I-fromloc.city_name I-transport_type 
+atis_flight atis_flight#atis_airline atis_aircraft#atis_flight#atis_flight_no 
+
+i'd	O B-return_date.day_name B-meal_description 
+like	O B-return_date.day_name B-meal_description 
+a	O B-meal_description I-toloc.airport_name 
+flight	O B-arrive_date.day_name I-depart_time.end_time 
+from	O B-meal_description B-return_date.day_name 
+new	B-fromloc.city_name I-transport_type B-fromloc.airport_code 
+york	I-fromloc.city_name I-transport_type I-toloc.airport_name 
+to	O B-return_date.today_relative I-transport_type 
+los	B-toloc.city_name B-arrive_date.month_name B-connect 
+angeles	I-toloc.city_name B-arrive_date.month_name I-fromloc.airport_name 
+on	O B-arrive_date.month_name I-depart_time.end_time 
+saturday	B-depart_date.day_name I-toloc.airport_name I-fromloc.airport_name 
+morning	B-depart_time.period_of_day I-transport_type B-meal_description 
+on	O I-transport_type B-meal_description 
+us	B-airline_name I-transport_type B-meal_description 
+air	I-airline_name I-transport_type I-toloc.airport_name 
+atis_flight atis_cheapest atis_flight#atis_airline 
+
+how	O I-depart_time.period_of_day B-depart_date.year 
+much	O I-fromloc.airport_name I-depart_time.period_of_day 
+does	O I-depart_time.period_of_day I-fromloc.airport_name 
+it	O B-cost_relative I-fromloc.airport_name 
+cost	O B-cost_relative I-class_type 
+to	O B-cost_relative I-depart_time.time_relative 
+fly	O B-cost_relative B-meal_description 
+directly	B-flight_stop I-depart_time.time_relative I-depart_time.end_time 
+from	O B-toloc.state_name I-today_relative 
+philadelphia	B-fromloc.city_name I-today_relative B-toloc.airport_code 
+to	O B-meal_description B-return_date.day_name 
+san	B-toloc.city_name I-return_date.day_number I-today_relative 
+francisco	I-toloc.city_name B-return_date.day_name B-airline_name 
+on	O I-toloc.airport_name B-meal_description 
+american	B-airline_name B-meal_description I-transport_type 
+airlines	I-airline_name I-transport_type I-return_date.day_number 
+atis_airfare atis_flight#atis_airfare atis_flight#atis_airline 
+
+what	O I-class_type B-meal_description 
+is	O I-class_type B-meal_description 
+the	O B-cost_relative B-return_date.day_name 
+earliest	B-flight_mod B-cost_relative I-class_type 
+flight	O B-cost_relative I-class_type 
+that	O I-class_type B-cost_relative 
+has	O B-cost_relative B-fromloc.state_code 
+no	B-flight_stop B-cost_relative I-class_type 
+stops	I-flight_stop B-airline_name I-class_type 
+from	O B-airline_name B-return_date.day_name 
+washington	B-fromloc.city_name B-return_date.day_name B-fare_basis_code 
+to	O B-fare_basis_code B-return_date.day_name 
+san	B-toloc.city_name B-fare_basis_code B-cost_relative 
+francisco	I-toloc.city_name B-cost_relative I-depart_time.period_of_day 
+on	O I-depart_time.period_of_day B-cost_relative 
+friday	B-depart_date.day_name I-return_date.day_number I-depart_time.period_of_day 
+atis_flight atis_flight#atis_airline atis_airfare 
+
+what	O I-class_type B-day_name 
+is	O I-class_type B-meal_description 
+the	O B-cost_relative B-return_date.day_name 
+cheapest	B-cost_relative B-cost_relative I-class_type 
+round	B-round_trip I-class_type B-cost_relative 
+trip	I-round_trip I-class_type I-depart_time.period_of_day 
+fare	O I-depart_time.period_of_day B-state_name 
+on	O I-fromloc.city_name I-return_date.day_number 
+continental	B-airline_name I-fromloc.city_name B-return_date.day_number 
+1291	B-flight_number I-fromloc.city_name B-return_date.day_number 
+round	B-round_trip I-fromloc.city_name B-toloc.airport_code 
+trip	I-round_trip B-return_date.day_number I-fromloc.city_name 
+denver	B-fromloc.city_name B-airline_name B-return_date.day_number 
+san	B-fromloc.city_name B-airline_name I-fromloc.city_name 
+francisco	I-fromloc.city_name I-fromloc.city_name B-return_date.day_name 
+atis_airfare atis_airfare atis_meal 
+
+is	O I-depart_time.end_time B-economy 
+there	O I-depart_time.end_time B-economy 
+a	O I-depart_time.end_time B-economy 
+flight	O B-economy I-depart_time.end_time 
+from	O I-depart_time.time_relative I-depart_time.end_time 
+pittsburgh	B-fromloc.city_name I-toloc.city_name I-depart_time.period_of_day 
+to	O B-return_date.today_relative B-toloc.state_name 
+baltimore	B-toloc.city_name B-arrive_time.period_of_day I-transport_type 
+that	O I-depart_time.end_time B-arrive_time.period_of_day 
+arrives	O I-return_date.day_number B-economy 
+between	O I-fromloc.city_name I-toloc.airport_name 
+6	B-arrive_time.start_time B-return_date.today_relative I-fromloc.city_name 
+and	O I-fromloc.airport_name B-arrive_date.month_name 
+7	B-arrive_time.end_time I-transport_type B-arrive_date.month_name 
+pm	I-arrive_time.end_time I-fromloc.city_name I-toloc.airport_name 
+atis_flight atis_flight#atis_airfare atis_city 
+
+show	O B-day_name B-return_date.day_name 
+me	O B-return_date.day_name I-class_type 
+all	O I-class_type I-toloc.airport_name 
+overnight	B-flight_mod B-cost_relative B-return_date.day_name 
+flights	O B-cost_relative B-meal_description 
+from	O B-cost_relative I-depart_time.end_time 
+washington	B-fromloc.city_name I-depart_time.end_time B-cost_relative 
+dc	B-fromloc.state_code B-airline_name I-airline_name 
+to	O B-airline_name B-days_code 
+san	B-toloc.city_name B-days_code I-depart_time.time_relative 
+francisco	I-toloc.city_name B-airline_name I-return_date.day_number 
+and	O I-return_date.day_number I-depart_time.period_of_day 
+list	O I-fromloc.city_name I-toloc.airport_name 
+their	O I-fromloc.airport_name I-transport_type 
+fares	O I-transport_type I-fromloc.city_name 
+atis_flight atis_flight#atis_airfare atis_meal 
+
+what	O B-meal_description I-class_type 
+is	O B-meal_description I-transport_type 
+the	O B-return_time.period_of_day I-transport_type 
+latest	B-flight_mod B-meal_description I-fromloc.city_name 
+first	B-class_type B-airline_name I-fromloc.city_name 
+class	I-class_type B-airline_name B-cost_relative 
+flight	O B-return_date.day_name B-days_code 
+of	O B-return_date.day_name B-airline_name 
+the	O I-toloc.airport_name B-airline_name 
+day	O B-meal_description I-transport_type 
+leaving	O I-transport_type I-fromloc.city_name 
+dallas	B-fromloc.city_name I-transport_type I-fromloc.city_name 
+for	O I-transport_type I-fromloc.city_name 
+san	B-toloc.city_name I-fromloc.city_name I-return_date.day_number 
+francisco	I-toloc.city_name I-transport_type I-fromloc.city_name 
+atis_flight atis_airfare atis_meal 
+
+i	O I-fromloc.city_name B-meal_description 
+want	O I-class_type I-fromloc.city_name 
+a	O B-return_date.day_name I-toloc.city_name 
+flight	O B-return_date.day_name B-class_type 
+departing	O B-meal_description B-class_type 
+from	O I-transport_type I-fromloc.city_name 
+newark	B-fromloc.city_name I-fromloc.city_name B-airline_name 
+to	O B-return_date.today_relative I-transport_type 
+los	B-toloc.city_name B-arrive_date.month_name B-stoploc.airport_name 
+angeles	I-toloc.city_name B-stoploc.airport_name B-arrive_date.month_name 
+that	O B-stoploc.airport_name I-depart_time.end_time 
+leaves	O I-depart_time.end_time B-stoploc.airport_name 
+in	O I-return_date.day_number B-return_date.today_relative 
+the	O I-fromloc.city_name I-toloc.airport_name 
+morning	B-depart_time.period_of_day B-return_date.today_relative I-fromloc.city_name 
+atis_flight atis_flight#atis_airfare atis_ground_service 
+
+i	O I-depart_time.period_of_day B-meal_description 
+would	O I-depart_time.end_time I-class_type 
+like	O I-transport_type I-depart_time.end_time 
+to	O I-transport_type B-arrive_date.month_name 
+fly	O I-transport_type B-arrive_date.today_relative 
+from	O I-transport_type B-arrive_date.today_relative 
+atlanta	B-fromloc.city_name I-transport_type I-fromloc.city_name 
+to	O I-transport_type B-return_date.day_number 
+san	B-toloc.city_name I-fromloc.city_name I-transport_type 
+francisco	I-toloc.city_name I-transport_type I-fromloc.city_name 
+with	O I-fromloc.city_name I-transport_type 
+a	O I-transport_type B-arrive_date.month_name 
+stopover	O I-fromloc.city_name B-arrive_date.month_name 
+in	O I-transport_type B-return_date.today_relative 
+dallas	B-stoploc.city_name I-transport_type B-arrive_date.month_name 
+atis_flight atis_flight#atis_airline atis_aircraft#atis_flight#atis_flight_no 
+
+please	O B-return_date.day_name I-depart_time.period_of_day 
+give	O B-return_date.day_name I-class_type 
+me	O B-meal_description I-class_type 
+the	O I-flight_stop I-transport_type 
+flights	O B-meal_description I-transport_type 
+available	O I-transport_type B-airline_name 
+from	O I-transport_type B-airline_name 
+boston	B-fromloc.city_name I-transport_type I-return_date.day_number 
+to	O I-transport_type I-return_date.day_number 
+pittsburgh	B-toloc.city_name I-return_date.day_number I-fromloc.city_name 
+on	O I-fromloc.city_name I-return_date.day_number 
+wednesday	B-depart_date.day_name I-fromloc.city_name I-transport_type 
+of	O I-transport_type I-fromloc.airport_name 
+next	B-depart_date.date_relative I-transport_type B-arrive_date.month_name 
+week	O I-transport_type B-economy 
+atis_flight atis_flight#atis_airline atis_aircraft#atis_flight#atis_flight_no 
+
+i	O B-flight_time I-depart_time.period_of_day 
+am	O B-meal_description B-return_date.day_name 
+also	O I-fromloc.city_name B-meal 
+interested	O I-transport_type B-time_relative 
+in	O I-transport_type B-time_relative 
+a	O I-arrive_date.day_number I-fromloc.city_name 
+flight	O B-connect B-meal_description 
+that	O B-meal_description B-connect 
+runs	O B-meal_description I-depart_time.period_of_day 
+from	O I-transport_type B-aircraft_code 
+st.	B-fromloc.city_name B-economy I-transport_type 
+louis	I-fromloc.city_name I-return_date.day_number B-airline_name 
+to	O B-return_date.day_name B-days_code 
+las	B-toloc.city_name I-toloc.airport_name I-fromloc.city_name 
+vegas	I-toloc.city_name B-meal_description B-stoploc.city_name 
+atis_flight atis_flight#atis_airfare atis_flight#atis_airline 
+
+what	O I-transport_type B-class_type 
+is	O I-transport_type B-arrive_date.day_name 
+the	O I-fromloc.city_name I-transport_type 
+fare	O I-fromloc.city_name I-transport_type 
+going	O I-fromloc.city_name I-transport_type 
+one	B-round_trip I-transport_type B-arrive_date.month_name 
+way	I-round_trip I-transport_type B-arrive_date.month_name 
+on	O I-fromloc.city_name I-transport_type 
+november	B-depart_date.month_name I-transport_type I-fromloc.city_name 
+seventh	B-depart_date.day_number I-fromloc.city_name I-transport_type 
+from	O I-transport_type I-fromloc.city_name 
+denver	B-fromloc.city_name I-transport_type I-fromloc.city_name 
+to	O I-transport_type B-return_date.day_number 
+oakland	B-toloc.city_name I-transport_type B-return_date.day_number 
+atis_airfare atis_flight#atis_airfare atis_aircraft#atis_flight#atis_flight_no 
+
+what	O I-depart_time.period_of_day I-arrive_date.day_number 
+type	O I-arrive_date.day_number I-depart_time.period_of_day 
+of	O I-arrive_date.day_number B-arrive_time.period_of_day 
+aircraft	O B-state_name B-arrive_time.period_of_day 
+is	O B-meal_description B-cost_relative 
+used	O B-airline_name B-arrive_time.period_of_day 
+for	O B-meal_description B-cost_relative 
+the	O B-airline_name B-return_time.period_of_day 
+american	B-airline_name I-return_date.day_number B-cost_relative 
+flight	O B-return_date.day_name B-days_code 
+leaving	O I-fromloc.city_name B-meal_description 
+at	O I-toloc.city_name I-fromloc.airport_name 
+419	B-depart_time.time B-stoploc.city_name B-connect 
+pm	I-depart_time.time B-stoploc.city_name I-toloc.airport_name 
+atis_aircraft atis_meal atis_aircraft#atis_flight#atis_flight_no 
+
+show	O I-class_type B-arrive_date.month_name 
+me	O B-meal_description I-class_type 
+the	O I-flight_stop B-fare_basis_code 
+flights	O B-meal_description I-fromloc.airport_name 
+from	O I-transport_type B-time_relative 
+pittsburgh	B-fromloc.city_name I-transport_type B-time_relative 
+to	O I-transport_type B-arrive_date.today_relative 
+san	B-toloc.city_name I-transport_type I-return_date.day_number 
+francisco	I-toloc.city_name I-transport_type B-arrive_date.today_relative 
+for	O I-transport_type B-economy 
+thursday	B-depart_date.day_name I-fromloc.city_name B-return_date.day_number 
+night	B-depart_time.period_of_day I-transport_type I-fromloc.city_name 
+or	B-or I-transport_type I-toloc.airport_name 
+friday	B-depart_date.day_name I-transport_type I-fromloc.city_name 
+atis_flight atis_flight#atis_airfare atis_meal 
+
+show	O I-class_type B-arrive_date.month_name 
+me	O B-meal_description B-return_date.day_name 
+flights	O I-transport_type I-flight_stop 
+from	O I-transport_type B-time_relative 
+pittsburgh	B-fromloc.city_name I-transport_type I-return_date.day_number 
+to	O I-transport_type B-return_date.today_relative 
+san	B-toloc.city_name I-transport_type I-return_date.day_number 
+francisco	I-toloc.city_name I-return_date.day_number I-transport_type 
+on	O I-toloc.airport_name I-fromloc.city_name 
+friday	B-depart_date.day_name I-transport_type B-meal_description 
+leaving	O I-transport_type I-fromloc.city_name 
+after	B-depart_time.time_relative I-transport_type I-fromloc.city_name 
+12	B-depart_time.time I-fromloc.city_name I-transport_type 
+noon	I-depart_time.time B-arrive_date.month_name I-transport_type 
+atis_flight atis_meal atis_flight#atis_airline 
+
+i	O I-depart_time.period_of_day B-arrive_time.period_of_day 
+would	O B-stoploc.city_name I-class_type 
+like	O B-stoploc.city_name I-class_type 
+an	O B-stoploc.city_name I-class_type 
+early	B-depart_time.period_of_day I-class_type B-stoploc.city_name 
+morning	B-depart_time.period_of_day B-stoploc.airport_name B-cost_relative 
+flight	O B-stoploc.airport_name B-fare_basis_code 
+from	O B-stoploc.airport_name I-fromloc.city_name 
+chicago	B-fromloc.city_name I-fromloc.city_name B-depart_time.time_relative 
+into	O I-fromloc.city_name B-return_date.day_number 
+seattle	B-toloc.city_name B-return_date.day_number B-return_date.today_relative 
+on	O I-class_type B-airline_name 
+continental	B-airline_name I-fromloc.airport_name I-class_type 
+airlines	I-airline_name B-arrive_time.period_of_day I-fromloc.city_name 
+atis_flight atis_airfare atis_flight_no 
+
+i	O I-depart_time.period_of_day B-economy 
+need	O B-days_code B-return_date.day_name 
+information	O B-cost_relative B-meal_description 
+on	O B-cost_relative B-meal_description 
+flights	O B-meal_description I-transport_type 
+from	O I-transport_type B-airline_name 
+washington	B-fromloc.city_name I-transport_type B-airline_name 
+to	O I-transport_type B-airline_name 
+boston	B-toloc.city_name I-transport_type B-arrive_date.today_relative 
+that	O I-transport_type B-economy 
+leave	O B-economy I-transport_type 
+on	O I-return_date.day_number B-meal_description 
+a	O B-meal_description I-fromloc.city_name 
+saturday	B-depart_date.day_name I-fromloc.city_name I-transport_type 
+atis_flight atis_flight#atis_airline atis_flight#atis_airfare 
+
+list	O B-arrive_time.period_of_day I-arrive_date.day_number 
+all	O B-arrive_time.period_of_day I-arrive_time.end_time 
+flights	O B-arrive_time.period_of_day I-return_date.day_number 
+on	O B-arrive_time.period_of_day I-return_date.day_number 
+continental	B-airline_name B-arrive_time.period_of_day B-time_relative 
+from	O B-arrive_time.period_of_day B-time_relative 
+denver	B-fromloc.city_name B-arrive_time.period_of_day B-time_relative 
+to	O B-time_relative B-arrive_time.period_of_day 
+chicago	B-toloc.city_name B-arrive_date.month_name B-arrive_time.period_of_day 
+which	O B-arrive_date.month_name I-fromloc.airport_name 
+depart	O B-arrive_date.month_name I-fromloc.airport_name 
+after	B-depart_time.time_relative B-arrive_time.period_of_day B-arrive_date.month_name 
+934	B-depart_time.time B-airline_name B-arrive_date.month_name 
+pm	I-depart_time.time B-days_code B-arrive_date.month_name 
+atis_flight atis_airfare atis_flight_time 
+
+show	O B-meal_description I-depart_time.period_of_day 
+me	O I-transport_type B-arrive_date.day_name 
+some	O I-transport_type B-time_relative 
+information	O I-transport_type B-time_relative 
+on	O I-transport_type B-time_relative 
+making	O I-transport_type B-economy 
+a	O B-economy B-arrive_date.day_name 
+reservation	O I-depart_time.end_time B-arrive_date.month_name 
+from	O B-economy I-today_relative 
+philadelphia	B-fromloc.city_name I-today_relative I-depart_time.end_time 
+to	O B-meal_description B-connect 
+denver	B-toloc.city_name I-return_date.day_number B-arrive_time.period_of_day 
+on	O I-fromloc.city_name I-return_date.day_number 
+sunday	B-depart_date.day_name I-fromloc.city_name I-return_date.day_number 
+atis_flight atis_flight#atis_airline atis_flight#atis_airfare 
+
+what	O B-meal_description B-arrive_date.month_name 
+type	O I-transport_type B-return_time.period_of_day 
+of	O I-arrive_date.day_number B-return_time.period_of_day 
+aircraft	O B-arrive_time.period_of_day I-transport_type 
+is	O B-arrive_time.period_of_day I-transport_type 
+used	O B-arrive_time.period_of_day B-time_relative 
+flying	O B-time_relative B-arrive_time.period_of_day 
+from	O B-arrive_time.period_of_day B-stoploc.airport_name 
+atlanta	B-fromloc.city_name B-time_relative B-arrive_time.period_of_day 
+to	O B-arrive_time.period_of_day B-stoploc.airport_name 
+denver	B-toloc.city_name B-arrive_time.period_of_day B-time_relative 
+before	B-depart_time.time_relative B-arrive_time.period_of_day B-arrive_date.month_name 
+12	B-depart_time.time B-arrive_time.period_of_day B-time_relative 
+noon	I-depart_time.time B-arrive_time.period_of_day B-arrive_date.month_name 
+atis_aircraft atis_aircraft#atis_flight#atis_flight_no atis_flight#atis_airfare 
+
+i	O B-flight_time I-depart_time.period_of_day 
+would	O B-connect B-flight_time 
+like	O B-connect B-meal_description 
+to	O B-connect B-meal_description 
+book	O B-meal_description B-connect 
+a	O B-connect B-arrive_time.period_of_day 
+flight	O B-meal_description B-connect 
+from	O B-arrive_time.period_of_day B-day_number 
+charlotte	B-fromloc.city_name B-time_relative B-arrive_time.period_of_day 
+to	O B-return_time.period_mod B-arrive_time.period_of_day 
+baltimore	B-toloc.city_name B-meal_description B-arrive_date.today_relative 
+on	O I-transport_type I-depart_time.period_of_day 
+april	B-depart_date.month_name I-transport_type B-arrive_date.today_relative 
+eighth	B-depart_date.day_number I-transport_type B-day_number 
+atis_flight atis_flight#atis_airline atis_airfare 
+
+i	O I-depart_time.period_of_day I-depart_time.end_time 
+want	O I-fromloc.city_name I-depart_time.period_of_day 
+to	O B-connect I-fromloc.airport_name 
+leave	O B-connect B-meal_description 
+chicago	B-fromloc.city_name B-stoploc.city_name B-connect 
+next	B-depart_date.date_relative B-stoploc.city_name B-cost_relative 
+tuesday	B-depart_date.day_name I-transport_type B-cost_relative 
+and	O B-meal_description I-transport_type 
+arrive	O I-fromloc.city_name I-transport_type 
+in	O I-transport_type B-arrive_date.month_name 
+detroit	B-toloc.city_name I-transport_type I-fromloc.city_name 
+around	B-arrive_time.time_relative I-transport_type B-return_date.today_relative 
+6	B-arrive_time.time B-return_date.today_relative I-transport_type 
+pm	I-arrive_time.time B-arrive_date.month_name B-stoploc.city_name 
+atis_flight atis_aircraft#atis_flight#atis_flight_no atis_flight_no 
+
+i'm	O I-depart_time.period_of_day B-depart_date.year 
+requesting	O B-cost_relative B-meal_description 
+flight	O B-cost_relative B-meal_description 
+information	O B-meal_description I-transport_type 
+on	O I-transport_type I-today_relative 
+a	O I-transport_type B-meal_description 
+flight	O I-transport_type B-economy 
+from	O I-transport_type B-economy 
+denver	B-fromloc.city_name B-meal_description I-fromloc.city_name 
+to	O I-transport_type I-fromloc.city_name 
+san	B-toloc.city_name I-return_date.day_number I-transport_type 
+francisco	I-toloc.city_name B-airline_name I-fromloc.city_name 
+on	O I-fromloc.city_name B-meal_description 
+wednesday	B-depart_date.day_name I-fromloc.city_name I-transport_type 
+atis_flight atis_flight#atis_airfare atis_airfare 
+
+what	O B-meal_description B-class_type 
+is	O I-transport_type B-meal 
+the	O B-airline_name I-transport_type 
+cost	O B-airline_name B-return_date.day_name 
+of	O B-return_date.day_name I-arrive_date.day_number 
+round	B-round_trip I-fromloc.city_name B-airline_name 
+trip	I-round_trip B-return_date.day_number I-fromloc.city_name 
+ticket	O B-airline_name B-return_date.day_number 
+first	B-class_type B-airline_name B-return_date.today_relative 
+class	I-class_type B-return_date.today_relative B-airline_name 
+between	O B-cost_relative B-airline_name 
+oakland	B-fromloc.city_name B-cost_relative B-meal_description 
+and	O B-meal_description I-depart_time.time_relative 
+atlanta	B-toloc.city_name I-transport_type B-meal_description 
+atis_airfare atis_ground_fare atis_flight#atis_airfare 
+
+i	O I-depart_time.period_of_day B-meal_description 
+would	O B-connect B-return_date.today_relative 
+like	O B-connect B-meal_description 
+to	O B-connect B-meal_description 
+fly	O B-meal_description B-connect 
+from	O I-transport_type B-aircraft_code 
+columbus	B-fromloc.city_name B-return_date.day_number I-transport_type 
+to	O B-return_date.day_number I-transport_type 
+phoenix	B-toloc.city_name B-return_date.day_number B-arrive_date.today_relative 
+through	O B-return_date.day_number B-airline_name 
+cincinnati	B-stoploc.city_name B-return_date.day_number I-class_type 
+in	O B-time_relative B-airline_name 
+the	O B-time_relative B-arrive_time.period_of_day 
+afternoon	B-depart_time.period_of_day B-cost_relative B-time_relative 
+atis_flight atis_aircraft#atis_flight#atis_flight_no atis_flight#atis_airline 
+
+i	O B-fromloc.state_code I-depart_time.end_time 
+would	O B-connect B-meal_description 
+like	O B-stoploc.city_name B-meal_description 
+to	O B-connect B-fromloc.state_code 
+have	O B-meal_description B-stoploc.city_name 
+the	O I-fromloc.city_name I-return_date.day_number 
+airline	O B-arrive_time.period_of_day B-time_relative 
+that	O B-arrive_time.period_of_day B-time_relative 
+flies	O B-time_relative B-arrive_time.period_of_day 
+toronto	B-fromloc.city_name B-arrive_date.month_name B-time_relative 
+detroit	B-toloc.city_name B-arrive_date.month_name B-airline_name 
+and	O B-arrive_date.month_name B-airline_name 
+st.	B-toloc.city_name B-airline_name B-arrive_date.month_name 
+louis	I-toloc.city_name B-flight_mod B-arrive_date.month_name 
+atis_airline atis_flight#atis_airline atis_aircraft 
+
+show	O B-return_date.day_name B-meal_description 
+me	O B-meal_description I-flight_stop 
+all	O I-flight_stop B-time_relative 
+flights	O B-meal_description B-airline_name 
+from	O I-transport_type B-airline_name 
+new	B-fromloc.city_name I-transport_type B-airline_name 
+york	I-fromloc.city_name I-transport_type B-airline_name 
+to	O I-transport_type B-arrive_date.month_name 
+miami	B-toloc.city_name B-arrive_date.month_name I-transport_type 
+leaving	O B-arrive_date.month_name B-connect 
+on	O B-arrive_date.month_name I-fromloc.airport_name 
+a	O B-arrive_date.month_name I-depart_time.end_time 
+tuesday	B-depart_date.day_name B-airline_name B-arrive_date.month_name 
+atis_flight atis_ground_service atis_flight#atis_airfare 
+
+how	O I-fromloc.airport_name B-meal_description 
+many	O I-fromloc.airport_name B-cost_relative 
+first	B-class_type I-fromloc.airport_name B-fare_basis_code 
+class	I-class_type I-fromloc.airport_name B-airline_name 
+flights	O I-fromloc.airport_name B-airline_name 
+does	O I-fromloc.airport_name I-return_date.day_number 
+united	B-airline_name B-stoploc.airport_name I-fromloc.airport_name 
+have	O I-fromloc.city_name B-stoploc.airport_name 
+leaving	O I-fromloc.city_name B-arrive_date.month_name 
+from	O I-transport_type B-return_date.today_relative 
+all	O B-arrive_time.period_of_day I-fromloc.city_name 
+cities	O B-arrive_time.period_of_day I-return_date.day_number 
+today	B-depart_date.today_relative B-arrive_time.period_of_day B-airline_name 
+atis_quantity atis_ground_service#atis_ground_fare atis_flight 
+
+can	O I-depart_time.period_of_day I-fromloc.city_name 
+i	O I-depart_time.period_of_day I-fromloc.city_name 
+go	O I-fromloc.city_name I-depart_time.period_of_day 
+from	O I-transport_type I-fromloc.city_name 
+boston	B-fromloc.city_name I-transport_type I-fromloc.city_name 
+to	O I-transport_type B-arrive_date.today_relative 
+san	B-toloc.city_name I-transport_type B-arrive_date.today_relative 
+francisco	I-toloc.city_name I-transport_type I-fromloc.city_name 
+with	O I-fromloc.city_name I-return_date.day_number 
+a	O I-transport_type B-return_date.today_relative 
+stopover	O I-fromloc.city_name I-toloc.airport_name 
+in	O B-return_date.today_relative I-transport_type 
+denver	B-stoploc.city_name B-arrive_time.period_of_day I-transport_type 
+atis_flight atis_flight#atis_airline atis_flight#atis_airfare 
+
+what	O I-class_type B-arrive_date.today_relative 
+airlines	O B-return_date.month_name B-meal_description 
+have	O I-depart_time.period_of_day B-arrive_time.period_of_day 
+flights	O I-transport_type B-airline_name 
+from	O I-transport_type B-airline_name 
+boston	B-fromloc.city_name I-transport_type I-return_date.day_number 
+to	O I-transport_type B-arrive_date.today_relative 
+philadelphia	B-toloc.city_name I-transport_type B-arrive_date.today_relative 
+that	O I-fromloc.city_name I-transport_type 
+leave	O I-transport_type I-fromloc.city_name 
+before	B-depart_time.time_relative I-transport_type I-fromloc.city_name 
+630	B-depart_time.time I-transport_type I-fromloc.city_name 
+am	I-depart_time.time I-fromloc.city_name I-transport_type 
+atis_airline atis_flight#atis_airline atis_flight#atis_airfare 
+
+what	O I-class_type B-meal_description 
+flights	O B-meal_description I-class_type 
+leave	O I-flight_stop B-arrive_time.period_of_day 
+philadelphia	B-fromloc.city_name B-meal_description I-fromloc.airport_name 
+for	O B-time_relative B-airline_name 
+dallas	B-toloc.city_name B-arrive_time.period_of_day B-airline_name 
+and	O B-airline_name B-time_relative 
+depart	O B-airline_name B-arrive_date.month_name 
+before	B-depart_time.time_relative B-arrive_date.month_name B-days_code 
+noon	B-depart_time.time B-arrive_date.month_name B-airline_name 
+on	O B-airline_name B-arrive_date.month_name 
+american	B-airline_name I-return_date.day_number B-arrive_date.month_name 
+airlines	I-airline_name I-return_date.day_number B-airline_name 
+atis_flight atis_ground_fare atis_ground_service#atis_ground_fare 
+
+what	O B-arrive_time.period_of_day B-arrive_date.today_relative 
+are	O B-arrive_time.period_of_day I-transport_type 
+the	O I-return_date.day_number B-arrive_time.period_of_day 
+latest	B-flight_mod I-fromloc.city_name I-toloc.airport_name 
+flights	O I-transport_type B-arrive_date.month_name 
+that	O I-transport_type I-fromloc.city_name 
+i	O I-transport_type I-return_date.day_number 
+can	O I-transport_type B-meal_description 
+take	O I-transport_type I-fromloc.city_name 
+from	O I-transport_type B-return_date.today_relative 
+baltimore	B-fromloc.city_name I-transport_type I-fromloc.city_name 
+to	O I-transport_type B-return_date.today_relative 
+boston	B-toloc.city_name I-transport_type B-arrive_date.today_relative 
+atis_flight atis_aircraft#atis_flight#atis_flight_no atis_flight#atis_airfare 
+
+i'm	O B-arrive_date.month_name B-depart_date.year 
+sorry	O B-arrive_date.month_name B-arrive_time.period_of_day 
+i	O B-arrive_date.month_name B-flight_stop 
+want	O B-arrive_date.month_name B-flight_stop 
+to	O B-arrive_date.month_name I-fromloc.airport_name 
+book	O I-depart_time.time_relative B-arrive_time.period_of_day 
+a	O I-toloc.city_name B-arrive_date.month_name 
+flight	O I-transport_type B-connect 
+from	O I-transport_type B-meal_description 
+atlanta	B-fromloc.city_name I-transport_type B-meal_description 
+to	O I-transport_type B-meal_description 
+denver	B-toloc.city_name I-transport_type B-meal_description 
+colorado	B-toloc.state_name I-fromloc.city_name I-transport_type 
+atis_flight atis_flight#atis_airfare atis_flight#atis_airline 
+
+do	O B-meal_description B-day_name 
+you	O B-arrive_time.period_of_day I-transport_type 
+have	O I-transport_type B-arrive_time.period_of_day 
+the	O I-transport_type B-airline_name 
+fare	O I-fromloc.city_name I-transport_type 
+for	O I-transport_type B-arrive_date.month_name 
+traveling	O I-fromloc.city_name I-transport_type 
+from	O I-transport_type B-return_date.today_relative 
+oakland	B-fromloc.airport_name I-transport_type B-meal_description 
+airport	I-fromloc.airport_name I-transport_type B-meal_description 
+to	O I-transport_type B-meal_description 
+oakland	B-toloc.city_name B-meal_description I-transport_type 
+downtown	O I-transport_type B-time_relative 
+atis_airfare atis_flight#atis_airfare atis_airfare#atis_flight 
+
+i	O I-depart_time.end_time B-depart_date.year 
+would	O B-stoploc.city_name B-connect 
+like	O B-connect B-stoploc.city_name 
+to	O B-connect B-stoploc.city_name 
+fly	O B-meal_description B-connect 
+from	O I-transport_type B-arrive_time.period_of_day 
+denver	B-fromloc.city_name I-transport_type I-fromloc.city_name 
+to	O I-transport_type B-day_number 
+atlanta	B-toloc.city_name I-transport_type B-time_relative 
+by	O I-transport_type I-fromloc.city_name 
+way	O I-transport_type B-arrive_date.month_name 
+of	O I-fromloc.city_name I-transport_type 
+pittsburgh	B-stoploc.city_name B-arrive_date.month_name I-transport_type 
+atis_flight atis_flight#atis_airline atis_airline#atis_flight_no 
+
+what	O I-class_type B-meal_description 
+is	O I-class_type B-meal_description 
+the	O I-fromloc.airport_name B-cost_relative 
+first	B-flight_mod I-fromloc.airport_name B-meal 
+flight	O I-fromloc.airport_name B-airline_name 
+after	B-depart_time.time_relative B-airline_name I-fromloc.airport_name 
+8	B-depart_time.time B-return_date.day_number B-airline_name 
+am	I-depart_time.time B-return_date.day_number B-airline_name 
+from	O B-airline_name I-transport_type 
+boston	B-fromloc.city_name B-return_date.day_name I-fromloc.city_name 
+to	O I-transport_type I-class_type 
+san	B-toloc.city_name I-transport_type I-fromloc.city_name 
+francisco	I-toloc.city_name I-transport_type I-fromloc.city_name 
+atis_flight atis_aircraft#atis_flight#atis_flight_no atis_flight#atis_airline 
+
+what	O I-flight_stop B-meal_description 
+flights	O B-meal_description B-flight_stop 
+leave	O I-transport_type B-return_time.period_of_day 
+chicago	B-fromloc.city_name I-toloc.airport_name B-airline_name 
+and	O I-transport_type B-meal_description 
+arrive	O I-transport_type I-return_date.day_number 
+in	O I-transport_type B-airline_name 
+detroit	B-toloc.city_name I-transport_type I-fromloc.city_name 
+around	B-arrive_time.time_relative B-return_date.today_relative I-toloc.airport_name 
+6	B-arrive_time.time I-toloc.airport_name B-arrive_date.month_name 
+pm	I-arrive_time.time B-return_date.today_relative I-transport_type 
+next	B-arrive_date.date_relative B-stoploc.city_name I-transport_type 
+tuesday	B-arrive_date.day_name I-transport_type B-return_date.today_relative 
+atis_flight atis_flight_no atis_aircraft#atis_flight#atis_flight_no 
+
+i	O I-depart_time.period_of_day B-depart_date.year 
+would	O I-class_type B-stoploc.city_name 
+like	O B-return_date.day_name I-depart_time.period_of_day 
+to	O I-class_type B-return_date.day_name 
+fly	O B-return_date.day_name B-fromloc.state_code 
+from	O B-return_date.day_name I-class_type 
+baltimore	B-fromloc.city_name I-class_type B-return_date.day_number 
+to	O B-return_date.day_name B-cost_relative 
+san	B-toloc.city_name I-flight_stop B-cost_relative 
+francisco	I-toloc.city_name I-depart_time.period_of_day B-meal_description 
+on	O I-depart_time.period_of_day I-fromloc.city_name 
+eastern	B-airline_name I-depart_time.period_of_day I-fromloc.city_name 
+airlines	I-airline_name I-return_date.day_number B-cost_relative 
+atis_flight atis_flight#atis_airline atis_aircraft#atis_flight#atis_flight_no 
+
+what	O B-meal_description B-arrive_date.today_relative 
+kind	O B-arrive_date.today_relative I-transport_type 
+of	O I-return_date.day_number B-arrive_time.period_of_day 
+aircraft	O I-fromloc.city_name I-return_date.day_number 
+is	O I-depart_time.period_of_day I-fromloc.city_name 
+used	O B-cost_relative I-return_date.day_number 
+on	O B-cost_relative B-meal_description 
+a	O B-meal_description I-depart_time.time_relative 
+flight	O I-transport_type I-depart_time.period_of_day 
+from	O B-meal_description I-transport_type 
+cleveland	B-fromloc.city_name B-time_relative I-transport_type 
+to	O B-stoploc.airport_name B-cost_relative 
+dallas	B-toloc.city_name B-stoploc.airport_name B-cost_relative 
+atis_aircraft atis_airfare atis_ground_service 
+
+show	O B-day_name B-meal_description 
+me	O B-meal_description I-toloc.airport_name 
+the	O B-return_time.period_of_day I-return_date.day_number 
+first	B-class_type B-meal_description B-airline_name 
+class	I-class_type B-airline_name B-time_relative 
+and	O I-return_date.day_number B-airline_name 
+coach	B-class_type I-fromloc.city_name B-arrive_date.month_name 
+flights	O B-return_date.today_relative B-arrive_date.month_name 
+from	O I-transport_type B-arrive_date.month_name 
+kennedy	B-fromloc.airport_name I-transport_type I-return_date.day_number 
+airport	I-fromloc.airport_name I-transport_type B-time_relative 
+to	O I-transport_type B-return_date.today_relative 
+miami	B-toloc.city_name B-return_date.today_relative B-arrive_date.today_relative 
+atis_flight atis_flight#atis_airfare atis_ground_fare 
+
+what	O B-arrive_date.month_name B-meal_description 
+is	O B-arrive_date.month_name I-class_type 
+the	O B-airline_name B-arrive_time.period_of_day 
+cheapest	B-cost_relative B-days_code B-airline_name 
+flight	O B-days_code B-airline_name 
+from	O B-airline_name B-days_code 
+denver	B-fromloc.city_name B-return_date.day_name B-days_code 
+to	O B-return_date.day_number B-return_date.day_name 
+pittsburgh	B-toloc.city_name B-cost_relative B-return_date.day_number 
+on	O B-cost_relative I-class_type 
+july	B-depart_date.month_name B-meal_description B-cost_relative 
+twenty	B-depart_date.day_number I-transport_type I-depart_time.period_of_day 
+sixth	I-depart_date.day_number I-fromloc.city_name I-transport_type 
+atis_flight atis_aircraft#atis_flight#atis_flight_no atis_flight#atis_airline 
+
+list	O B-arrive_time.period_of_day I-fromloc.airport_name 
+all	O B-arrive_time.period_of_day I-fromloc.airport_name 
+nonstop	B-flight_stop B-arrive_time.period_of_day I-return_date.day_number 
+flights	O B-arrive_time.period_of_day I-transport_type 
+on	O B-arrive_time.period_of_day I-return_date.day_number 
+tuesday	B-arrive_date.day_name B-arrive_time.period_of_day B-time_relative 
+before	B-arrive_time.time_relative B-arrive_time.period_of_day B-airline_name 
+noon	B-arrive_time.time B-arrive_time.period_of_day B-time_relative 
+from	O B-arrive_time.period_of_day B-time_relative 
+charlotte	B-fromloc.city_name B-arrive_time.period_of_day B-time_relative 
+to	O B-arrive_time.period_of_day B-time_relative 
+baltimore	B-toloc.city_name B-arrive_time.period_of_day B-time_relative 
+atis_flight atis_airfare atis_flight_time 
+
+please	O I-return_date.today_relative I-transport_type 
+find	O B-meal I-transport_type 
+a	O I-fromloc.airport_name B-stoploc.airport_name 
+flight	O B-stoploc.airport_name I-fromloc.airport_name 
+from	O B-stoploc.airport_name I-today_relative 
+san	B-fromloc.city_name I-return_date.day_number B-stoploc.airport_name 
+diego	I-fromloc.city_name I-return_date.day_number I-fromloc.city_name 
+to	O B-days_code B-meal_description 
+toronto	B-toloc.city_name B-meal_description I-toloc.airport_name 
+on	O I-fromloc.city_name I-toloc.airport_name 
+alaska	B-airline_name B-return_date.day_number I-transport_type 
+airlines	I-airline_name I-class_type B-airline_name 
+atis_flight atis_ground_service atis_airfare 
+
+give	O B-fare_basis_code B-return_date.day_name 
+me	O B-fare_basis_code B-return_date.day_name 
+the	O I-fromloc.airport_name B-fare_basis_code 
+flights	O I-fromloc.airport_name I-flight_stop 
+from	O I-fromloc.airport_name B-time_relative 
+pittsburgh	B-fromloc.city_name I-return_date.day_number I-transport_type 
+to	O B-return_date.day_name I-fromloc.airport_name 
+los	B-toloc.city_name B-return_date.day_name B-arrive_date.month_name 
+angeles	I-toloc.city_name I-flight_stop B-class_type 
+on	O B-meal_description B-fromloc.state_code 
+thursday	B-depart_date.day_name I-transport_type B-fromloc.state_code 
+evening	B-depart_time.period_of_day I-transport_type B-fromloc.state_code 
+atis_flight atis_cheapest atis_flight#atis_airfare 
+
+i	O I-fromloc.city_name I-return_date.day_number 
+want	O B-arrive_date.month_name I-fromloc.city_name 
+to	O B-arrive_date.month_name B-airline_name 
+leave	O B-arrive_date.month_name B-arrive_date.today_relative 
+philadelphia	B-fromloc.city_name I-depart_time.end_time B-airline_name 
+and	O I-transport_type I-today_relative 
+arrive	O I-transport_type B-stoploc.city_name 
+in	O I-transport_type B-stoploc.city_name 
+atlanta	B-toloc.city_name I-transport_type B-economy 
+on	O B-economy I-transport_type 
+a	O I-return_date.day_number B-arrive_date.month_name 
+thursday	B-arrive_date.day_name I-toloc.airport_name I-fromloc.city_name 
+atis_flight atis_ground_service atis_flight#atis_airline 
+
+is	O B-arrive_time.period_of_day I-transport_type 
+there	O I-transport_type B-arrive_time.period_of_day 
+an	O I-transport_type B-economy 
+early	B-depart_time.period_of_day B-economy B-meal_description 
+morning	B-depart_time.period_of_day I-depart_time.end_time I-fromloc.city_name 
+delta	B-airline_name I-toloc.airport_name I-transport_type 
+airlines	I-airline_name I-transport_type B-return_date.today_relative 
+flight	O I-transport_type B-meal_description 
+between	O I-transport_type B-economy 
+boston	B-fromloc.city_name I-transport_type I-fromloc.city_name 
+and	O I-fromloc.city_name B-meal_description 
+washington	B-toloc.city_name B-return_date.today_relative B-toloc.state_name 
+atis_flight atis_flight#atis_airfare atis_flight#atis_airline 
+
+does	O I-depart_time.period_of_day B-meal_description 
+united	B-airline_name B-cost_relative I-depart_time.period_of_day 
+have	O B-cost_relative B-meal_description 
+a	O I-depart_time.end_time B-meal_description 
+flight	O B-meal_description I-depart_time.end_time 
+from	O I-transport_type B-stoploc.airport_name 
+miami	B-fromloc.city_name B-stoploc.airport_name I-transport_type 
+to	O B-stoploc.airport_name I-today_relative 
+washington	B-toloc.city_name B-stoploc.airport_name B-connect 
+dc	B-toloc.state_code B-fare_basis_code I-fromloc.city_name 
+on	O B-arrive_time.period_of_day B-connect 
+wednesday	B-depart_date.day_name B-transport_type B-arrive_time.period_of_day 
+atis_flight atis_flight#atis_airfare atis_flight#atis_airline 
+
+i	O I-depart_time.period_of_day B-stoploc.city_name 
+would	O B-stoploc.city_name B-connect 
+like	O B-stoploc.city_name B-connect 
+to	O B-connect B-return_date.today_relative 
+see	O B-connect B-return_date.today_relative 
+the	O I-return_date.day_number B-connect 
+economy	B-economy I-fromloc.city_name B-return_date.day_name 
+fares	O I-fromloc.city_name I-fromloc.airport_name 
+for	O I-fromloc.airport_name I-transport_type 
+denver	B-fromloc.city_name I-transport_type I-fromloc.airport_name 
+to	O I-transport_type I-fromloc.city_name 
+philadelphia	B-toloc.city_name I-transport_type I-fromloc.city_name 
+atis_airfare atis_flight#atis_airline atis_airline#atis_flight_no 
+
+what	O B-meal_description B-arrive_date.month_name 
+flights	O I-transport_type I-flight_stop 
+from	O I-transport_type B-time_relative 
+denver	B-fromloc.city_name I-transport_type B-time_relative 
+to	O I-transport_type B-connect 
+pittsburgh	B-toloc.city_name I-fromloc.city_name I-transport_type 
+arrive	O I-transport_type B-arrive_date.month_name 
+before	B-arrive_time.time_relative I-transport_type B-arrive_date.month_name 
+8	B-arrive_time.time I-transport_type I-toloc.airport_name 
+in	O I-transport_type B-return_date.today_relative 
+the	O B-return_date.today_relative I-transport_type 
+morning	B-arrive_time.period_of_day I-transport_type I-toloc.airport_name 
+atis_flight atis_flight#atis_airfare atis_airfare 
+
+what	O I-transport_type I-depart_time.period_of_day 
+about	O I-transport_type I-toloc.city_name 
+a	O I-transport_type I-arrive_date.day_number 
+flight	O I-transport_type B-economy 
+from	O I-transport_type I-fromloc.city_name 
+boston	B-fromloc.city_name I-transport_type I-fromloc.city_name 
+to	O I-transport_type B-arrive_date.today_relative 
+san	B-toloc.city_name I-transport_type I-return_date.day_number 
+francisco	I-toloc.city_name I-transport_type I-fromloc.city_name 
+stopping	O I-return_date.day_number B-meal_description 
+in	O B-meal_description I-toloc.airport_name 
+denver	B-stoploc.city_name I-fromloc.city_name I-transport_type 
+atis_flight atis_flight#atis_airfare atis_flight#atis_airline 
+
+what	O B-meal_description I-class_type 
+is	O I-transport_type B-arrive_date.day_name 
+the	O B-arrive_date.day_name I-transport_type 
+ground	O B-return_date.day_name B-arrive_date.day_name 
+transportation	O B-return_date.day_name I-class_type 
+from	O B-depart_date.year I-toloc.airport_name 
+philadelphia	B-fromloc.airport_name I-depart_time.end_time B-connect 
+airport	I-fromloc.airport_name I-depart_time.end_time B-stoploc.city_name 
+to	O B-return_date.today_relative B-connect 
+the	O B-connect I-toloc.airport_name 
+city	O B-stoploc.city_name B-connect 
+proper	O I-fromloc.city_name I-toloc.airport_name 
+atis_ground_service atis_aircraft#atis_flight#atis_flight_no atis_cheapest 
+
+what	O B-arrive_date.month_name B-meal_description 
+flights	O B-arrive_date.month_name I-transport_type 
+are	O B-arrive_date.month_name I-transport_type 
+there	O B-arrive_date.month_name I-transport_type 
+from	O I-transport_type I-fromloc.airport_name 
+atlanta	B-fromloc.city_name I-transport_type B-time_relative 
+to	O I-transport_type B-meal_description 
+washington	B-toloc.city_name I-transport_type B-meal_description 
+early	B-depart_time.period_mod B-meal_description B-fare_basis_code 
+on	O I-fromloc.city_name I-transport_type 
+thursday	B-depart_date.day_name I-transport_type B-arrive_date.month_name 
+mornings	B-depart_time.period_of_day I-transport_type I-fromloc.city_name 
+atis_flight atis_airfare atis_flight#atis_airfare 
+
+could	O B-days_code I-depart_time.period_of_day 
+i	O B-days_code B-return_date.today_relative 
+have	O B-meal_description B-cost_relative 
+flight	O I-transport_type B-meal_description 
+information	O I-transport_type B-meal_description 
+on	O I-transport_type B-meal_description 
+flights	O I-transport_type B-meal_description 
+from	O I-transport_type B-return_date.today_relative 
+pittsburgh	B-fromloc.city_name I-transport_type I-fromloc.city_name 
+to	O I-transport_type B-return_date.today_relative 
+phoenix	B-toloc.city_name I-transport_type I-fromloc.city_name 
+please	O I-transport_type B-arrive_date.month_name 
+atis_flight atis_flight#atis_airline atis_aircraft#atis_flight#atis_flight_no 
+
+what	O B-meal_description B-arrive_date.today_relative 
+times	B-flight_time I-fromloc.airport_name I-toloc.airport_name 
+does	O I-return_date.day_number B-fare_basis_code 
+the	O B-days_code B-fare_basis_code 
+late	B-depart_time.period_of_day I-toloc.airport_name B-cost_relative 
+afternoon	I-depart_time.period_of_day B-return_date.today_relative B-meal_description 
+flight	O I-transport_type B-meal_description 
+leave	O B-meal_description I-transport_type 
+from	O I-transport_type B-meal_description 
+washington	B-fromloc.city_name B-fare_basis_code I-transport_type 
+for	O B-fare_basis_code I-transport_type 
+denver	B-toloc.city_name B-arrive_time.period_of_day I-transport_type 
+atis_flight_time atis_aircraft#atis_flight#atis_flight_no atis_flight#atis_airline 
+
+what	O B-meal_description I-transport_type 
+flights	O I-transport_type I-flight_stop 
+go	O I-transport_type I-fromloc.city_name 
+from	O I-transport_type I-toloc.airport_name 
+boston	B-fromloc.city_name I-transport_type I-fromloc.city_name 
+to	O I-transport_type B-return_date.today_relative 
+pittsburgh	B-toloc.city_name I-fromloc.city_name B-return_date.today_relative 
+after	B-depart_time.time_relative I-transport_type B-return_date.today_relative 
+6	B-depart_time.time I-transport_type B-return_date.today_relative 
+o'clock	I-depart_time.time I-transport_type B-days_code 
+next	B-depart_date.date_relative I-transport_type B-arrive_date.month_name 
+tuesday	B-depart_date.day_name I-transport_type B-arrive_date.month_name 
+atis_flight atis_flight#atis_airline atis_aircraft#atis_flight#atis_flight_no 
+
+what	O B-arrive_date.month_name B-meal_description 
+are	O B-arrive_date.month_name B-airline_name 
+all	O B-airline_name B-arrive_date.month_name 
+the	O B-airline_name B-days_code 
+flights	O B-airline_name B-days_code 
+available	O I-fromloc.city_name B-days_code 
+between	O I-fromloc.city_name B-return_date.today_relative 
+pittsburgh	B-fromloc.city_name I-fromloc.city_name B-arrive_date.month_name 
+and	O B-arrive_date.month_name B-return_date.today_relative 
+dallas	B-toloc.city_name B-arrive_date.month_name I-transport_type 
+fort	I-toloc.city_name I-transport_type B-airline_name 
+worth	I-toloc.city_name I-transport_type I-return_date.date_relative 
+atis_flight atis_flight#atis_airfare atis_ground_service 
+
+i	O B-class_type B-economy 
+need	O B-meal_description B-economy 
+flight	O B-meal_description B-economy 
+information	O I-transport_type B-meal_description 
+leaving	O I-transport_type B-economy 
+atlanta	B-fromloc.city_name B-economy I-transport_type 
+and	O B-airline_name I-transport_type 
+arriving	O I-fromloc.city_name B-airline_name 
+in	O B-return_date.today_relative B-arrive_date.month_name 
+baltimore	B-toloc.city_name I-transport_type B-arrive_date.month_name 
+for	O B-stoploc.city_name I-fromloc.city_name 
+monday	B-arrive_date.day_name I-toloc.airport_name B-stoploc.city_name 
+atis_flight atis_flight_no atis_ground_service 
+
+does	O B-days_code I-depart_time.end_time 
+any	O I-depart_time.end_time B-meal_description 
+airline	O B-meal_description B-return_date.day_number 
+have	O B-return_date.day_number I-fromloc.city_name 
+an	O I-class_type B-return_date.day_number 
+early	B-depart_time.period_of_day B-fare_basis_code B-arrive_time.period_of_day 
+afternoon	B-depart_time.period_of_day B-arrive_time.period_of_day B-fare_basis_code 
+flight	O B-arrive_time.period_of_day B-fare_basis_code 
+from	O B-arrive_time.period_of_day I-transport_type 
+boston	B-fromloc.city_name B-time_relative I-transport_type 
+to	O B-arrive_date.month_name I-transport_type 
+pittsburgh	B-toloc.city_name B-arrive_date.today_relative B-arrive_date.month_name 
+atis_airline atis_flight#atis_airline atis_flight#atis_airfare 
+
+give	O B-return_date.day_name B-airport_code 
+me	O B-return_date.day_name B-depart_date.year 
+the	O B-depart_date.year B-return_date.day_name 
+flights	O I-toloc.airport_name B-meal_description 
+from	O I-transport_type B-meal_description 
+miami	B-fromloc.city_name I-transport_type B-return_date.day_number 
+to	O I-transport_type B-arrive_date.month_name 
+new	B-toloc.city_name I-transport_type I-arrive_time.end_time 
+york	I-toloc.city_name I-transport_type B-arrive_date.month_name 
+using	O B-arrive_date.month_name I-transport_type 
+tower	B-airline_name B-arrive_date.month_name I-depart_time.time_relative 
+air	I-airline_name B-arrive_date.month_name I-depart_time.time_relative 
+atis_flight atis_flight#atis_airfare atis_airfare 
+
+is	O B-economy I-fromloc.airport_name 
+there	O I-depart_time.end_time B-economy 
+ground	O B-airline_name I-depart_time.period_of_day 
+transportation	O B-airline_name B-return_date.day_name 
+from	O B-return_date.day_name I-fromloc.city_name 
+san	B-fromloc.airport_name I-toloc.airport_name I-fromloc.city_name 
+diego	I-fromloc.airport_name I-transport_type B-connect 
+airport	I-fromloc.airport_name I-transport_type B-connect 
+to	O B-connect I-transport_type 
+the	O B-connect B-stoploc.city_name 
+downtown	O B-stoploc.city_name B-connect 
+area	O I-fromloc.city_name B-return_date.today_relative 
+atis_ground_service atis_aircraft#atis_flight#atis_flight_no atis_ground_service 
+
+show	O I-class_type B-return_date.day_name 
+me	O B-meal_description I-class_type 
+first	B-class_type B-meal I-flight_stop 
+class	I-class_type B-cost_relative B-fare_basis_code 
+flights	O B-cost_relative B-airline_name 
+from	O I-transport_type B-cost_relative 
+pittsburgh	B-fromloc.city_name I-transport_type B-airline_name 
+to	O I-transport_type B-arrive_date.today_relative 
+san	B-toloc.city_name I-transport_type I-return_date.day_number 
+francisco	I-toloc.city_name I-transport_type I-return_date.day_number 
+on	O I-return_date.day_number I-transport_type 
+friday	B-depart_date.day_name I-fromloc.city_name I-toloc.airport_name 
+atis_flight atis_flight#atis_airfare atis_flight#atis_airline 
+
+how	O B-aircraft_code B-fare_amount 
+many	O B-aircraft_code I-toloc.airport_name 
+cities	O I-toloc.airport_name B-arrive_time.period_of_day 
+are	O B-connect I-toloc.state_name 
+served	O B-arrive_time.period_of_day B-connect 
+by	O B-arrive_time.period_of_day B-arrive_date.month_name 
+eastern	B-airline_name B-arrive_time.period_of_day B-arrive_date.month_name 
+with	O B-arrive_time.period_of_day I-toloc.airport_name 
+first	B-class_type B-airline_name B-arrive_time.period_of_day 
+class	I-class_type B-airline_name I-toloc.airport_name 
+flights	O B-arrive_date.month_name B-return_date.today_relative 
+atis_quantity atis_flight#atis_airfare atis_ground_fare 
+
+how	O B-depart_date.year I-depart_time.period_of_day 
+many	O I-toloc.airport_name I-depart_time.period_of_day 
+flights	O B-connect I-transport_type 
+does	O B-connect I-depart_time.period_of_day 
+each	O B-meal_description B-connect 
+airline	O I-transport_type B-arrive_time.period_of_day 
+have	O I-fromloc.city_name I-transport_type 
+with	O B-return_date.today_relative I-fromloc.city_name 
+first	B-class_type B-arrive_date.month_name I-transport_type 
+class	I-class_type B-arrive_date.month_name B-airline_name 
+service	O I-fromloc.airport_name B-arrive_date.month_name 
+atis_quantity atis_flight#atis_airfare atis_airfare 
+
+and	O B-arrive_time.period_of_day B-meal_description 
+flights	O B-arrive_time.period_of_day I-depart_time.end_time 
+leaving	O B-time_relative I-transport_type 
+from	O B-stoploc.airport_name B-arrive_date.month_name 
+atlanta	B-fromloc.city_name B-stoploc.airport_name B-economy 
+to	O B-stoploc.airport_name I-today_relative 
+oakland	B-toloc.city_name B-economy I-return_date.day_number 
+leaving	O I-today_relative I-return_date.day_number 
+after	B-depart_time.time_relative B-meal_description I-return_date.day_number 
+5	B-depart_time.time I-transport_type I-fromloc.airport_name 
+pm	I-depart_time.time B-meal_description B-airline_name 
+atis_flight atis_ground_service atis_flight_no 
+
+i	O B-depart_date.year I-depart_time.period_of_day 
+want	O B-fromloc.state_code I-depart_time.end_time 
+to	O B-meal_description B-connect 
+make	O B-arrive_time.period_of_day I-depart_time.period_of_day 
+a	O B-arrive_time.period_of_day I-depart_time.end_time 
+trip	O B-arrive_time.period_of_day I-depart_time.time_relative 
+from	O B-arrive_time.period_of_day B-stoploc.airport_name 
+washington	B-fromloc.city_name B-stoploc.airport_name B-arrive_time.period_of_day 
+to	O B-stoploc.airport_name B-return_time.period_mod 
+san	B-toloc.city_name I-return_date.day_number B-stoploc.airport_name 
+francisco	I-toloc.city_name I-return_date.day_number B-days_code 
+atis_flight atis_airfare atis_aircraft#atis_flight#atis_flight_no 
+
+show	O B-day_name I-class_type 
+me	O I-class_type B-meal_description 
+early	B-depart_time.period_mod B-meal_description B-return_date.month_name 
+friday	B-depart_date.day_name I-flight_stop I-toloc.airport_name 
+morning	B-depart_time.period_of_day B-meal_description I-depart_time.period_of_day 
+flights	O I-transport_type B-time_relative 
+from	O I-transport_type I-today_relative 
+san	B-fromloc.city_name I-transport_type I-return_date.day_number 
+francisco	I-fromloc.city_name I-transport_type B-cost_relative 
+to	O I-transport_type B-meal_description 
+boston	B-toloc.city_name I-transport_type B-meal_description 
+atis_flight atis_flight#atis_airfare atis_flight#atis_airline 
+
+i	O I-depart_time.period_of_day B-meal_description 
+need	O I-depart_time.period_of_day B-class_type 
+a	O B-class_type B-cost_relative 
+flight	O B-meal_description B-return_date.day_name 
+from	O I-depart_time.period_of_day I-fromloc.city_name 
+denver	B-fromloc.city_name B-stoploc.airport_name B-cost_relative 
+to	O B-stoploc.airport_name I-return_date.day_number 
+washington	B-toloc.city_name B-stoploc.airport_name B-cost_relative 
+dc	B-toloc.state_code B-fare_basis_code I-return_date.day_number 
+on	O B-arrive_time.period_of_day B-transport_type 
+wednesday	B-depart_date.day_name B-transport_type B-arrive_time.period_of_day 
+atis_flight atis_flight#atis_airfare atis_airfare 
+
+what	O I-transport_type I-depart_time.period_of_day 
+is	O I-transport_type I-class_type 
+the	O I-transport_type I-class_type 
+coach	B-class_type I-fromloc.city_name I-class_type 
+fare	O I-fromloc.city_name I-transport_type 
+between	O I-fromloc.city_name I-transport_type 
+boston	B-fromloc.city_name I-transport_type B-arrive_date.month_name 
+and	O B-toloc.state_name I-fromloc.city_name 
+atlanta	B-toloc.city_name I-transport_type B-meal_description 
+on	O I-transport_type B-meal_description 
+delta	B-airline_name B-economy I-transport_type 
+atis_airfare atis_flight#atis_airline atis_ground_service#atis_ground_fare 
+
+i'd	O B-meal_description I-class_type 
+like	O I-class_type B-fromloc.state_code 
+to	O B-return_date.day_name B-fromloc.state_code 
+fly	O I-class_type B-return_date.day_name 
+from	O B-return_date.day_name B-stoploc.airport_name 
+philadelphia	B-fromloc.city_name B-return_date.day_number B-return_date.day_name 
+to	O B-return_date.day_number B-arrive_date.today_relative 
+san	B-toloc.city_name B-return_date.day_number B-arrive_date.today_relative 
+francisco	I-toloc.city_name B-arrive_date.today_relative B-return_date.day_number 
+through	O I-class_type B-return_date.day_number 
+dallas	B-stoploc.city_name B-arrive_time.period_of_day B-cost_relative 
+atis_flight atis_flight#atis_airline atis_aircraft#atis_flight#atis_flight_no 
+
+show	O B-day_name B-depart_time.end_time 
+me	O I-toloc.airport_name I-class_type 
+the	O B-meal_description I-transport_type 
+cheapest	B-cost_relative I-transport_type I-return_date.day_number 
+one	B-round_trip I-transport_type B-return_time.period_of_day 
+way	I-round_trip I-transport_type B-airline_name 
+flights	O I-transport_type B-airline_name 
+from	O I-transport_type I-fromloc.city_name 
+montreal	B-fromloc.city_name I-fromloc.city_name I-transport_type 
+to	O B-arrive_date.month_name I-transport_type 
+orlando	B-toloc.city_name B-arrive_date.month_name I-transport_type 
+atis_flight atis_meal atis_aircraft 
+
+please	O B-return_date.day_number I-return_date.day_number 
+find	O B-return_date.day_number B-airline_name 
+a	O I-depart_time.end_time B-arrive_date.day_name 
+flight	O B-airline_name B-return_date.day_number 
+from	O B-return_date.day_name B-return_date.today_relative 
+st.	B-fromloc.city_name B-return_date.day_name B-cost_relative 
+petersburg	I-fromloc.city_name I-toloc.airport_name B-return_date.day_name 
+to	O B-meal_description I-transport_type 
+miami	B-toloc.city_name I-transport_type I-depart_time.period_of_day 
+on	O I-transport_type I-return_date.day_number 
+thursday	B-depart_date.day_name I-transport_type B-arrive_date.month_name 
+atis_flight atis_airfare atis_ground_service 
+
+what	O B-meal_description B-arrive_date.month_name 
+flights	O I-transport_type B-arrive_date.month_name 
+are	O I-transport_type I-fromloc.city_name 
+currently	O B-airline_name I-fromloc.city_name 
+available	O I-fromloc.city_name B-return_date.today_relative 
+between	O I-fromloc.city_name B-return_date.today_relative 
+boston	B-fromloc.city_name I-fromloc.city_name I-transport_type 
+and	O I-transport_type B-return_date.today_relative 
+dallas	B-toloc.city_name I-transport_type I-fromloc.city_name 
+fort	I-toloc.city_name I-fromloc.city_name I-transport_type 
+worth	I-toloc.city_name I-transport_type I-fromloc.city_name 
+atis_flight atis_flight#atis_airline atis_ground_service 
+
+show	O B-day_name I-class_type 
+me	O B-day_name I-airline_name 
+all	O I-toloc.airport_name B-fare_basis_code 
+the	O B-meal_description I-transport_type 
+one	B-round_trip I-transport_type I-fromloc.city_name 
+way	I-round_trip B-airline_name I-transport_type 
+fares	O I-fromloc.city_name B-arrive_date.month_name 
+from	O I-transport_type B-arrive_date.month_name 
+tacoma	B-fromloc.city_name I-transport_type I-fromloc.city_name 
+to	O I-fromloc.city_name B-connect 
+montreal	B-toloc.city_name B-connect B-return_date.today_relative 
+atis_airfare atis_aircraft#atis_flight#atis_flight_no atis_meal 
+
+do	O B-meal_description B-depart_date.year 
+you	O B-arrive_time.period_of_day B-meal_description 
+have	O B-arrive_time.period_of_day B-time_relative 
+an	O B-time_relative B-arrive_time.period_of_day 
+819	B-depart_time.time B-arrive_time.period_of_day B-time_relative 
+flight	O B-time_relative I-transport_type 
+from	O B-arrive_time.period_of_day B-stoploc.airport_name 
+denver	B-fromloc.city_name B-arrive_time.period_of_day B-return_time.period_mod 
+to	O B-return_time.period_mod B-time_relative 
+san	B-toloc.city_name B-arrive_date.today_relative B-cost_relative 
+francisco	I-toloc.city_name B-cost_relative I-transport_type 
+atis_flight atis_flight#atis_airfare atis_flight#atis_airline 
+
+how	O I-depart_time.end_time B-meal_description 
+can	O I-arrive_date.day_number I-depart_time.end_time 
+i	O I-depart_time.end_time B-return_date.day_name 
+go	O B-return_date.day_number B-meal_description 
+from	O B-stoploc.airport_name I-depart_time.end_time 
+minneapolis	B-fromloc.city_name B-airline_name I-toloc.airport_name 
+to	O B-airline_name B-return_date.today_relative 
+long	B-toloc.city_name B-return_date.day_name B-days_code 
+beach	I-toloc.city_name B-city_name B-meal_description 
+late	B-depart_time.period_mod B-meal_description B-return_date.day_name 
+tomorrow	B-depart_date.today_relative I-transport_type I-fromloc.city_name 
+atis_flight atis_flight#atis_airline atis_ground_fare 
+
+flights	O B-meal_description B-arrive_time.period_of_day 
+from	O B-arrive_time.period_of_day B-toloc.airport_code 
+pittsburgh	B-fromloc.city_name B-arrive_time.period_of_day B-airline_name 
+to	O B-time_relative B-airline_name 
+baltimore	B-toloc.city_name B-arrive_date.month_name B-arrive_time.period_of_day 
+between	O B-arrive_time.period_of_day B-arrive_date.month_name 
+10	B-depart_time.start_time B-arrive_time.period_of_day B-airline_name 
+am	I-depart_time.start_time B-airline_name B-aircraft_code 
+and	O B-aircraft_code B-airline_name 
+2	B-depart_time.end_time B-arrive_date.month_name B-aircraft_code 
+pm	I-depart_time.end_time B-arrive_date.month_name I-fromloc.airport_name 
+atis_flight atis_flight#atis_airfare atis_cheapest 
+
+what	O B-day_name I-class_type 
+time	B-flight_time I-class_type I-transport_type 
+is	O B-return_date.day_name B-meal_description 
+the	O B-return_date.day_name I-class_type 
+last	B-flight_mod I-class_type B-return_date.day_number 
+flight	O B-return_date.day_name B-fare_basis_code 
+from	O B-return_date.day_name I-toloc.airport_name 
+washington	B-fromloc.city_name B-return_date.day_name I-toloc.airport_name 
+to	O I-toloc.airport_name B-return_date.day_name 
+san	B-toloc.city_name B-connect I-transport_type 
+francisco	I-toloc.city_name B-connect I-depart_time.period_of_day 
+atis_flight_time atis_airfare atis_flight#atis_airfare 
+
+can	O B-flight_time I-depart_time.period_of_day 
+you	O B-airline_name B-arrive_time.period_of_day 
+list	O B-return_date.day_name B-days_code 
+all	O B-airline_name B-return_date.day_name 
+the	O B-days_code B-airline_name 
+flights	O B-airline_name B-depart_time.end_time 
+between	O I-fromloc.city_name B-return_date.day_number 
+phoenix	B-fromloc.city_name I-fromloc.city_name B-airline_name 
+and	O I-fromloc.city_name B-return_date.today_relative 
+las	B-toloc.city_name B-toloc.airport_code B-arrive_date.month_name 
+vegas	I-toloc.city_name B-arrive_time.period_of_day B-toloc.airport_code 
+atis_flight atis_flight#atis_airfare atis_ground_service#atis_ground_fare 
+
+what	O B-arrive_date.month_name B-arrive_date.today_relative 
+are	O B-arrive_date.month_name B-arrive_date.today_relative 
+the	O B-class_type I-fromloc.airport_name 
+lowest	B-cost_relative I-class_type B-class_type 
+one	B-round_trip B-fare_basis_code B-return_date.day_name 
+way	I-round_trip I-class_type B-fare_basis_code 
+fares	O B-cost_relative I-depart_time.period_of_day 
+from	O B-cost_relative B-meal_description 
+atlanta	B-fromloc.city_name B-meal_description I-depart_time.time_relative 
+to	O I-transport_type B-airline_name 
+denver	B-toloc.city_name I-transport_type B-meal_description 
+atis_airfare atis_aircraft#atis_flight#atis_flight_no atis_flight#atis_airfare 
+
+is	O I-fromloc.airport_name I-depart_time.period_of_day 
+there	O I-depart_time.period_of_day I-depart_time.end_time 
+a	O I-depart_time.end_time I-toloc.city_name 
+flight	O I-depart_time.end_time I-transport_type 
+on	O I-transport_type B-economy 
+continental	B-airline_name I-transport_type B-meal_description 
+airlines	I-airline_name B-meal_description I-transport_type 
+from	O I-transport_type I-fromloc.city_name 
+boston	B-fromloc.city_name I-transport_type I-fromloc.city_name 
+to	O I-transport_type B-return_date.today_relative 
+denver	B-toloc.city_name I-transport_type B-return_date.today_relative 
+atis_flight atis_flight#atis_airfare atis_airfare 
+
+list	O I-depart_time.end_time B-return_date.today_relative 
+the	O B-return_date.today_relative I-fromloc.airport_name 
+total	O I-fromloc.city_name B-stoploc.airport_code 
+number	O B-arrive_date.month_name B-return_date.today_relative 
+of	O I-depart_time.time_relative B-arrive_time.period_of_day 
+flights	O B-arrive_date.month_name B-return_date.today_relative 
+to	O B-arrive_date.month_name I-depart_time.time_relative 
+all	O B-arrive_time.period_of_day I-flight_mod 
+airports	O B-return_time.period_of_day B-airline_name 
+by	O B-arrive_date.today_relative B-return_time.period_of_day 
+delta	B-airline_name B-toloc.state_name B-arrive_date.today_relative 
+atis_quantity atis_flight#atis_airfare atis_ground_service#atis_ground_fare 
+
+flights	O B-meal_description B-arrive_time.period_of_day 
+from	O B-arrive_time.period_of_day B-toloc.airport_code 
+pittsburgh	B-fromloc.city_name B-arrive_time.period_of_day B-airline_name 
+to	O B-time_relative B-airline_name 
+baltimore	B-toloc.city_name B-arrive_date.month_name B-arrive_time.period_of_day 
+between	O B-arrive_time.period_of_day B-arrive_date.month_name 
+10	B-depart_time.start_time B-arrive_time.period_of_day B-airline_name 
+am	I-depart_time.start_time B-airline_name B-aircraft_code 
+and	O B-aircraft_code B-airline_name 
+2	B-depart_time.end_time B-arrive_date.month_name B-aircraft_code 
+pm	I-depart_time.end_time B-arrive_date.month_name I-fromloc.airport_name 
+atis_flight atis_flight#atis_airfare atis_cheapest 
+
+flights	O B-meal_description I-depart_time.end_time 
+from	O B-arrive_time.period_of_day B-aircraft_code 
+denver	B-fromloc.city_name B-arrive_time.period_of_day B-time_relative 
+to	O B-arrive_time.period_of_day B-time_relative 
+baltimore	B-toloc.city_name B-airline_name B-arrive_time.period_of_day 
+between	O B-arrive_time.period_of_day B-airline_name 
+10	B-depart_time.start_time B-arrive_time.period_of_day B-airline_name 
+am	I-depart_time.start_time B-airline_name B-time_relative 
+and	O B-aircraft_code B-airline_name 
+2	B-depart_time.end_time B-arrive_date.month_name B-meal_description 
+pm	I-depart_time.end_time B-arrive_date.month_name I-fromloc.airport_name 
+atis_flight atis_flight#atis_airfare atis_ground_service#atis_ground_fare 
+
+list	O B-flight_time B-arrive_time.period_of_day 
+the	O B-meal_description B-arrive_time.period_of_day 
+flights	O I-transport_type I-fromloc.airport_name 
+from	O I-transport_type I-return_date.day_number 
+denver	B-fromloc.city_name I-return_date.day_number I-transport_type 
+to	O B-days_code I-fromloc.city_name 
+westchester	B-toloc.city_name B-airline_name B-meal_description 
+county	I-toloc.city_name B-return_date.today_relative B-return_date.day_name 
+on	O I-toloc.airport_name B-arrive_date.month_name 
+june	B-depart_date.month_name I-depart_time.period_of_day I-transport_type 
+seventh	B-depart_date.day_number I-depart_time.period_of_day I-transport_type 
+atis_flight atis_flight#atis_airfare atis_abbreviation 
+
+what's	O B-aircraft_code B-return_date.day_number 
+the	O B-meal_description B-arrive_date.month_name 
+difference	O B-airline_name B-arrive_date.month_name 
+between	O I-fromloc.city_name B-airline_name 
+fare	O I-fromloc.city_name B-arrive_date.month_name 
+code	O B-arrive_date.month_name B-toloc.airport_code 
+q	B-fare_basis_code B-arrive_date.month_name B-arrive_time.period_of_day 
+and	O B-arrive_date.month_name B-airline_name 
+fare	O B-arrive_date.month_name I-depart_time.end_time 
+code	O B-arrive_date.month_name I-depart_time.end_time 
+f	B-fare_basis_code I-depart_time.end_time B-arrive_date.month_name 
+atis_abbreviation atis_flight#atis_airfare atis_ground_service#atis_ground_fare 
+
+i'm	O B-depart_date.year I-depart_time.time 
+interested	O B-stoploc.city_name B-fromloc.state_code 
+in	O B-stoploc.city_name B-airline_name 
+the	O B-return_date.today_relative B-airline_name 
+cheapest	B-cost_relative B-stoploc.city_name B-airline_name 
+fare	O B-return_date.today_relative B-stoploc.city_name 
+from	O B-stoploc.city_name B-arrive_time.period_of_day 
+washington	B-fromloc.city_name B-return_date.today_relative B-stoploc.city_name 
+to	O B-stoploc.city_name B-connect 
+fort	B-toloc.city_name B-stoploc.city_name B-return_date.today_relative 
+worth	I-toloc.city_name B-return_date.day_number I-return_date.date_relative 
+atis_airfare atis_flight#atis_airline atis_flight_no 
+
+list	O B-meal_description I-class_type 
+all	O B-meal_description B-arrive_time.period_of_day 
+flights	O I-transport_type B-airline_name 
+on	O I-transport_type I-return_date.day_number 
+continental	B-airline_name B-meal_description I-transport_type 
+leaving	O I-fromloc.city_name B-return_time.period_of_day 
+denver	B-fromloc.city_name I-transport_type B-time_relative 
+on	O I-fromloc.city_name I-transport_type 
+sunday	B-depart_date.day_name I-fromloc.city_name I-transport_type 
+after	B-depart_time.time_relative I-transport_type B-return_date.today_relative 
+2134	B-depart_time.time B-return_date.today_relative I-fromloc.city_name 
+atis_flight atis_ground_service#atis_ground_fare atis_airfare 
+
+show	O B-day_name B-arrive_date.month_name 
+me	O I-toloc.airport_name B-day_name 
+the	O I-transport_type B-meal_description 
+one	B-round_trip I-transport_type B-arrive_date.month_name 
+way	I-round_trip I-transport_type B-airline_name 
+flights	O I-transport_type B-airline_name 
+from	O I-transport_type B-airline_name 
+detroit	B-fromloc.city_name I-transport_type I-fromloc.city_name 
+to	O I-transport_type B-arrive_date.month_name 
+westchester	B-toloc.city_name I-transport_type B-connect 
+county	I-toloc.city_name I-transport_type B-arrive_date.month_name 
+atis_flight atis_aircraft atis_meal 
+
+show	O B-day_name B-meal 
+me	O B-day_name I-flight_stop 
+round	B-round_trip B-economy I-class_type 
+trip	I-round_trip I-depart_time.time_relative B-airline_name 
+fares	O I-depart_time.period_of_day B-meal_description 
+between	O I-fromloc.city_name I-depart_time.period_of_day 
+san	B-fromloc.city_name I-depart_time.period_of_day B-arrive_date.today_relative 
+francisco	I-fromloc.city_name B-cost_relative I-depart_time.period_of_day 
+and	O B-cost_relative I-depart_time.time_relative 
+washington	B-toloc.city_name B-cost_relative I-depart_time.time_relative 
+dc	B-toloc.state_code I-depart_time.time_relative I-depart_time.end_time 
+atis_airfare atis_flight#atis_airfare atis_meal 
+
+what	O B-day_name I-class_type 
+is	O I-depart_time.end_time I-class_type 
+the	O B-airline_name B-return_date.day_number 
+distance	O B-return_date.today_relative B-return_date.day_number 
+between	O B-economy B-return_date.day_number 
+pittsburgh	B-fromloc.airport_name I-fromloc.city_name B-airline_name 
+airport	I-fromloc.airport_name B-return_date.today_relative I-fromloc.city_name 
+and	O B-return_date.today_relative B-airline_name 
+downtown	O B-return_date.today_relative I-toloc.airport_name 
+pittsburgh	B-toloc.city_name B-return_date.month_name I-toloc.airport_name 
+atis_distance atis_flight#atis_airfare atis_aircraft#atis_flight#atis_flight_no 
+
+all	O B-aircraft_code I-depart_time.period_of_day 
+northwest	B-airline_name B-aircraft_code B-meal_description 
+and	O B-meal_description B-aircraft_code 
+united	B-airline_name B-arrive_time.period_of_day I-fromloc.airport_name 
+airlines	I-airline_name B-arrive_time.period_of_day B-toloc.airport_code 
+flights	O B-arrive_time.period_of_day B-airline_name 
+with	O B-airline_name B-arrive_time.period_of_day 
+stopovers	O B-airline_name I-toloc.airport_name 
+in	O B-arrive_date.month_name B-return_date.today_relative 
+denver	B-stoploc.city_name B-airline_name I-toloc.airport_name 
+atis_flight atis_flight#atis_airfare atis_meal 
+
+when	O I-depart_time.end_time I-fromloc.airport_name 
+is	O I-transport_type I-depart_time.end_time 
+the	O I-transport_type B-return_date.day_number 
+first	B-flight_mod B-airline_name B-economy 
+flight	O B-return_date.today_relative B-return_date.day_name 
+leaving	O I-transport_type B-economy 
+from	O I-transport_type I-fromloc.city_name 
+oakland	B-fromloc.city_name B-meal_description I-transport_type 
+to	O I-transport_type B-return_time.period_of_day 
+boston	B-toloc.city_name I-transport_type B-return_date.today_relative 
+atis_flight atis_aircraft#atis_flight#atis_flight_no atis_flight_no 
+
+i	O B-class_type B-meal_description 
+need	O B-meal_description B-class_type 
+information	O I-transport_type B-meal_description 
+on	O I-transport_type I-return_date.day_number 
+flights	O I-transport_type B-meal_description 
+from	O I-transport_type B-meal_description 
+toronto	B-fromloc.city_name I-transport_type I-fromloc.city_name 
+to	O I-transport_type I-fromloc.city_name 
+san	B-toloc.city_name I-transport_type B-connect 
+diego	I-toloc.city_name B-economy B-arrive_date.today_relative 
+atis_flight atis_aircraft#atis_flight#atis_flight_no atis_flight#atis_airline 
+
+what	O I-transport_type I-depart_time.period_of_day 
+is	O B-meal_description I-transport_type 
+the	O B-return_time.period_of_day B-airline_name 
+cost	O B-meal_description I-return_date.day_number 
+of	O B-return_time.period_of_day I-fromloc.city_name 
+limousine	B-transport_type I-fromloc.city_name B-meal_description 
+service	O B-toloc.airport_code I-transport_type 
+at	O B-toloc.airport_code I-fromloc.airport_name 
+logan	B-airport_name B-arrive_time.period_of_day B-toloc.airport_code 
+airport	I-airport_name B-arrive_time.period_of_day B-airline_name 
+atis_ground_fare atis_airfare atis_meal 
+
+what	O B-meal_description I-transport_type 
+is	O I-transport_type B-meal_description 
+the	O I-transport_type B-meal_description 
+most	B-cost_relative B-days_code B-meal_description 
+expensive	I-cost_relative I-toloc.city_name B-return_date.day_name 
+flight	O B-return_date.day_name I-class_type 
+from	O I-class_type B-return_date.day_name 
+boston	B-fromloc.city_name B-return_date.day_name B-stoploc.airport_name 
+to	O B-return_date.day_name B-stoploc.airport_name 
+dallas	B-toloc.city_name B-return_date.day_name B-return_date.day_number 
+atis_flight atis_aircraft#atis_flight#atis_flight_no atis_flight#atis_airfare 
+
+what's	O I-depart_time.end_time B-days_code 
+the	O B-airline_name B-return_date.day_number 
+lowest	B-cost_relative B-airline_name B-cost_relative 
+round	B-round_trip B-return_date.day_name B-days_code 
+trip	I-round_trip B-depart_date.year I-depart_time.end_time 
+fare	O I-depart_time.end_time B-city_name 
+from	O I-depart_time.end_time B-meal_description 
+atlanta	B-fromloc.city_name B-meal_description B-return_date.today_relative 
+to	O I-transport_type B-time_relative 
+pittsburgh	B-toloc.city_name I-fromloc.city_name I-transport_type 
+atis_airfare atis_aircraft#atis_flight#atis_flight_no atis_flight#atis_airfare 
+
+please	O B-return_date.day_name I-return_date.today_relative 
+give	O B-return_date.day_name B-meal_description 
+all	O B-meal_description B-return_date.day_name 
+flights	O I-transport_type I-flight_stop 
+from	O I-transport_type I-return_date.day_number 
+dallas	B-fromloc.city_name I-return_date.day_number I-transport_type 
+to	O B-return_date.day_name B-meal_description 
+oakland	B-toloc.city_name B-meal_description B-class_type 
+california	B-toloc.state_name I-transport_type I-return_date.day_number 
+monday	B-depart_date.day_name I-return_date.day_number B-meal_description 
+atis_flight atis_aircraft atis_cheapest 
+
+show	O B-meal_description I-class_type 
+me	O B-return_time.period_of_day B-meal_description 
+the	O B-meal_description I-transport_type 
+first	B-class_type B-time_relative B-airline_name 
+class	I-class_type B-cost_relative B-airline_name 
+fares	O B-cost_relative B-meal_description 
+from	O B-meal_description B-cost_relative 
+baltimore	B-fromloc.city_name I-today_relative B-airline_name 
+to	O B-meal_description B-return_date.day_name 
+dallas	B-toloc.city_name I-transport_type B-arrive_time.period_of_day 
+atis_airfare atis_aircraft#atis_flight#atis_flight_no atis_flight#atis_airfare 
+
+list	O B-cost_relative I-arrive_date.day_number 
+all	O B-cost_relative B-days_code 
+flights	O I-toloc.airport_name I-transport_type 
+from	O I-transport_type B-return_date.today_relative 
+minneapolis	B-fromloc.city_name I-transport_type I-toloc.airport_name 
+to	O I-transport_type B-airline_name 
+long	B-toloc.city_name B-meal_description B-days_code 
+beach	I-toloc.city_name B-arrive_date.month_name B-arrive_date.today_relative 
+on	O B-arrive_date.month_name B-arrive_date.today_relative 
+saturday	B-depart_date.day_name B-arrive_date.month_name I-transport_type 
+atis_flight atis_ground_fare atis_flight#atis_airline 
+
+list	O B-arrive_time.period_of_day B-flight_time 
+the	O B-arrive_time.period_of_day I-fromloc.airport_name 
+earliest	B-flight_mod B-arrive_time.period_of_day I-return_date.day_number 
+flight	O B-arrive_time.period_of_day B-airline_name 
+from	O B-arrive_time.period_of_day B-airline_name 
+st.	B-fromloc.city_name B-arrive_time.period_of_day I-return_date.day_number 
+paul	I-fromloc.city_name B-arrive_time.period_of_day I-fromloc.city_name 
+to	O B-airline_name B-arrive_date.month_name 
+san	B-toloc.city_name B-return_date.today_relative I-return_date.day_number 
+jose	I-toloc.city_name B-arrive_date.month_name B-cost_relative 
+atis_flight atis_aircraft#atis_flight#atis_flight_no atis_airfare 
+
+where	O B-depart_date.year B-stoploc.city_name 
+does	O B-stoploc.city_name I-depart_time.end_time 
+flight	O B-return_date.day_number I-depart_time.end_time 
+ua	B-airline_code I-class_type B-return_date.day_number 
+281	B-flight_number B-fare_basis_code I-class_type 
+from	O B-arrive_time.period_of_day B-fare_basis_code 
+boston	B-fromloc.city_name B-arrive_time.period_of_day B-aircraft_code 
+to	O I-transport_type B-arrive_time.period_of_day 
+oakland	B-toloc.city_name I-transport_type B-arrive_time.period_of_day 
+stop	B-flight_stop I-transport_type B-stoploc.city_name 
+atis_flight atis_flight#atis_airline atis_flight#atis_airfare 
+
+list	O B-cost_relative B-aircraft_code 
+all	O B-cost_relative I-depart_time.period_of_day 
+the	O B-cost_relative B-meal_description 
+airlines	O B-cost_relative I-class_type 
+that	O B-meal_description B-cost_relative 
+fly	O B-return_time.period_of_day B-meal_description 
+into	O B-meal_description B-connect 
+general	B-toloc.airport_name I-fromloc.city_name B-return_time.period_of_day 
+mitchell	I-toloc.airport_name I-transport_type B-airline_name 
+international	I-toloc.airport_name B-airline_name I-transport_type 
+atis_airline atis_meal atis_flight_time 
+
+show	O B-return_date.day_name I-depart_time.period_of_day 
+me	O B-return_date.day_name I-class_type 
+the	O B-class_type I-class_type 
+earliest	B-flight_mod B-meal_description B-return_date.day_name 
+flight	O I-transport_type B-time_relative 
+from	O B-time_relative I-transport_type 
+denver	B-fromloc.city_name B-return_date.day_name B-meal_description 
+to	O B-return_date.day_name B-connect 
+las	B-toloc.city_name B-return_date.month_name B-return_date.day_number 
+vegas	I-toloc.city_name B-arrive_time.period_of_day I-return_date.day_number 
+atis_flight atis_flight#atis_airfare atis_aircraft#atis_flight#atis_flight_no 
+
+list	O B-meal_description I-class_type 
+the	O I-class_type B-meal_description 
+flights	O I-fromloc.airport_name B-cost_relative 
+from	O B-aircraft_code B-arrive_time.period_of_day 
+philadelphia	B-fromloc.city_name B-return_date.day_name B-arrive_time.period_of_day 
+to	O B-return_date.day_name I-transport_type 
+san	B-toloc.city_name B-return_date.day_name B-class_type 
+francisco	I-toloc.city_name I-flight_stop B-city_name 
+via	O B-meal_description I-depart_time.end_time 
+dallas	B-stoploc.city_name I-transport_type I-depart_time.end_time 
+atis_flight atis_flight#atis_airfare atis_flight#atis_airline 
+
+show	O I-class_type B-meal_description 
+me	O B-meal_description I-fromloc.airport_name 
+all	O I-flight_stop B-arrive_time.period_of_day 
+flights	O B-meal_description I-fromloc.airport_name 
+from	O I-transport_type B-airline_name 
+san	B-fromloc.city_name B-airline_name I-return_date.day_number 
+diego	I-fromloc.city_name B-stoploc.airport_name I-return_date.day_number 
+to	O B-stoploc.airport_name B-cost_relative 
+los	B-toloc.city_name B-cost_relative B-stoploc.airport_name 
+angeles	I-toloc.city_name B-cost_relative I-depart_time.end_time 
+atis_flight atis_meal atis_capacity 
+
+show	O B-day_name B-days_code 
+me	O I-toloc.airport_name B-meal_description 
+all	O I-transport_type B-meal_description 
+the	O B-meal_description I-transport_type 
+saturday	B-depart_date.day_name I-transport_type I-return_date.day_number 
+flights	O I-transport_type B-arrive_date.month_name 
+from	O I-transport_type B-return_date.today_relative 
+pittsburgh	B-fromloc.city_name I-transport_type I-return_date.day_number 
+to	O B-arrive_date.month_name I-transport_type 
+baltimore	B-toloc.city_name B-arrive_date.month_name B-days_code 
+atis_flight atis_aircraft#atis_flight#atis_flight_no atis_flight#atis_airfare 
+
+what	O B-day_name B-meal_description 
+transportation	O I-toloc.airport_name B-arrive_date.day_name 
+is	O B-meal_description I-depart_time.period_of_day 
+available	O I-transport_type I-depart_time.period_of_day 
+from	O I-transport_type B-return_date.today_relative 
+the	O B-return_date.today_relative I-fromloc.city_name 
+dallas	B-fromloc.airport_name I-return_date.date_relative I-toloc.airport_name 
+airport	I-fromloc.airport_name B-return_date.today_relative B-cost_relative 
+to	O B-connect B-arrive_time.period_of_day 
+downtown	O B-connect B-stoploc.city_name 
+atis_ground_service atis_ground_service atis_aircraft#atis_flight#atis_flight_no 
+
+what	O B-day_name B-meal_description 
+is	O B-meal_description I-transport_type 
+the	O I-transport_type B-return_time.period_of_day 
+most	B-cost_relative B-stoploc.airport_name B-return_time.period_of_day 
+expensive	I-cost_relative B-stoploc.airport_name I-toloc.city_name 
+flight	O B-stoploc.airport_name B-cost_relative 
+from	O B-stoploc.airport_name B-cost_relative 
+dallas	B-fromloc.city_name B-stoploc.airport_name I-fromloc.city_name 
+to	O B-stoploc.airport_name I-fromloc.city_name 
+baltimore	B-toloc.city_name I-fromloc.city_name B-cost_relative 
+atis_flight atis_airfare atis_aircraft#atis_flight#atis_flight_no 
+
+what	O B-meal_description B-arrive_date.month_name 
+are	O I-transport_type B-meal_description 
+all	O I-transport_type B-meal_description 
+flights	O I-transport_type B-meal_description 
+to	O I-transport_type B-meal_description 
+denver	B-toloc.city_name B-meal_description I-transport_type 
+from	O I-transport_type I-fromloc.city_name 
+philadelphia	B-fromloc.city_name I-transport_type I-fromloc.city_name 
+on	O I-fromloc.city_name I-return_date.day_number 
+sunday	B-depart_date.day_name I-fromloc.city_name I-transport_type 
+atis_flight atis_flight#atis_airfare atis_ground_service#atis_ground_fare 
+
+what	O B-meal_description I-return_date.day_number 
+are	O B-meal_description I-return_date.day_number 
+the	O I-return_date.day_number B-airline_name 
+fares	O B-airline_name I-return_date.day_number 
+for	O B-meal_description B-airline_name 
+flights	O I-fromloc.city_name I-transport_type 
+between	O I-transport_type I-fromloc.city_name 
+atlanta	B-fromloc.city_name I-transport_type I-fromloc.city_name 
+and	O I-transport_type I-fromloc.city_name 
+dfw	B-toloc.airport_code I-transport_type I-fromloc.city_name 
+atis_airfare atis_aircraft#atis_flight#atis_flight_no atis_flight#atis_airfare 
+
+what	O B-day_name B-arrive_time.period_of_day 
+is	O I-class_type B-arrive_date.day_name 
+the	O B-cost_relative B-return_date.day_name 
+earliest	B-flight_mod B-cost_relative I-class_type 
+flight	O I-class_type B-cost_relative 
+from	O B-stoploc.airport_name B-cost_relative 
+tampa	B-fromloc.city_name B-stoploc.airport_name B-cost_relative 
+to	O I-fromloc.city_name B-stoploc.airport_name 
+milwaukee	B-toloc.city_name B-return_date.today_relative B-return_date.day_number 
+tomorrow	B-depart_date.today_relative B-stoploc.city_name I-return_date.date_relative 
+atis_flight atis_aircraft#atis_flight#atis_flight_no atis_airfare 
+
+what	O B-meal_description B-arrive_date.today_relative 
+flights	O I-transport_type B-arrive_date.today_relative 
+are	O B-meal_description B-arrive_date.today_relative 
+available	O B-time_relative I-transport_type 
+from	O B-time_relative B-arrive_time.period_of_day 
+denver	B-fromloc.city_name B-arrive_time.period_of_day B-cost_relative 
+to	O B-return_time.period_mod B-arrive_time.period_of_day 
+philadelphia	B-toloc.city_name B-connect I-today_relative 
+on	O B-meal_description B-stoploc.city_name 
+monday	B-depart_date.day_name I-fromloc.city_name I-return_date.day_number 
+atis_flight atis_ground_service#atis_ground_fare atis_ground_service 
+
+is	O B-arrive_time.period_of_day I-depart_time.period_of_day 
+there	O I-depart_time.end_time B-arrive_time.period_of_day 
+ground	O B-return_date.today_relative I-toloc.city_name 
+transportation	O I-toloc.airport_name B-connect 
+from	O B-connect B-return_date.today_relative 
+the	O B-connect B-return_date.today_relative 
+airport	O B-connect B-stoploc.city_name 
+to	O B-connect B-return_date.today_relative 
+downtown	O B-connect B-stoploc.city_name 
+phoenix	B-toloc.city_name B-connect B-stoploc.city_name 
+atis_ground_service atis_aircraft#atis_flight#atis_flight_no atis_flight#atis_airfare 
+
+what	O B-meal_description I-depart_time.period_of_day 
+are	O B-meal_description I-transport_type 
+the	O B-time_relative I-transport_type 
+flights	O I-transport_type I-fromloc.airport_name 
+from	O I-transport_type I-return_date.day_number 
+milwaukee	B-fromloc.city_name I-transport_type I-return_date.day_number 
+to	O I-transport_type I-return_date.day_number 
+orlando	B-toloc.city_name I-return_date.day_number B-arrive_date.month_name 
+on	O I-fromloc.city_name B-meal_description 
+wednesday	B-depart_date.day_name I-fromloc.city_name B-arrive_date.month_name 
+atis_flight atis_aircraft#atis_flight#atis_flight_no atis_flight#atis_airfare 
+
+i'd	O I-class_type B-flight_time 
+like	O B-return_date.day_name B-return_date.month_name 
+a	O I-depart_time.end_time B-fare_basis_code 
+limo	B-transport_type I-depart_time.end_time B-stoploc.airport_name 
+in	O I-transport_type B-return_date.today_relative 
+denver	B-fromloc.city_name I-arrive_date.day_number B-stoploc.city_name 
+on	O I-arrive_date.day_number I-transport_type 
+august	B-depart_date.month_name B-stoploc.city_name B-arrive_time.period_of_day 
+seventh	B-depart_date.day_number B-stoploc.city_name I-transport_type 
+atis_ground_service atis_ground_service atis_flight#atis_airline 
+
+what	O B-meal_description I-transport_type 
+is	O I-transport_type B-return_time.period_of_day 
+the	O I-transport_type I-return_date.day_number 
+seating	O I-return_date.day_number I-arrive_date.day_number 
+capacity	O B-return_date.day_name B-cost_relative 
+of	O I-toloc.airport_name I-arrive_date.day_number 
+the	O I-transport_type B-return_date.today_relative 
+aircraft	O I-fromloc.city_name I-return_date.day_number 
+72s	B-aircraft_code I-fromloc.city_name I-transport_type 
+atis_capacity atis_aircraft#atis_flight#atis_flight_no atis_meal 
+
+list	O B-aircraft_code I-fromloc.airport_name 
+the	O B-meal_description B-cost_relative 
+airlines	O I-fromloc.airport_name I-return_date.day_number 
+with	O B-aircraft_code I-return_date.day_number 
+flights	O B-meal_description B-cost_relative 
+to	O B-aircraft_code I-fromloc.airport_name 
+or	O B-arrive_date.month_name B-arrive_time.period_of_day 
+from	O B-arrive_time.period_of_day B-arrive_date.today_relative 
+denver	B-city_name B-arrive_time.period_of_day B-airline_name 
+atis_airline atis_flight#atis_airfare atis_meal 
+
+show	O B-arrive_date.month_name B-day_name 
+me	O B-airport_code B-arrive_date.month_name 
+all	O I-toloc.airport_name B-airline_name 
+flights	O I-transport_type B-return_date.today_relative 
+from	O I-transport_type I-today_relative 
+orlando	B-fromloc.city_name I-transport_type I-return_date.day_number 
+to	O I-transport_type I-return_date.day_number 
+montreal	B-toloc.city_name I-return_date.day_number I-today_relative 
+please	O I-return_date.day_number I-fromloc.city_name 
+atis_flight atis_flight#atis_airfare atis_aircraft 
+
+show	O B-day_name I-class_type 
+me	O I-class_type I-airline_name 
+round	B-round_trip I-toloc.airport_name I-fromloc.airport_name 
+trip	I-round_trip B-meal_description I-depart_time.period_of_day 
+flights	O I-transport_type B-time_relative 
+from	O I-transport_type B-time_relative 
+orlando	B-fromloc.city_name I-transport_type I-fromloc.city_name 
+to	O I-fromloc.city_name I-transport_type 
+montreal	B-toloc.city_name B-arrive_date.month_name B-connect 
+atis_flight atis_flight#atis_airfare atis_meal 
+
+first	B-class_type B-cost_relative B-depart_date.year 
+class	I-class_type B-cost_relative B-meal_description 
+round	B-round_trip B-cost_relative I-fare_basis_code 
+trip	I-round_trip I-depart_time.time_relative I-depart_time.end_time 
+airfare	O B-meal_description B-return_date.today_relative 
+from	O I-transport_type B-return_date.day_number 
+indianapolis	B-fromloc.city_name I-fromloc.city_name I-transport_type 
+to	O I-transport_type B-time_relative 
+memphis	B-toloc.city_name I-transport_type B-arrive_date.today_relative 
+atis_airfare atis_flight#atis_airfare atis_cheapest 
+
+list	O I-class_type B-meal_description 
+flights	O I-class_type B-meal_description 
+from	O I-fromloc.airport_name B-cost_relative 
+baltimore	B-fromloc.city_name B-cost_relative I-fromloc.airport_name 
+to	O B-cost_relative I-fromloc.airport_name 
+san	B-toloc.city_name B-cost_relative I-depart_time.time_relative 
+francisco	I-toloc.city_name B-cost_relative I-depart_time.time_relative 
+on	O I-depart_time.time_relative I-depart_time.period_of_day 
+friday	B-depart_date.day_name I-depart_time.period_of_day B-meal_description 
+atis_flight atis_airfare atis_flight#atis_airline 
+
+show	O I-depart_time.period_of_day B-day_name 
+me	O B-aircraft_code B-meal_description 
+all	O B-meal_description B-aircraft_code 
+flights	O I-transport_type B-aircraft_code 
+from	O I-transport_type B-return_date.today_relative 
+san	B-fromloc.city_name I-transport_type I-return_date.day_number 
+francisco	I-fromloc.city_name I-transport_type I-return_date.day_number 
+to	O I-transport_type B-meal_description 
+atlanta	B-toloc.city_name I-transport_type B-economy 
+atis_flight atis_flight#atis_airfare atis_meal 
+
+what	O B-meal_description I-return_date.day_number 
+are	O B-time_relative I-class_type 
+the	O B-cost_relative I-fromloc.airport_name 
+flights	O B-cost_relative I-class_type 
+from	O I-class_type I-transport_type 
+orlando	B-fromloc.city_name B-fromloc.state_code I-return_date.day_number 
+to	O B-meal_description B-return_date.day_name 
+kansas	B-toloc.city_name I-fromloc.city_name I-return_date.day_number 
+city	I-toloc.city_name I-fromloc.city_name B-arrive_date.today_relative 
+atis_flight atis_flight#atis_airfare atis_aircraft#atis_flight#atis_flight_no 
+
+list	O B-economy B-return_date.day_number 
+distance	O I-flight_mod B-arrive_time.period_of_day 
+from	O I-toloc.airport_name I-flight_mod 
+airports	O I-transport_type I-depart_time.period_of_day 
+to	O I-transport_type B-return_date.today_relative 
+downtown	O B-return_date.today_relative I-transport_type 
+in	O I-toloc.airport_name I-transport_type 
+new	B-city_name I-transport_type B-return_date.today_relative 
+york	I-city_name I-transport_type B-return_date.today_relative 
+atis_distance atis_flight#atis_airfare atis_abbreviation 
+
+find	O I-depart_time.end_time B-meal_description 
+a	O I-depart_time.end_time B-meal_description 
+flight	O B-meal_description I-depart_time.end_time 
+from	O I-transport_type B-time_relative 
+boston	B-fromloc.city_name I-transport_type B-stoploc.airport_name 
+to	O I-transport_type B-arrive_date.today_relative 
+washington	B-toloc.city_name I-return_date.day_number B-meal_description 
+on	O I-fromloc.city_name B-meal_description 
+monday	B-depart_date.day_name I-fromloc.city_name B-return_date.day_number 
+atis_flight atis_flight#atis_airline atis_flight#atis_airfare 
+
+list	O B-meal_description I-class_type 
+flights	O I-class_type B-meal_description 
+from	O I-fromloc.airport_name B-arrive_time.period_of_day 
+philadelphia	B-fromloc.city_name B-arrive_time.period_of_day B-stoploc.airport_name 
+to	O B-arrive_time.period_of_day I-flight_mod 
+san	B-toloc.city_name B-time_relative B-arrive_time.period_of_day 
+francisco	I-toloc.city_name B-arrive_time.period_of_day B-arrive_date.today_relative 
+via	O B-arrive_time.period_of_day B-arrive_date.today_relative 
+dallas	B-stoploc.city_name B-arrive_time.period_of_day B-time_relative 
+atis_flight atis_flight#atis_airline atis_flight#atis_airfare 
+
+what	O B-day_name I-depart_time.end_time 
+is	O I-depart_time.end_time I-class_type 
+the	O B-cost_relative B-airline_name 
+cheapest	B-cost_relative B-airline_name B-cost_relative 
+fare	O B-return_date.day_name I-class_type 
+from	O I-depart_time.end_time I-class_type 
+denver	B-fromloc.city_name B-return_date.day_number B-return_date.today_relative 
+to	O I-depart_time.end_time B-return_date.day_number 
+pittsburgh	B-toloc.city_name B-return_date.day_number B-return_date.today_relative 
+atis_airfare atis_aircraft#atis_flight#atis_flight_no atis_flight#atis_airfare 
+
+what	O B-meal_description B-arrive_date.today_relative 
+flights	O I-flight_stop I-transport_type 
+arrive	O B-meal_description I-transport_type 
+in	O I-transport_type B-airline_name 
+chicago	B-toloc.city_name B-airline_name I-transport_type 
+on	O I-return_date.day_number B-airline_name 
+sunday	B-arrive_date.day_name B-meal_description I-toloc.airport_name 
+on	O I-fromloc.city_name I-return_date.day_number 
+continental	B-airline_name I-transport_type B-return_date.today_relative 
+atis_flight atis_flight#atis_airline atis_flight_no 
+
+what	O I-depart_time.period_of_day B-class_type 
+ground	O I-depart_time.period_of_day B-class_type 
+transportation	O B-class_type B-return_time.period_of_day 
+is	O B-economy B-arrive_date.day_name 
+available	O I-depart_time.end_time I-toloc.airport_name 
+at	O I-toloc.airport_name I-transport_type 
+the	O B-return_date.today_relative I-transport_type 
+atlanta	B-airport_name I-transport_type B-return_date.today_relative 
+airport	I-airport_name B-return_date.today_relative B-economy 
+atis_ground_service atis_aircraft#atis_flight#atis_flight_no atis_meal 
+
+does	O I-depart_time.period_of_day I-depart_time.end_time 
+american	B-airline_name I-depart_time.period_of_day B-class_type 
+airlines	I-airline_name I-toloc.city_name I-return_date.day_number 
+fly	O I-transport_type B-meal_description 
+to	O I-transport_type B-connect 
+san	B-toloc.city_name I-transport_type B-connect 
+francisco	I-toloc.city_name I-transport_type B-return_date.day_number 
+from	O I-transport_type B-return_date.day_number 
+atlanta	B-fromloc.city_name I-transport_type B-meal_description 
+atis_flight atis_aircraft#atis_flight#atis_flight_no atis_flight#atis_airline 
+
+show	O B-return_date.day_name I-toloc.state_name 
+me	O I-flight_stop B-class_type 
+the	O B-meal_description B-flight_stop 
+type	O B-airline_name B-return_time.period_of_day 
+of	O I-return_date.day_number B-airline_name 
+aircraft	O I-return_date.day_number B-airline_name 
+that	O I-return_date.day_number B-meal_description 
+cp	B-airline_code I-fromloc.city_name B-meal_description 
+uses	O I-fromloc.city_name B-airline_name 
+atis_aircraft atis_meal atis_flight#atis_airfare 
+
+list	O B-cost_relative B-aircraft_code 
+the	O B-cost_relative B-meal_description 
+takeoffs	O B-cost_relative B-meal_description 
+and	O B-cost_relative I-class_type 
+landings	O I-class_type B-meal_description 
+at	O B-stoploc.city_name B-meal_description 
+general	B-airport_name I-fromloc.airport_name B-stoploc.city_name 
+mitchell	I-airport_name B-airline_name B-return_time.period_of_day 
+international	I-airport_name B-days_code B-airline_name 
+atis_flight atis_ground_service#atis_ground_fare atis_meal 
+
+what	O I-transport_type B-meal_description 
+is	O I-transport_type B-meal_description 
+the	O I-transport_type B-meal_description 
+earliest	B-flight_mod B-airline_name B-days_code 
+flight	O B-days_code B-return_date.today_relative 
+from	O B-return_date.today_relative B-return_date.day_name 
+boston	B-fromloc.city_name B-stoploc.airport_name B-return_date.day_name 
+to	O B-return_date.day_name B-stoploc.airport_name 
+philadelphia	B-toloc.city_name B-arrive_date.today_relative B-return_date.day_name 
+atis_flight atis_flight#atis_airline atis_aircraft#atis_flight#atis_flight_no 
+
+i	O I-depart_time.end_time B-meal_description 
+would	O B-connect B-meal_description 
+like	O B-stoploc.city_name B-meal_description 
+to	O B-connect B-return_date.day_name 
+fly	O B-meal_description B-connect 
+from	O B-arrive_time.period_of_day B-day_number 
+philadelphia	B-fromloc.city_name B-arrive_time.period_of_day B-stoploc.airport_name 
+to	O B-time_relative B-arrive_time.period_of_day 
+dallas	B-toloc.city_name B-arrive_time.period_of_day B-arrive_date.month_name 
+atis_flight atis_flight#atis_airline atis_airline#atis_flight_no 
+
+list	O B-meal_description I-depart_time.end_time 
+the	O I-fromloc.city_name I-fromloc.airport_name 
+flights	O I-fromloc.airport_name I-transport_type 
+from	O I-transport_type I-fromloc.airport_name 
+toronto	B-fromloc.city_name I-transport_type I-toloc.airport_name 
+to	O I-transport_type B-arrive_date.month_name 
+salt	B-toloc.city_name I-transport_type I-toloc.airport_name 
+lake	I-toloc.city_name I-toloc.airport_name I-fromloc.city_name 
+city	I-toloc.city_name I-transport_type B-return_date.today_relative 
+atis_flight atis_airfare atis_meal 
+
+show	O B-day_name I-class_type 
+me	O B-meal_description I-class_type 
+all	O B-return_time.period_of_day I-flight_stop 
+flights	O B-meal_description I-transport_type 
+from	O I-transport_type B-time_relative 
+atlanta	B-fromloc.city_name I-transport_type B-time_relative 
+to	O I-transport_type I-today_relative 
+san	B-toloc.city_name I-transport_type I-return_date.day_number 
+francisco	I-toloc.city_name I-transport_type I-return_date.day_number 
+atis_flight atis_aircraft#atis_flight#atis_flight_no atis_meal 
+
+show	O B-meal_description B-class_type 
+me	O I-transport_type B-meal 
+the	O B-airline_name I-transport_type 
+airlines	O B-airline_name I-return_date.day_number 
+between	O B-airline_name B-meal_description 
+boston	B-fromloc.city_name B-meal_description B-airline_name 
+and	O I-fromloc.city_name B-aircraft_code 
+toronto	B-toloc.city_name I-transport_type B-time_relative 
+atis_airline atis_flight#atis_airline atis_aircraft#atis_flight#atis_flight_no 
+
+all	O B-fare_amount B-aircraft_code 
+delta	B-airline_name B-return_date.day_name I-return_date.day_number 
+flights	O B-class_type I-class_type 
+to	O B-return_date.day_name B-class_type 
+everywhere	O B-city_name I-flight_stop 
+if	O B-city_name B-arrive_date.month_name 
+you	O B-arrive_date.month_name B-return_date.day_name 
+can	O B-arrive_date.month_name B-arrive_time.period_of_day 
+atis_flight atis_flight_time atis_ground_service 
+
+show	O I-depart_time.period_of_day B-return_date.day_name 
+me	O B-return_date.day_name I-depart_time.period_of_day 
+the	O I-class_type B-airline_name 
+flights	O I-flight_stop I-return_date.day_number 
+arriving	O I-depart_time.period_of_day B-meal_description 
+at	O I-return_date.day_number B-return_time.period_mod 
+love	B-toloc.airport_name B-airline_name B-depart_date.year 
+field	I-toloc.airport_name I-toloc.airport_name I-return_date.day_number 
+atis_flight atis_meal atis_aircraft#atis_flight#atis_flight_no 
+
+i	O I-depart_time.end_time B-class_type 
+want	O I-depart_time.end_time B-meal_description 
+a	O I-depart_time.end_time B-meal_description 
+flight	O B-meal_description B-return_date.today_relative 
+from	O B-time_relative B-arrive_time.period_of_day 
+ontario	B-fromloc.city_name B-stoploc.airport_name B-return_date.day_name 
+to	O B-stoploc.airport_name B-return_date.day_name 
+chicago	B-toloc.city_name I-return_date.day_number B-cost_relative 
+atis_flight atis_flight#atis_airfare atis_airfare 
+
+show	O B-day_name B-meal_description 
+me	O B-meal_description I-toloc.airport_name 
+flights	O I-transport_type I-toloc.airport_name 
+from	O I-transport_type I-toloc.airport_name 
+new	B-fromloc.city_name I-transport_type I-return_date.day_number 
+york	I-fromloc.city_name I-transport_type I-toloc.airport_name 
+to	O I-transport_type B-arrive_date.month_name 
+miami	B-toloc.city_name I-transport_type B-arrive_date.month_name 
+atis_flight atis_meal atis_flight#atis_airfare 
+
+flights	O B-meal_description B-cost_relative 
+from	O I-depart_time.period_of_day B-meal_description 
+kansas	B-fromloc.city_name B-cost_relative I-fromloc.city_name 
+city	I-fromloc.city_name B-cost_relative I-toloc.airport_name 
+to	O B-cost_relative B-meal_description 
+cleveland	B-toloc.city_name B-meal_description B-airport_code 
+on	O I-depart_time.period_of_day I-today_relative 
+wednesday	B-depart_date.day_name I-today_relative I-fromloc.airport_name 
+atis_flight atis_airfare atis_aircraft 
+
+list	O B-cost_relative B-aircraft_code 
+all	O B-cost_relative I-depart_time.period_of_day 
+the	O B-cost_relative I-class_type 
+landings	O B-cost_relative B-meal_description 
+at	O B-stoploc.city_name B-meal_description 
+general	B-toloc.airport_name B-stoploc.city_name I-fromloc.airport_name 
+mitchell	I-toloc.airport_name B-days_code B-airline_name 
+international	I-toloc.airport_name B-airline_name B-meal_description 
+atis_flight atis_meal atis_ground_service#atis_ground_fare 
+
+what	O B-meal_description B-arrive_date.month_name 
+flights	O I-transport_type B-time_relative 
+from	O I-transport_type B-time_relative 
+denver	B-fromloc.city_name I-transport_type B-time_relative 
+to	O I-transport_type B-arrive_date.today_relative 
+salt	B-toloc.city_name I-transport_type B-return_date.day_number 
+lake	I-toloc.city_name I-fromloc.city_name I-toloc.airport_name 
+city	I-toloc.city_name I-transport_type I-fromloc.city_name 
+atis_flight atis_airfare atis_meal 
+
+how	O I-depart_time.period_of_day I-depart_time.end_time 
+many	O I-fromloc.airport_name B-return_date.day_name 
+us	B-airline_name I-fromloc.airport_name B-fare_basis_code 
+air	I-airline_name I-fromloc.airport_name I-transport_type 
+flights	O I-transport_type I-fromloc.airport_name 
+leave	O I-transport_type I-toloc.airport_name 
+from	O I-toloc.airport_name I-transport_type 
+washington	B-fromloc.city_name B-connect I-transport_type 
+atis_quantity atis_cheapest atis_abbreviation 
+
+what	O B-arrive_time.period_of_day B-day_name 
+are	O B-arrive_time.period_of_day I-transport_type 
+the	O B-arrive_time.period_of_day I-return_date.day_number 
+flights	O I-transport_type I-return_date.day_number 
+from	O I-transport_type I-return_date.day_number 
+dallas	B-fromloc.city_name I-transport_type I-return_date.day_number 
+to	O I-transport_type B-day_number 
+baltimore	B-toloc.city_name I-transport_type I-return_date.day_number 
+atis_flight atis_airfare atis_aircraft#atis_flight#atis_flight_no 
+
+show	O B-meal_description B-day_name 
+me	O B-return_time.period_of_day B-meal_description 
+all	O B-meal_description I-transport_type 
+flights	O I-transport_type B-time_relative 
+from	O I-transport_type I-today_relative 
+baltimore	B-fromloc.city_name I-today_relative I-transport_type 
+to	O B-meal_description B-connect 
+philadelphia	B-toloc.city_name I-transport_type I-today_relative 
+atis_flight atis_ground_service#atis_ground_fare atis_capacity 
+
+show	O B-day_name B-meal_description 
+me	O B-meal_description I-flight_stop 
+the	O I-flight_stop I-transport_type 
+flights	O B-meal_description I-transport_type 
+from	O I-transport_type B-time_relative 
+chicago	B-fromloc.city_name I-transport_type I-return_date.day_number 
+to	O I-transport_type B-time_relative 
+indianapolis	B-toloc.city_name B-arrive_date.today_relative B-arrive_date.month_name 
+atis_flight atis_aircraft#atis_flight#atis_flight_no atis_meal 
+
+first	B-class_type B-depart_date.year B-cost_relative 
+class	I-class_type B-cost_relative I-fare_basis_code 
+price	O I-class_type B-cost_relative 
+san	B-fromloc.city_name I-depart_time.period_of_day B-cost_relative 
+francisco	I-fromloc.city_name B-cost_relative I-depart_time.period_of_day 
+pittsburgh	B-fromloc.city_name I-depart_time.period_of_day B-cost_relative 
+round	B-round_trip I-class_type I-depart_time.period_of_day 
+trip	I-round_trip I-depart_time.period_of_day B-fare_basis_code 
+atis_airfare atis_flight#atis_airfare atis_flight#atis_airline 
+
+which	O B-arrive_time.period_of_day B-meal_description 
+flights	O I-transport_type B-arrive_time.period_of_day 
+are	O I-transport_type I-fromloc.city_name 
+between	O I-fromloc.city_name I-transport_type 
+boston	B-fromloc.city_name I-transport_type I-fromloc.city_name 
+and	O I-fromloc.city_name I-transport_type 
+baltimore	B-toloc.city_name I-transport_type I-fromloc.city_name 
+washington	B-toloc.state_name B-toloc.state_name I-transport_type 
+atis_flight atis_city atis_flight#atis_airfare 
+
+show	O I-depart_time.period_of_day B-arrive_date.month_name 
+me	O I-toloc.city_name B-class_type 
+delta	B-airline_name B-meal_description I-class_type 
+flights	O I-transport_type B-arrive_date.month_name 
+from	O I-transport_type B-time_relative 
+dallas	B-fromloc.city_name I-transport_type I-arrive_date.day_number 
+to	O I-transport_type I-arrive_date.day_number 
+denver	B-toloc.city_name I-arrive_date.day_number I-transport_type 
+atis_flight atis_flight#atis_airfare atis_meal 
+
+show	O B-day_name I-depart_time.start_time 
+me	O I-toloc.airport_name B-day_name 
+the	O I-transport_type B-meal_description 
+flights	O I-transport_type B-meal_description 
+from	O I-transport_type I-today_relative 
+boston	B-fromloc.city_name I-transport_type I-return_date.day_number 
+to	O I-transport_type B-arrive_date.month_name 
+baltimore	B-toloc.city_name I-transport_type I-return_date.day_number 
+atis_flight atis_flight#atis_airfare atis_aircraft#atis_flight#atis_flight_no 
+
+what	O B-depart_date.year B-arrive_date.today_relative 
+are	O B-meal_description I-transport_type 
+the	O I-transport_type I-return_date.day_number 
+flights	O I-transport_type I-return_date.day_number 
+from	O I-transport_type B-return_date.today_relative 
+pittsburgh	B-fromloc.city_name I-transport_type I-fromloc.city_name 
+to	O I-transport_type B-arrive_date.today_relative 
+oakland	B-toloc.city_name I-transport_type B-meal_description 
+atis_flight atis_aircraft#atis_flight#atis_flight_no atis_flight#atis_airfare 
+
+flights	O B-cost_relative I-depart_time.period_of_day 
+from	O B-cost_relative B-meal_description 
+newark	B-fromloc.city_name B-cost_relative B-meal_description 
+new	B-fromloc.state_name B-cost_relative B-depart_date.today_relative 
+jersey	I-fromloc.state_name B-meal_description B-airport_code 
+to	O B-return_time.period_mod B-arrive_date.today_relative 
+cleveland	B-toloc.city_name B-return_time.period_mod B-meal_description 
+ohio	B-toloc.state_name B-meal_description B-return_time.period_mod 
+atis_flight atis_airfare atis_flight#atis_airfare 
+
+show	O B-days_code B-meal_description 
+morning	B-depart_time.period_of_day I-toloc.city_name I-airline_name 
+flights	O B-meal_description I-transport_type 
+from	O I-transport_type B-time_relative 
+philadelphia	B-fromloc.city_name I-transport_type I-today_relative 
+to	O I-transport_type I-today_relative 
+dallas	B-toloc.city_name I-arrive_date.day_number I-transport_type 
+atis_flight atis_cheapest atis_flight#atis_airfare 
+
+what's	O I-depart_time.end_time B-toloc.airport_code 
+the	O B-airline_name B-return_date.day_number 
+ground	O B-return_date.day_name B-airline_name 
+transportation	O B-airline_name B-depart_time.end_time 
+like	O B-return_date.day_name B-fare_basis_code 
+at	O B-city_name B-depart_time.end_time 
+pittsburgh	B-city_name B-city_name I-class_type 
+atis_ground_service atis_aircraft#atis_flight#atis_flight_no atis_airline#atis_flight_no 
+
+show	O B-day_name B-meal_description 
+me	O B-meal_description I-toloc.airport_name 
+flights	O I-transport_type B-airline_name 
+from	O I-transport_type B-airline_name 
+pittsburgh	B-fromloc.city_name I-transport_type I-return_date.day_number 
+to	O I-transport_type B-arrive_date.month_name 
+philadelphia	B-toloc.city_name I-transport_type B-arrive_date.month_name 
+atis_flight atis_flight#atis_airfare atis_flight#atis_airline 
+
+list	O B-arrive_time.period_of_day I-fromloc.airport_name 
+flights	O B-arrive_time.period_of_day I-fromloc.airport_name 
+from	O B-arrive_time.period_of_day I-transport_type 
+la	B-fromloc.airport_name B-arrive_time.period_of_day B-airline_name 
+guardia	I-fromloc.airport_name B-arrive_time.period_of_day B-airline_name 
+to	O B-time_relative B-arrive_time.period_of_day 
+burbank	B-toloc.city_name B-arrive_date.month_name B-arrive_date.today_relative 
+atis_flight atis_flight#atis_airline atis_abbreviation 
+
+give	O B-days_code B-arrive_date.day_name 
+me	O B-meal_description I-fromloc.airport_name 
+flights	O B-return_time.period_mod I-fromloc.airport_name 
+from	O B-meal_description I-fromloc.airport_name 
+denver	B-fromloc.city_name B-return_time.period_mod I-transport_type 
+to	O B-return_time.period_mod B-meal_description 
+baltimore	B-toloc.city_name B-meal_description I-fromloc.airport_name 
+atis_flight atis_ground_service#atis_ground_fare atis_flight#atis_airfare 
+
+what	O B-meal_description I-class_type 
+flights	O I-transport_type B-arrive_date.today_relative 
+go	O I-transport_type B-arrive_date.today_relative 
+from	O I-transport_type B-arrive_date.today_relative 
+boston	B-fromloc.city_name I-transport_type B-arrive_date.today_relative 
+to	O B-arrive_date.today_relative I-transport_type 
+dallas	B-toloc.city_name B-arrive_date.today_relative I-transport_type 
+atis_flight atis_flight#atis_airline atis_flight#atis_airfare 
+
+list	O B-meal_description B-fromloc.state_code 
+the	O B-meal_description I-transport_type 
+cities	O I-transport_type I-flight_mod 
+from	O I-transport_type I-return_date.day_number 
+which	O I-return_date.day_number I-transport_type 
+northwest	B-airline_name B-days_code I-depart_time.end_time 
+flies	O I-toloc.airport_name B-cost_relative 
+atis_city atis_aircraft#atis_flight#atis_flight_no atis_airfare 
+
+show	O B-day_name I-class_type 
+me	O I-toloc.airport_name I-class_type 
+ground	O I-transport_type I-toloc.city_name 
+transportation	O I-transport_type I-toloc.airport_name 
+in	O I-transport_type I-toloc.airport_name 
+san	B-city_name I-arrive_date.day_number B-economy 
+francisco	I-city_name B-connect I-toloc.airport_name 
+atis_ground_service atis_aircraft#atis_flight#atis_flight_no atis_meal 
+
+what	O B-class_type I-toloc.city_name 
+ground	O B-class_type I-depart_time.period_of_day 
+transportation	O B-economy I-toloc.airport_name 
+is	O I-toloc.airport_name B-economy 
+there	O B-connect I-transport_type 
+from	O B-connect B-meal_description 
+denver	B-city_name B-meal_description B-stoploc.city_name 
+atis_ground_service atis_aircraft#atis_flight#atis_flight_no atis_airfare 
+
+i	O I-depart_time.end_time I-depart_time.period_of_day 
+want	O B-meal_description I-depart_time.end_time 
+to	O I-transport_type I-fromloc.city_name 
+fly	O I-transport_type B-arrive_date.today_relative 
+boston	B-fromloc.city_name I-transport_type I-fromloc.city_name 
+to	O B-arrive_date.today_relative I-transport_type 
+dallas	B-toloc.city_name B-return_date.day_number B-toloc.state_name 
+atis_flight atis_flight#atis_airline atis_ground_service 
+
+list	O I-depart_time.period_of_day I-fromloc.airport_name 
+flights	O I-fromloc.airport_name I-class_type 
+from	O B-aircraft_code I-transport_type 
+las	B-fromloc.city_name B-meal_description B-arrive_time.period_of_day 
+vegas	I-fromloc.city_name B-arrive_time.period_of_day I-transport_type 
+to	O B-time_relative B-return_time.period_of_day 
+denver	B-toloc.city_name B-arrive_time.period_of_day B-arrive_date.today_relative 
+atis_flight atis_flight#atis_airfare atis_ground_service#atis_ground_fare 
+
+let's	O B-flight_mod B-arrive_date.today_relative 
+look	O B-day_name B-days_code 
+at	O B-days_code I-toloc.airport_name 
+baltimore	B-fromloc.city_name B-meal_description B-airline_name 
+to	O B-airline_name B-arrive_time.period_of_day 
+philadelphia	B-toloc.city_name B-days_code B-airline_name 
+again	O B-airline_name B-days_code 
+atis_flight atis_airline#atis_flight_no atis_airfare 
+
+please	O I-depart_time.period_of_day B-return_date.today_relative 
+list	O I-depart_time.period_of_day I-class_type 
+information	O I-class_type I-transport_type 
+regarding	O B-cost_relative I-fromloc.airport_name 
+san	B-airport_name B-cost_relative I-depart_time.end_time 
+francisco	I-airport_name B-cost_relative I-depart_time.time_relative 
+airport	I-airport_name I-depart_time.end_time I-depart_time.time_relative 
+atis_airport atis_ground_fare atis_aircraft 
+
+which	O B-meal_description I-depart_time.period_of_day 
+airlines	O I-transport_type B-meal_description 
+fly	O I-transport_type B-meal_description 
+between	O I-transport_type B-airline_name 
+boston	B-fromloc.city_name I-transport_type I-fromloc.city_name 
+and	O I-fromloc.city_name B-airline_name 
+philadelphia	B-toloc.city_name I-transport_type I-fromloc.city_name 
+atis_airline atis_flight#atis_airline atis_flight#atis_airfare 
+
+show	O B-meal I-depart_time.end_time 
+me	O B-return_time.period_mod B-class_type 
+flights	O B-meal_description B-return_time.period_mod 
+from	O I-transport_type B-return_time.period_mod 
+dallas	B-fromloc.city_name I-transport_type I-return_date.day_number 
+to	O I-transport_type B-return_time.period_mod 
+atlanta	B-toloc.city_name I-transport_type B-meal_description 
+atis_flight atis_flight#atis_airfare atis_aircraft 
+
+need	O I-depart_time.period_of_day I-toloc.city_name 
+a	O I-toloc.city_name B-days_code 
+flight	O B-cost_relative B-class_type 
+from	O B-cost_relative B-meal_description 
+pittsburgh	B-fromloc.city_name B-cost_relative B-meal_description 
+to	O I-depart_time.end_time B-cost_relative 
+denver	B-toloc.city_name B-meal_description B-fromloc.state_code 
+atis_flight atis_flight#atis_airfare atis_flight#atis_airline 
+
+kansas	B-fromloc.city_name B-return_date.month_name B-aircraft_code 
+city	I-fromloc.city_name I-return_date.day_number I-fromloc.city_name 
+to	O I-fromloc.city_name B-return_date.day_name 
+atlanta	B-toloc.city_name I-transport_type I-fromloc.city_name 
+monday	B-depart_date.day_name I-transport_type I-fromloc.city_name 
+morning	B-depart_time.period_of_day I-transport_type I-fromloc.city_name 
+flights	O I-transport_type B-meal_description 
+atis_flight atis_cheapest atis_ground_service 
+
+which	O I-depart_time.period_of_day B-meal_description 
+united	B-airline_name B-toloc.airport_code I-return_date.day_number 
+airlines	I-airline_name B-arrive_time.period_of_day B-toloc.airport_code 
+flights	O B-arrive_time.period_of_day I-return_date.day_number 
+go	O I-return_date.day_number B-arrive_time.period_of_day 
+through	O B-airline_name I-toloc.airport_name 
+denver	B-stoploc.city_name B-airline_name I-toloc.airport_name 
+atis_flight atis_ground_service#atis_ground_fare atis_meal 
+
+what	O B-arrive_date.today_relative I-toloc.city_name 
+airlines	O I-transport_type B-arrive_date.today_relative 
+fly	O I-transport_type B-arrive_date.today_relative 
+from	O I-transport_type B-arrive_date.today_relative 
+boston	B-fromloc.city_name I-transport_type I-fromloc.city_name 
+to	O B-arrive_date.today_relative I-transport_type 
+denver	B-toloc.city_name B-arrive_date.today_relative I-transport_type 
+atis_airline atis_flight#atis_airline atis_airfare 
+
+show	O B-days_code B-day_name 
+first	B-flight_mod I-toloc.airport_name B-days_code 
+flight	O I-transport_type B-return_date.today_relative 
+from	O I-transport_type B-return_date.today_relative 
+boston	B-fromloc.city_name I-transport_type B-return_date.today_relative 
+to	O I-transport_type B-return_date.today_relative 
+philadelphia	B-toloc.city_name I-transport_type B-return_date.today_relative 
+atis_flight atis_flight#atis_airline atis_flight#atis_airfare 
+
+what	O B-meal_description B-arrive_date.month_name 
+is	O B-arrive_date.day_name I-class_type 
+fare	O B-arrive_date.month_name B-arrive_date.day_name 
+code	O B-arrive_date.month_name I-depart_time.end_time 
+y	B-fare_basis_code I-depart_time.end_time B-arrive_date.month_name 
+mean	O B-return_time.period_of_day I-depart_time.end_time 
+atis_abbreviation atis_meal atis_airline 
+
+what	O B-meal_description B-class_type 
+does	O I-fromloc.city_name B-state_name 
+flight	O B-arrive_time.period_of_day I-transport_type 
+code	O B-arrive_time.period_of_day I-fromloc.city_name 
+us	B-airline_code B-arrive_time.period_of_day B-airline_name 
+mean	O B-airline_name B-return_time.period_of_day 
+atis_flight atis_flight#atis_airline atis_meal 
+
+show	O B-economy B-meal_description 
+flights	O B-arrive_date.month_name I-transport_type 
+between	O B-airline_name I-transport_type 
+boston	B-fromloc.city_name B-airline_name B-days_code 
+and	O B-days_code I-return_date.day_number 
+philadelphia	B-toloc.city_name B-airline_name B-days_code 
+atis_flight atis_flight#atis_airline atis_flight#atis_airfare 
+
+list	O I-fromloc.airport_name I-depart_time.period_of_day 
+flights	O I-fromloc.airport_name B-arrive_time.period_of_day 
+from	O B-arrive_time.period_of_day B-aircraft_code 
+houston	B-fromloc.city_name B-arrive_time.period_of_day I-transport_type 
+to	O B-arrive_time.period_of_day B-time_relative 
+denver	B-toloc.city_name B-arrive_time.period_of_day B-time_relative 
+atis_flight atis_ground_service#atis_ground_fare atis_airline#atis_flight_no 
+
+nashville	B-fromloc.city_name I-depart_time.period_of_day B-toloc.airport_code 
+to	O I-fromloc.airport_name I-return_date.day_number 
+cleveland	B-toloc.city_name I-return_date.day_number I-depart_time.period_of_day 
+sunday	B-depart_date.day_name I-fromloc.city_name I-return_date.day_number 
+before	B-depart_time.time_relative B-return_date.today_relative I-depart_time.period_of_day 
+9	B-depart_time.time I-toloc.airport_name I-transport_type 
+atis_flight atis_flight#atis_airfare atis_airfare 
+
+i'm	O B-meal_description B-arrive_date.month_name 
+flying	O B-fare_basis_code I-transport_type 
+from	O B-arrive_time.period_of_day B-return_date.day_name 
+boston	B-fromloc.city_name B-arrive_time.period_of_day I-transport_type 
+to	O B-stoploc.airport_name B-arrive_time.period_of_day 
+dallas	B-toloc.city_name B-stoploc.airport_name B-arrive_time.period_of_day 
+atis_flight atis_flight#atis_airline atis_flight#atis_airfare 
+
+list	O I-fromloc.airport_name B-arrive_time.period_of_day 
+flights	O I-fromloc.airport_name B-arrive_time.period_of_day 
+from	O I-fromloc.airport_name B-arrive_time.period_of_day 
+newark	B-fromloc.city_name I-fromloc.airport_name B-arrive_time.period_of_day 
+to	O B-arrive_time.period_of_day I-fromloc.airport_name 
+houston	B-toloc.city_name B-time_relative B-arrive_time.period_of_day 
+atis_flight atis_ground_fare atis_ground_service#atis_ground_fare 
+
+flights	O I-depart_time.period_of_day B-meal_description 
+from	O I-arrive_date.day_number I-transport_type 
+las	B-fromloc.city_name B-arrive_time.period_of_day B-return_date.day_name 
+vegas	I-fromloc.city_name B-arrive_time.period_of_day I-return_date.day_number 
+to	O B-time_relative B-return_time.period_mod 
+phoenix	B-toloc.city_name B-arrive_time.period_of_day B-stoploc.airport_name 
+atis_flight atis_flight#atis_airfare atis_flight#atis_airline 
+
+show	O B-days_code B-flight_time 
+flights	O I-transport_type B-class_type 
+from	O I-transport_type B-meal_description 
+pittsburgh	B-fromloc.city_name I-transport_type B-meal_description 
+to	O I-transport_type B-arrive_date.month_name 
+oakland	B-toloc.city_name I-transport_type B-meal_description 
+atis_flight atis_flight#atis_airfare atis_aircraft#atis_flight#atis_flight_no 
+
+please	O I-depart_time.period_of_day B-class_type 
+list	O I-depart_time.period_of_day I-fromloc.airport_name 
+ground	O I-fromloc.airport_name I-class_type 
+transportation	O I-toloc.airport_name I-class_type 
+in	O I-transport_type B-return_date.today_relative 
+atlanta	B-city_name I-transport_type B-return_date.today_relative 
+atis_ground_service atis_aircraft#atis_flight#atis_flight_no atis_aircraft 
+
+flights	O B-meal_description B-arrive_time.period_of_day 
+from	O B-arrive_time.period_of_day I-transport_type 
+new	B-fromloc.city_name B-arrive_time.period_of_day I-transport_type 
+york	I-fromloc.city_name I-transport_type B-arrive_time.period_of_day 
+to	O I-transport_type B-arrive_date.month_name 
+miami	B-toloc.city_name I-transport_type I-toloc.city_name 
+atis_flight atis_flight#atis_airfare atis_ground_service 
+
+ground	O I-depart_time.period_of_day B-flight_time 
+transportation	O B-cost_relative I-return_date.date_relative 
+in	O B-cost_relative I-toloc.airport_name 
+san	B-city_name B-cost_relative I-toloc.airport_name 
+jose	I-city_name I-toloc.airport_name B-airline_name 
+atis_ground_service atis_aircraft#atis_flight#atis_flight_no atis_airfare 
+
+list	O I-fromloc.city_name B-arrive_time.period_of_day 
+ground	O I-fromloc.city_name I-fromloc.airport_name 
+transportation	O I-fromloc.airport_name I-fromloc.city_name 
+in	O I-fromloc.city_name I-fromloc.airport_name 
+detroit	B-city_name I-transport_type B-arrive_time.period_of_day 
+atis_ground_service atis_aircraft#atis_flight#atis_flight_no atis_ground_fare 
+
+what	O I-class_type I-depart_time.period_of_day 
+is	O I-depart_time.period_of_day B-return_date.month_name 
+fare	O I-fromloc.city_name B-arrive_date.day_name 
+code	O B-arrive_date.day_name I-fromloc.city_name 
+h	B-fare_basis_code B-arrive_date.day_name B-arrive_date.month_name 
+atis_abbreviation atis_airline atis_ground_service 
+
+does	O I-depart_time.period_of_day B-arrive_time.period_of_day 
+midwest	B-airline_name B-days_code I-toloc.airport_name 
+express	O B-days_code I-toloc.airport_name 
+serve	O B-days_code I-toloc.airport_name 
+baltimore	B-city_name I-toloc.airport_name B-cost_relative 
+atis_flight atis_flight_no atis_ground_fare 
+
+ground	O B-flight_time B-class_type 
+transportation	O I-toloc.airport_name I-depart_time.period_of_day 
+in	O I-depart_time.period_of_day I-transport_type 
+westchester	B-city_name B-airline_name I-depart_time.period_of_day 
+county	I-city_name B-arrive_date.month_name B-return_date.today_relative 
+atis_ground_service atis_ground_service atis_abbreviation 
+
+does	O I-depart_time.end_time B-arrive_date.day_name 
+delta	B-airline_name B-stoploc.city_name B-arrive_time.period_of_day 
+aircraft	O B-stoploc.city_name B-arrive_time.period_of_day 
+fly	O B-return_date.day_number B-stoploc.city_name 
+dc10	B-aircraft_code I-depart_time.end_time B-return_date.day_number 
+atis_aircraft atis_aircraft#atis_flight#atis_flight_no atis_flight#atis_airline 
+
+flights	O B-meal_description I-depart_time.period_of_day 
+from	O I-transport_type B-aircraft_code 
+atlanta	B-fromloc.city_name I-transport_type I-return_date.day_number 
+please	O I-transport_type B-economy 
+atis_flight atis_aircraft atis_flight#atis_airfare 
+
+minneapolis	B-fromloc.city_name B-arrive_time.period_of_day I-depart_time.end_time 
+to	O B-arrive_time.period_of_day B-fare_basis_code 
+pittsburgh	B-toloc.city_name I-flight_mod B-fare_basis_code 
+flight	O I-transport_type B-arrive_date.today_relative 
+atis_flight atis_airline#atis_flight_no atis_aircraft#atis_flight#atis_flight_no 
+
+what	O B-arrive_date.month_name I-transport_type 
+airline	O I-transport_type B-arrive_date.month_name 
+is	O I-transport_type B-economy 
+as	B-airline_code B-economy I-transport_type 
+atis_airline atis_ground_service atis_meal 
+
+ground	O I-depart_time.period_of_day B-class_type 
+transportation	O I-depart_time.period_of_day B-class_type 
+in	O I-arrive_date.day_number I-fromloc.city_name 
+denver	B-city_name I-toloc.airport_name B-state_name 
+atis_ground_service atis_aircraft#atis_flight#atis_flight_no atis_airline#atis_flight_no 
+
+which	O B-meal_description B-flight_time 
+airline	O B-meal_description B-return_time.period_of_day 
+is	O B-return_time.period_of_day B-arrive_time.period_of_day 
+us	B-airline_code B-meal_description B-return_time.period_of_day 
+atis_airline atis_airfare#atis_flight_time atis_abbreviation 
+
+from	O I-depart_time.end_time B-meal_description 
+washington	B-fromloc.city_name B-meal_description I-depart_time.end_time 
+to	O I-transport_type I-depart_time.end_time 
+atlanta	B-toloc.city_name I-transport_type B-time_relative 
+atis_flight atis_flight#atis_airfare atis_airfare#atis_flight_time 
+
+what	O I-depart_time.period_of_day I-transport_type 
+is	O I-transport_type I-depart_time.period_of_day 
+ewr	B-airport_code I-transport_type B-return_time.period_of_day 
+atis_abbreviation atis_aircraft#atis_flight#atis_flight_no atis_airfare 
+
+what	O B-arrive_date.month_name I-class_type 
+is	O I-time I-class_type 
+ff	B-airline_code B-meal_description I-class_type 
+atis_abbreviation atis_airfare#atis_flight_time atis_meal 
+

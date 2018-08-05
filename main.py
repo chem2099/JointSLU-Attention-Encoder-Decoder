@@ -100,6 +100,8 @@ if __name__ == "__main__":
 		  num_epoch, print_each, save_model, validate_each,
 		  model_save)
 
+	# test(encoder, decoder, data)
+
 	predict(data, encoder=encoder, decoder=decoder, name='self-test', give_predictions=2)
 	predict(data, encoder=encoder, decoder=decoder, 
 			sample_tuple=data.get_dev(), name='self-dev', give_predictions=1)

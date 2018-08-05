@@ -31,7 +31,7 @@ class Alphabet(object):
 		if isinstance(elems, list):
 			for elem in elems:
 				self.add_words(elem)
-		elif isinstance(elems, str):
+		elif isinstance(elems, (str, unicode)):
 			# 注意字典中的元素不能重复加入, 重复者被忽略.
 			if elems not in self.word_list:
 				self.word2index[elems] = len(self.word_list) + 1
@@ -64,7 +64,7 @@ class Alphabet(object):
 				ret_list.append(self.indexs(word))
 
 			return ret_list
-		elif isinstance(words, str):
+		elif isinstance(words, (str, unicode)):
 			if words not in self.word2index.keys():
 				raise Exception("查询元素不在字典中.")
 			else:
