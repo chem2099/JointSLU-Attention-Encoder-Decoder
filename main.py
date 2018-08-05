@@ -101,7 +101,7 @@ if __name__ == "__main__":
 		  model_save)
 
 	predict(data, encoder=encoder, decoder=decoder, name='self-test', give_predictions=2)
-	predict(data, encoder=encoder, decoder=decoder 
+	predict(data, encoder=encoder, decoder=decoder, 
 			sample_tuple=data.get_dev(), name='self-dev', give_predictions=1)
 
 	# import torch
