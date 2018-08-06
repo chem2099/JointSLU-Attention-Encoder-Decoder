@@ -16,7 +16,7 @@ import time
 def train(encoder, decoder, dataset, optim_mode,
 		  batch_size, learning_rate, 
 		  train_epoch, print_each, save_each, validate_each,
-		  model_save_dir):
+		  model_save_dir, model_selection):
 	
 	total_time_start = time.time()
 
@@ -27,8 +27,8 @@ def train(encoder, decoder, dataset, optim_mode,
 		time_start = time.time()
 		encoder = encoder.cuda()
 		decoder = decoder.cuda()
-
-		print "模型 Encoder, Decoder 已加入 GPU, 共用时 {:.6f} 秒.\n\n".format(time.time() - time_start)
+		if not model_selection:
+			print "模型 Encoder, Decoder 已加入 GPU, 共用时 {:.6f} 秒.\n\n".format(time.time() - time_start)
 
 	criterion = NLLLoss()
 	if optim_mode == "adam":
@@ -60,10 +60,12 @@ def train(encoder, decoder, dataset, optim_mode,
 			labels_var_list = [elem.cuda() for elem in labels_var_list]
 			intent_var = intent_var.cuda()
 			time_con = time.time() - time_start
-
-			print 'batch {} 已载入 GPU, 用时 {:.6f} 秒, 正在前向计算和反馈更新.'.format(epoch, time_con)
+			
+			if not model_selection:
+				print 'batch {} 已载入 GPU, 用时 {:.6f} 秒, 正在前向计算和反馈更新.'.format(epoch, time_con)
 		else:
-			print 'batch {} 已载入 CPU, 正在前向计算和反馈更新.'.format(epoch)	
+			if not model_selection:
+				print 'batch {} 已载入 CPU, 正在前向计算和反馈更新.'.format(epoch)	
 
 		time_start = time.time()
 		hiddens, last_hidden = encoder(sent_var, seq_lens)
@@ -74,7 +76,8 @@ def train(encoder, decoder, dataset, optim_mode,
 		# 	exit(0)
 		slot_pred_list, intent_pred = decoder(last_hidden, hiddens, seq_lens)
 		time_con = time.time() - time_start
-		print 'batch {} 的前向计算时间开销为 {:.6f} 秒.'.format(epoch, time_con)
+		if not model_selection:
+			print 'batch {} 的前向计算时间开销为 {:.6f} 秒.'.format(epoch, time_con)
 
 		time_start = time.time()
 		# 这里事实上只支持 NLLLoss 损失.
@@ -93,18 +96,20 @@ def train(encoder, decoder, dataset, optim_mode,
 		en_optimer.step()
 		de_optimer.step()
 		time_con = time.time() - time_start
-		print 'batch {} 的回馈更新时间开销为 {:.6f} 秒.\n'.format(epoch, time_con)
+		
+		if not model_selection:
+			print 'batch {} 的回馈更新时间开销为 {:.6f} 秒.\n'.format(epoch, time_con)
 
 		# 打印当前 batch 的损失.
 		if epoch % print_each == 0:
 			print '在第 {} 轮 batch 的平均损失为 {:.6f}.\n'.format(epoch, total_loss.cpu().data.numpy()[0])
 
-			if epoch % validate_each != 0:
+			if epoch % validate_each != 0 and not model_selection:
 				time.sleep(5)
 
 		if epoch % save_each == 0:
-			torch.save(encoder, model_save_dir + 'encoder.pth')
-			torch.save(decoder, model_save_dir + 'decoder.pth')
+			torch.save(encoder, model_save_dir + 'encoder_.pth')
+			torch.save(decoder, model_save_dir + 'decoder_.pth')
 
 		if epoch % validate_each == 0:
 			time_start = time.time()
@@ -112,13 +117,19 @@ def train(encoder, decoder, dataset, optim_mode,
 			slot_accuracy, slot_f1, intent_accuracy = test(encoder, decoder, dataset)
 			print '在第 {} 轮验证数据集中 slot filling 的 准确率为 {:.6f}, F1 值为 {:6f}.'.format(epoch, slot_accuracy, slot_f1)
 			print'在第 {} 轮验证数据集中 intent detection 的 准确率为 {:.6f}.'.format(epoch, intent_accuracy)
+
+			if model_selection:
+				print ""
 			
 			time_con = time.time() - time_start
-			print('在 {} 轮 batch 中, 用于在测试集上评测的时间为 {:.6f} 秒.'.format(epoch, time_con))
-
-			time.sleep(5)
-
-		print '\n' 
+			if not model_selection:
+				print '在 {} 轮 batch 中, 用于在测试集上评测的时间为 {:.6f} 秒.'.format(epoch, time_con)
+			
+			if not model_selection:
+				time.sleep(5)
+		
+		if not model_selection:
+			print '\n' 
 
 	total_time_con = time.time() - total_time_start
 	print '本次训练 + 测试共计用时 {:.6f} 秒.'.format(total_time_con)
