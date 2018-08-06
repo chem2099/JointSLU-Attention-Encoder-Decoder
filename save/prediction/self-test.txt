@@ -13782,3 +13782,2837 @@ is	O I-time I-class_type
 ff	B-airline_code B-meal_description I-class_type 
 atis_abbreviation atis_airfare#atis_flight_time atis_meal 
 
+i	O O B-fromloc.city_name 
+want	O O B-fromloc.city_name 
+to	O O B-fromloc.city_name 
+travel	O O B-fromloc.city_name 
+from	O O B-fromloc.city_name 
+kansas	B-fromloc.city_name B-fromloc.city_name O 
+city	I-fromloc.city_name I-fromloc.city_name B-fromloc.city_name 
+to	O O B-fromloc.city_name 
+chicago	B-toloc.city_name B-toloc.city_name B-fromloc.city_name 
+round	B-round_trip B-round_trip B-airline_name 
+trip	I-round_trip I-round_trip O 
+leaving	O O B-fromloc.city_name 
+wednesday	B-depart_date.day_name B-depart_date.day_name B-arrive_date.day_name 
+june	B-depart_date.month_name B-depart_date.month_name B-arrive_date.month_name 
+sixteenth	B-depart_date.day_number B-depart_date.day_number O 
+arriving	O O B-fromloc.city_name 
+in	O O B-toloc.city_name 
+chicago	B-toloc.city_name B-toloc.city_name B-stoploc.city_name 
+at	O O I-airline_name 
+around	B-arrive_time.time_relative B-arrive_time.time_relative B-depart_time.time_relative 
+7	B-arrive_time.time B-arrive_time.time B-depart_time.time 
+o'clock	I-arrive_time.time I-arrive_time.time I-depart_time.time 
+in	O O B-toloc.city_name 
+the	O O B-round_trip 
+evening	B-arrive_time.period_of_day B-arrive_time.period_of_day B-depart_time.period_of_day 
+and	O O I-flight_mod 
+returning	O O I-flight_mod 
+the	O O B-return_date.date_relative 
+next	B-return_date.date_relative B-return_date.date_relative O 
+day	O O B-return_date.date_relative 
+arriving	O O I-flight_mod 
+in	O O B-toloc.city_name 
+kansas	B-toloc.city_name B-toloc.city_name B-stoploc.city_name 
+city	I-toloc.city_name I-toloc.city_name I-fromloc.city_name 
+at	O O B-arrive_time.time 
+around	B-arrive_time.time_relative B-arrive_time.time_relative B-depart_time.time_relative 
+7	B-arrive_time.time B-arrive_time.time B-depart_time.time 
+o'clock	I-arrive_time.time I-arrive_time.time I-depart_time.time 
+in	O O B-toloc.city_name 
+the	O O I-flight_time 
+evening	B-arrive_time.period_of_day B-arrive_time.period_of_day B-depart_time.period_of_day 
+which	O O B-or 
+airlines	O O I-flight_mod 
+fly	O O B-fromloc.city_name 
+that	O O I-flight_mod 
+route	O O B-toloc.city_name 
+atis_flight atis_flight atis_airline 
+
+may	O O B-toloc.city_name 
+i	O O B-toloc.city_name 
+please	O O B-toloc.city_name 
+see	O O B-flight_mod 
+airlines	O O I-airline_name 
+and	O O B-flight_mod 
+flight	O O B-flight_time 
+numbers	O O B-flight_time 
+from	O O B-fromloc.city_name 
+new	B-fromloc.city_name B-fromloc.city_name O 
+york	I-fromloc.city_name I-fromloc.city_name B-fromloc.city_name 
+to	O O B-fromloc.city_name 
+toronto	B-toloc.city_name B-toloc.city_name B-fromloc.city_name 
+on	O O I-toloc.city_name 
+the	O O B-depart_date.day_name 
+same	B-depart_date.date_relative O B-depart_date.date_relative 
+date	O O B-return_date.date_relative 
+june	B-depart_date.month_name B-depart_date.month_name O 
+seventeenth	B-depart_date.day_number B-depart_date.day_number B-airline_name 
+also	O O B-fromloc.city_name 
+arriving	O O B-toloc.city_name 
+in	O O B-toloc.city_name 
+toronto	B-toloc.city_name B-toloc.city_name B-stoploc.city_name 
+before	B-arrive_time.time_relative B-arrive_time.time_relative B-depart_time.time_relative 
+noon	B-arrive_time.time B-arrive_time.time B-depart_time.time 
+thank	O O B-toloc.city_name 
+you	O O I-flight_time 
+atis_airline#atis_flight_no atis_airline#atis_flight_no atis_flight_no 
+
+i	O O B-fromloc.city_name 
+would	O O B-flight_mod 
+like	O O B-flight_mod 
+the	O O B-flight_mod 
+flights	O O B-flight_mod 
+available	O O B-fromloc.city_name 
+from	O O B-fromloc.city_name 
+boston	B-fromloc.city_name B-fromloc.city_name O 
+to	O O B-fromloc.city_name 
+denver	B-toloc.city_name B-toloc.city_name B-fromloc.city_name 
+arriving	O O I-toloc.city_name 
+in	O O B-toloc.city_name 
+denver	B-toloc.city_name B-toloc.city_name B-stoploc.city_name 
+on	O O I-toloc.city_name 
+9	B-arrive_time.time B-arrive_time.time B-arrive_time.time_relative 
+o'clock	I-arrive_time.time I-arrive_time.time I-depart_time.time 
+wednesday	B-arrive_date.day_name B-arrive_date.day_name I-arrive_time.time 
+morning	B-arrive_time.period_of_day B-arrive_time.period_of_day B-depart_time.period_of_day 
+on	O O I-flight_time 
+or	B-or B-or O 
+by	B-arrive_time.time_relative B-arrive_time.time_relative B-arrive_date.day_name 
+9	B-arrive_time.time B-arrive_time.time I-arrive_time.time 
+o'clock	I-arrive_time.time I-arrive_time.time I-depart_time.time 
+wednesday	B-arrive_date.day_name B-arrive_date.day_name I-arrive_time.time 
+morning	B-arrive_time.period_of_day B-arrive_time.period_of_day B-depart_time.period_of_day 
+atis_flight atis_flight atis_flight_no 
+
+can	O O B-toloc.city_name 
+you	O O B-flight_mod 
+please	O O I-flight_time 
+tell	O O B-flight_mod 
+me	O O B-flight_mod 
+the	O O B-flight_mod 
+type	O O I-flight_time 
+of	O O I-flight_time 
+aircraft	O O I-flight_time 
+used	O O B-flight_mod 
+flying	O O B-flight_mod 
+from	O O B-fromloc.city_name 
+atlanta	B-fromloc.city_name B-fromloc.city_name O 
+to	O O B-fromloc.city_name 
+denver	B-toloc.city_name B-toloc.city_name B-fromloc.city_name 
+on	O O B-toloc.city_name 
+eastern	B-airline_name B-airline_name B-depart_date.month_name 
+flight	O O B-flight_number 
+825	B-flight_number B-flight_number O 
+leaving	O O B-fromloc.city_name 
+at	O O B-depart_date.day_name 
+555	B-depart_time.time B-depart_time.time B-arrive_time.time 
+atis_aircraft atis_aircraft atis_flight 
+
+show	O O B-fromloc.city_name 
+me	O O B-fromloc.city_name 
+any	O O B-fromloc.city_name 
+show	O O B-connect 
+me	O O B-flight_mod 
+what	O O I-flight_time 
+the	O O B-class_type 
+first	B-class_type B-class_type B-mod 
+class	I-class_type I-class_type B-class_type 
+fares	O O I-flight_mod 
+are	O O B-flight_stop 
+of	O O B-fromloc.city_name 
+the	O O B-flight_mod 
+flights	O O B-fromloc.city_name 
+from	O O B-fromloc.city_name 
+pittsburgh	B-fromloc.city_name B-fromloc.city_name O 
+to	O O B-fromloc.city_name 
+san	B-toloc.city_name B-toloc.city_name B-fromloc.city_name 
+francisco	I-toloc.city_name I-toloc.city_name I-fromloc.city_name 
+on	O O B-toloc.city_name 
+monday	B-depart_date.day_name B-depart_date.day_name B-arrive_date.day_name 
+atis_airfare atis_airfare atis_flight 
+
+find	O O B-fromloc.city_name 
+me	O O B-flight_mod 
+the	O O B-flight_mod 
+earliest	B-flight_mod B-flight_mod B-mod 
+flight	O O I-flight_mod 
+from	O O B-fromloc.city_name 
+boston	B-fromloc.city_name B-fromloc.city_name O 
+to	O O B-fromloc.city_name 
+atlanta	B-toloc.city_name B-toloc.city_name B-fromloc.city_name 
+and	O O B-fromloc.city_name 
+the	O O B-toloc.city_name 
+latest	B-flight_mod B-flight_mod O 
+return	O O B-round_trip 
+from	O O B-fromloc.city_name 
+atlanta	B-fromloc.city_name B-fromloc.city_name B-toloc.city_name 
+to	O O B-fromloc.city_name 
+boston	B-toloc.city_name B-toloc.city_name B-fromloc.city_name 
+within	O O I-toloc.city_name 
+the	O O B-toloc.city_name 
+same	B-depart_date.date_relative O B-depart_date.date_relative 
+day	O B-return_date.date_relative O 
+atis_flight atis_flight atis_airfare 
+
+very	O O B-flight_mod 
+well	O O B-fare_basis_code 
+i'm	O O B-round_trip 
+working	O O B-flight_mod 
+on	O O B-flight_mod 
+scenario	O O B-connect 
+three	O O B-flight_time 
+i'm	O O I-flight_mod 
+interested	O O B-fromloc.city_name 
+in	O O B-fromloc.city_name 
+a	O O B-fromloc.city_name 
+flight	O O B-flight_mod 
+on	O O B-flight_mod 
+a	O O B-flight_mod 
+727	B-aircraft_code B-aircraft_code O 
+from	O O B-fromloc.city_name 
+washington	B-fromloc.city_name B-fromloc.city_name O 
+dc	B-fromloc.state_code B-fromloc.state_code B-toloc.state_code 
+to	O O B-fromloc.city_name 
+atlanta	B-toloc.city_name B-toloc.city_name B-fromloc.city_name 
+georgia	B-toloc.state_name B-toloc.state_name I-toloc.airport_name 
+atis_flight atis_flight atis_ground_service 
+
+now	O O B-fromloc.city_name 
+i'd	O O B-flight_stop 
+like	O O B-flight_mod 
+a	O O B-flight_mod 
+schedule	B-flight_time B-flight_time B-aircraft_code 
+for	O O I-flight_time 
+the	O O I-flight_time 
+flights	O O B-flight_mod 
+on	O O B-flight_mod 
+tuesday	B-depart_date.day_name B-depart_date.day_name B-arrive_date.day_name 
+morning	B-depart_time.period_of_day B-depart_time.period_of_day B-arrive_time.period_of_day 
+from	O O B-fromloc.city_name 
+oakland	B-fromloc.city_name B-fromloc.city_name B-fromloc.airport_name 
+no	O O B-flight_stop 
+from	O O B-fromloc.city_name 
+dallas	B-fromloc.city_name B-fromloc.city_name O 
+fort	I-fromloc.city_name I-fromloc.city_name B-fromloc.city_name 
+worth	I-fromloc.city_name I-fromloc.city_name B-fromloc.city_name 
+to	O O B-fromloc.city_name 
+atlanta	B-toloc.city_name B-toloc.city_name B-fromloc.city_name 
+atis_flight_time atis_flight_time atis_flight 
+
+i	O O B-fromloc.city_name 
+would	O O B-flight_mod 
+like	O O B-flight_mod 
+to	O O B-fromloc.city_name 
+originate	O O B-flight_mod 
+my	O O B-flight_mod 
+flight	O O B-flight_mod 
+in	O O B-fromloc.city_name 
+washington	B-fromloc.city_name B-fromloc.city_name B-toloc.city_name 
+dc	B-fromloc.state_code B-fromloc.state_code B-toloc.state_code 
+stop	O O I-flight_stop 
+in	O O B-flight_mod 
+denver	B-stoploc.city_name B-stoploc.city_name B-toloc.city_name 
+with	O O I-flight_mod 
+the	O O B-flight_stop 
+destination	O O I-flight_time 
+city	O O B-fromloc.city_name 
+of	O O B-toloc.state_name 
+san	B-toloc.city_name B-toloc.city_name B-fromloc.city_name 
+francisco	I-toloc.city_name I-toloc.city_name I-fromloc.city_name 
+atis_flight atis_flight atis_airport 
+
+is	O O B-fromloc.city_name 
+there	O O B-flight_mod 
+one	O B-round_trip O 
+airline	O O I-airline_name 
+that	O O I-flight_stop 
+flies	O O B-flight_mod 
+from	O O B-fromloc.city_name 
+burbank	B-fromloc.city_name B-fromloc.city_name O 
+to	O O B-fromloc.city_name 
+milwaukee	B-toloc.city_name B-toloc.city_name B-fromloc.city_name 
+milwaukee	B-fromloc.city_name B-fromloc.city_name I-fromloc.city_name 
+to	O O B-fromloc.city_name 
+st.	B-toloc.city_name B-toloc.city_name B-stoploc.city_name 
+louis	I-toloc.city_name I-toloc.city_name I-fromloc.city_name 
+and	O O B-fromloc.city_name 
+from	O O B-fromloc.city_name 
+st.	B-fromloc.city_name B-fromloc.city_name O 
+louis	I-fromloc.city_name I-fromloc.city_name B-fromloc.city_name 
+to	O O B-fromloc.city_name 
+burbank	B-toloc.city_name B-toloc.city_name B-fromloc.city_name 
+atis_airline atis_flight atis_airline 
+
+what's	O O B-fare_basis_code 
+the	O O B-flight_mod 
+price	O O B-cost_relative 
+of	O O B-fare_basis_code 
+the	O O B-round_trip 
+least	B-cost_relative B-cost_relative B-mod 
+expensive	I-cost_relative I-cost_relative O 
+first	B-class_type B-class_type B-mod 
+class	I-class_type I-class_type B-class_type 
+round	B-round_trip B-round_trip I-round_trip 
+trip	I-round_trip I-round_trip O 
+ticket	O O B-flight_number 
+on	O O B-flight_mod 
+us	B-airline_name B-airline_name B-round_trip 
+air	I-airline_name I-airline_name O 
+from	O O B-fromloc.city_name 
+cleveland	B-fromloc.city_name B-fromloc.city_name O 
+to	O O B-fromloc.city_name 
+miami	B-toloc.city_name B-toloc.city_name B-fromloc.city_name 
+atis_airfare atis_airfare atis_flight_time 
+
+what	O O B-fromloc.city_name 
+is	O O B-flight_mod 
+the	O O B-flight_mod 
+first	B-flight_mod B-flight_mod O 
+flight	O O B-flight_mod 
+from	O O B-fromloc.city_name 
+atlanta	B-fromloc.city_name B-fromloc.city_name O 
+to	O O B-fromloc.city_name 
+boston	B-toloc.city_name B-toloc.city_name B-fromloc.city_name 
+on	O O B-fromloc.city_name 
+thursday	B-depart_date.day_name B-depart_date.day_name O 
+september	B-depart_date.month_name B-depart_date.month_name B-toloc.city_name 
+fifth	B-depart_date.day_number B-depart_date.day_number B-depart_date.month_name 
+that	O O I-flight_stop 
+leaves	O O B-toloc.city_name 
+after	B-depart_time.time_relative B-depart_time.time_relative B-arrive_time.time_relative 
+8	B-depart_time.time B-depart_time.time I-depart_date.today_relative 
+am	I-depart_time.time I-depart_time.time B-depart_time.time 
+atis_flight atis_flight atis_airfare 
+
+what	O O I-flight_time 
+are	O O I-flight_time 
+the	O O B-flight_time 
+times	B-flight_time B-flight_time I-flight_time 
+that	O O I-flight_time 
+you	O O I-flight_time 
+have	O O I-flight_time 
+planes	O O B-flight_mod 
+leaving	O O B-flight_mod 
+from	O O B-fromloc.city_name 
+san	B-fromloc.city_name B-fromloc.city_name O 
+francisco	I-fromloc.city_name I-fromloc.city_name B-fromloc.city_name 
+going	O O B-fromloc.city_name 
+to	O O B-fromloc.city_name 
+pittsburgh	B-toloc.city_name B-toloc.city_name B-fromloc.city_name 
+on	O O I-flight_time 
+july	B-depart_date.month_name B-depart_date.month_name B-arrive_date.month_name 
+seventh	B-depart_date.day_number B-depart_date.day_number B-arrive_date.day_number 
+atis_flight_time atis_flight_time atis_flight 
+
+can	O O B-fromloc.city_name 
+you	O O B-flight_mod 
+list	O O B-flight_mod 
+flights	O O B-fromloc.city_name 
+from	O O B-fromloc.city_name 
+boston	B-fromloc.city_name B-fromloc.city_name O 
+to	O O B-fromloc.city_name 
+washington	B-toloc.city_name B-toloc.city_name B-fromloc.city_name 
+with	O O I-flight_time 
+the	O O B-depart_date.day_name 
+lowest	B-cost_relative B-cost_relative B-depart_time.time_relative 
+one	B-round_trip B-round_trip I-round_trip 
+way	I-round_trip I-round_trip O 
+fares	O O I-flight_stop 
+that	O O I-flight_time 
+leave	O O B-fromloc.city_name 
+on	O O B-fromloc.city_name 
+saturday	B-depart_date.day_name B-depart_date.day_name B-arrive_date.day_name 
+atis_flight atis_flight atis_airfare 
+
+give	O O B-toloc.city_name 
+me	O O B-fromloc.city_name 
+all	O O B-flight_mod 
+the	O O B-flight_mod 
+flights	O O B-fromloc.city_name 
+from	O O B-fromloc.city_name 
+new	B-fromloc.city_name B-fromloc.city_name O 
+york	I-fromloc.city_name I-fromloc.city_name B-fromloc.city_name 
+to	O O B-fromloc.city_name 
+miami	B-toloc.city_name B-toloc.city_name B-stoploc.city_name 
+round	B-round_trip B-round_trip B-airline_name 
+trip	I-round_trip I-round_trip O 
+with	O O I-flight_mod 
+costs	O O B-cost_relative 
+less	B-cost_relative B-cost_relative B-arrive_time.time_relative 
+than	O O B-fare_amount 
+466	B-fare_amount B-fare_amount O 
+dollars	I-fare_amount I-fare_amount B-fare_amount 
+atis_flight atis_flight atis_airfare 
+
+show	O O B-flight_mod 
+me	O O B-flight_mod 
+the	O O B-flight_mod 
+least	B-cost_relative B-cost_relative B-airline_code 
+expensive	I-cost_relative I-cost_relative O 
+flight	O O B-flight_mod 
+leaving	O O B-fromloc.city_name 
+miami	B-fromloc.city_name B-fromloc.city_name O 
+on	O O B-fromloc.city_name 
+sunday	B-depart_date.day_name B-depart_date.day_name B-arrive_date.day_name 
+after	B-depart_time.time_relative B-depart_time.time_relative B-round_trip 
+12	B-depart_time.time B-depart_time.time I-depart_date.today_relative 
+o'clock	I-depart_time.time I-depart_time.time I-arrive_time.time 
+noon	I-depart_time.time I-depart_time.time B-depart_time.time 
+and	O O B-fromloc.city_name 
+arriving	O O B-fromloc.city_name 
+cleveland	B-toloc.city_name B-toloc.city_name B-fromloc.city_name 
+atis_flight atis_flight atis_airfare 
+
+hi	O O B-toloc.city_name 
+i	O O B-fromloc.city_name 
+need	O O B-round_trip 
+to	O O B-fromloc.city_name 
+get	O O B-toloc.city_name 
+a	O O B-flight_mod 
+flight	O O B-flight_mod 
+from	O O B-fromloc.city_name 
+memphis	B-fromloc.city_name B-fromloc.city_name O 
+to	O O B-fromloc.city_name 
+salt	B-toloc.city_name B-toloc.city_name B-toloc.airport_name 
+lake	I-toloc.city_name I-toloc.city_name B-toloc.state_name 
+city	I-toloc.city_name I-toloc.city_name B-toloc.state_name 
+departing	O O B-flight_stop 
+before	B-depart_time.time_relative B-depart_time.time_relative B-arrive_time.time_relative 
+10	B-depart_time.time B-depart_time.time B-arrive_time.time 
+am	I-depart_time.time I-depart_time.time I-arrive_time.time 
+atis_flight atis_flight atis_aircraft 
+
+i	O O B-fromloc.city_name 
+need	O O B-flight_mod 
+a	O O B-flight_mod 
+first	B-class_type B-class_type B-depart_date.day_number 
+class	I-class_type I-class_type B-class_type 
+ticket	O O B-fromloc.city_name 
+on	O O B-flight_mod 
+united	B-airline_name B-airline_name B-round_trip 
+airlines	I-airline_name I-airline_name O 
+from	O O B-fromloc.city_name 
+denver	B-fromloc.city_name B-fromloc.city_name O 
+to	O O B-fromloc.city_name 
+baltimore	B-toloc.city_name B-toloc.city_name O 
+scheduled	O O B-depart_date.day_name 
+for	O O B-fromloc.city_name 
+december	B-depart_date.month_name B-depart_date.month_name B-arrive_date.month_name 
+seventeenth	B-depart_date.day_number B-depart_date.day_number B-arrive_date.day_number 
+atis_airfare atis_airfare atis_flight 
+
+i	O O B-fromloc.city_name 
+want	O O B-flight_mod 
+a	O O B-flight_mod 
+flight	O O B-flight_mod 
+from	O O B-fromloc.city_name 
+los	B-fromloc.city_name B-fromloc.city_name O 
+angeles	I-fromloc.city_name I-fromloc.city_name B-fromloc.city_name 
+to	O O B-fromloc.city_name 
+pittsburgh	B-toloc.city_name B-toloc.city_name B-fromloc.city_name 
+that	O O I-toloc.city_name 
+arrives	O O B-toloc.city_name 
+before	B-arrive_time.time_relative B-arrive_time.time_relative B-depart_time.time_relative 
+3	B-arrive_time.time B-arrive_time.time B-arrive_time.time_relative 
+pm	I-arrive_time.time I-arrive_time.time B-arrive_time.time 
+on	O O I-flight_time 
+tuesday	B-arrive_date.day_name B-arrive_date.day_name B-depart_date.day_name 
+atis_flight atis_flight atis_airline 
+
+i'd	O O B-fromloc.city_name 
+like	O O B-flight_mod 
+to	O O B-fromloc.city_name 
+book	O O B-flight_mod 
+the	O O B-flight_mod 
+cheapest	B-cost_relative B-cost_relative B-airline_code 
+one	B-round_trip B-round_trip O 
+way	I-round_trip I-round_trip O 
+flight	O O I-flight_time 
+from	O O B-fromloc.city_name 
+denver	B-fromloc.city_name B-fromloc.city_name B-toloc.city_name 
+to	O O B-fromloc.city_name 
+pittsburgh	B-toloc.city_name B-toloc.city_name B-fromloc.city_name 
+on	O O B-fromloc.city_name 
+july	B-depart_date.month_name B-depart_date.month_name B-arrive_date.month_name 
+fifteenth	B-depart_date.day_number B-depart_date.day_number B-arrive_date.day_number 
+atis_flight atis_flight atis_airfare 
+
+i'd	O O B-fromloc.city_name 
+like	O O B-flight_mod 
+a	O O B-flight_mod 
+flight	O O B-flight_mod 
+from	O O B-fromloc.city_name 
+new	B-fromloc.city_name B-fromloc.city_name O 
+york	I-fromloc.city_name I-fromloc.city_name B-fromloc.city_name 
+to	O O B-fromloc.city_name 
+los	B-toloc.city_name B-toloc.city_name B-stoploc.city_name 
+angeles	I-toloc.city_name I-toloc.city_name I-toloc.airport_name 
+on	O O B-connect 
+saturday	B-depart_date.day_name B-depart_date.day_name B-arrive_date.day_name 
+morning	B-depart_time.period_of_day B-depart_time.period_of_day B-arrive_time.period_of_day 
+on	O O I-flight_mod 
+us	B-airline_name B-airline_name B-depart_date.day_name 
+air	I-airline_name I-airline_name O 
+atis_flight atis_flight atis_airfare 
+
+how	O O I-flight_mod 
+much	O O B-fare_basis_code 
+does	O O B-fare_basis_code 
+it	O O B-flight_time 
+cost	O O I-cost_relative 
+to	O O B-fromloc.city_name 
+fly	O O B-fare_basis_code 
+directly	B-flight_stop O B-flight_stop 
+from	O O B-fromloc.city_name 
+philadelphia	B-fromloc.city_name B-fromloc.city_name O 
+to	O O B-fromloc.city_name 
+san	B-toloc.city_name B-toloc.city_name B-toloc.airport_name 
+francisco	I-toloc.city_name I-toloc.city_name I-toloc.airport_name 
+on	O O B-toloc.city_name 
+american	B-airline_name B-airline_name B-depart_time.time_relative 
+airlines	I-airline_name I-airline_name O 
+atis_airfare atis_airfare atis_ground_fare 
+
+what	O O B-toloc.city_name 
+is	O O B-fare_basis_code 
+the	O O B-flight_mod 
+earliest	B-flight_mod B-flight_mod O 
+flight	O O I-flight_mod 
+that	O O I-flight_time 
+has	O O B-fromloc.city_name 
+no	B-flight_stop B-flight_stop B-mod 
+stops	I-flight_stop I-flight_stop O 
+from	O O B-fromloc.city_name 
+washington	B-fromloc.city_name B-fromloc.city_name O 
+to	O O B-fromloc.city_name 
+san	B-toloc.city_name B-toloc.city_name B-fromloc.city_name 
+francisco	I-toloc.city_name I-toloc.city_name I-fromloc.city_name 
+on	O O B-toloc.city_name 
+friday	B-depart_date.day_name B-depart_date.day_name B-arrive_date.day_name 
+atis_flight atis_flight atis_airfare 
+
+what	O O B-flight_mod 
+is	O O B-fare_basis_code 
+the	O O B-round_trip 
+cheapest	B-cost_relative B-cost_relative B-round_trip 
+round	B-round_trip B-round_trip B-airline_code 
+trip	I-round_trip I-round_trip B-airline_code 
+fare	O O I-round_trip 
+on	O O B-fromloc.city_name 
+continental	B-airline_name B-airline_name B-round_trip 
+1291	B-flight_number B-flight_number O 
+round	B-round_trip B-round_trip I-round_trip 
+trip	I-round_trip I-round_trip B-flight_number 
+denver	B-fromloc.city_name B-fromloc.city_name O 
+san	B-fromloc.city_name B-fromloc.city_name B-toloc.city_name 
+francisco	I-fromloc.city_name I-fromloc.city_name I-toloc.city_name 
+atis_airfare atis_airfare atis_flight 
+
+is	O O B-toloc.city_name 
+there	O O B-fare_basis_code 
+a	O O B-flight_mod 
+flight	O O B-flight_mod 
+from	O O B-fromloc.city_name 
+pittsburgh	B-fromloc.city_name B-fromloc.city_name O 
+to	O O B-fromloc.city_name 
+baltimore	B-toloc.city_name B-toloc.city_name B-fromloc.city_name 
+that	O O I-toloc.city_name 
+arrives	O O B-flight_stop 
+between	O O B-toloc.city_name 
+6	B-arrive_time.start_time B-arrive_time.start_time O 
+and	O O B-toloc.city_name 
+7	B-arrive_time.end_time B-arrive_time.end_time B-depart_time.end_time 
+pm	I-arrive_time.end_time I-arrive_time.end_time I-arrive_time.start_time 
+atis_flight atis_flight atis_airline 
+
+show	O O B-flight_mod 
+me	O O B-flight_mod 
+all	O O B-flight_mod 
+overnight	B-flight_mod B-flight_mod O 
+flights	O O B-fromloc.city_name 
+from	O O B-fromloc.city_name 
+washington	B-fromloc.city_name B-fromloc.city_name O 
+dc	B-fromloc.state_code B-fromloc.state_code B-toloc.state_code 
+to	O O B-fromloc.city_name 
+san	B-toloc.city_name B-toloc.city_name B-fromloc.city_name 
+francisco	I-toloc.city_name I-toloc.city_name B-toloc.state_name 
+and	O O B-toloc.city_name 
+list	O O B-toloc.city_name 
+their	O O I-flight_mod 
+fares	O O I-flight_mod 
+atis_flight atis_flight atis_airfare 
+
+what	O O B-flight_mod 
+is	O O B-flight_mod 
+the	O O B-flight_mod 
+latest	B-flight_mod B-flight_mod B-mod 
+first	B-class_type B-class_type I-class_type 
+class	I-class_type I-class_type B-class_type 
+flight	O O I-flight_mod 
+of	O O B-flight_mod 
+the	O O I-flight_mod 
+day	O O I-flight_mod 
+leaving	O O B-fromloc.city_name 
+dallas	B-fromloc.city_name B-fromloc.city_name B-toloc.city_name 
+for	O O B-fromloc.city_name 
+san	B-toloc.city_name B-toloc.city_name B-fromloc.city_name 
+francisco	I-toloc.city_name I-toloc.city_name I-fromloc.city_name 
+atis_flight atis_flight atis_flight_no 
+
+i	O O B-flight_mod 
+want	O O B-flight_mod 
+a	O O B-flight_mod 
+flight	O O B-flight_mod 
+departing	O O B-flight_mod 
+from	O O B-fromloc.city_name 
+newark	B-fromloc.city_name B-fromloc.city_name O 
+to	O O I-fromloc.city_name 
+los	B-toloc.city_name B-toloc.city_name B-fromloc.city_name 
+angeles	I-toloc.city_name I-toloc.city_name I-fromloc.city_name 
+that	O O B-toloc.city_name 
+leaves	O O B-flight_mod 
+in	O O B-fromloc.city_name 
+the	O O B-depart_date.date_relative 
+morning	B-depart_time.period_of_day B-depart_time.period_of_day B-arrive_time.period_of_day 
+atis_flight atis_flight atis_aircraft 
+
+i	O O B-fromloc.city_name 
+would	O O B-flight_mod 
+like	O O B-flight_mod 
+to	O O B-fromloc.city_name 
+fly	O O B-fare_basis_code 
+from	O O B-fromloc.city_name 
+atlanta	B-fromloc.city_name B-fromloc.city_name O 
+to	O O B-fromloc.city_name 
+san	B-toloc.city_name B-toloc.city_name B-toloc.airport_name 
+francisco	I-toloc.city_name I-toloc.city_name I-fromloc.city_name 
+with	O O I-flight_mod 
+a	O O B-flight_mod 
+stopover	O O I-flight_stop 
+in	O O B-flight_mod 
+dallas	B-stoploc.city_name B-stoploc.city_name B-toloc.city_name 
+atis_flight atis_flight atis_aircraft 
+
+please	O O B-toloc.city_name 
+give	O O B-toloc.city_name 
+me	O O B-fromloc.city_name 
+the	O O B-flight_mod 
+flights	O O B-flight_mod 
+available	O O B-fromloc.city_name 
+from	O O B-fromloc.city_name 
+boston	B-fromloc.city_name B-fromloc.city_name B-toloc.city_name 
+to	O O B-fromloc.city_name 
+pittsburgh	B-toloc.city_name B-toloc.city_name B-fromloc.city_name 
+on	O O B-toloc.city_name 
+wednesday	B-depart_date.day_name B-depart_date.day_name O 
+of	O O B-depart_time.period_of_day 
+next	B-depart_date.date_relative B-depart_date.date_relative B-arrive_date.date_relative 
+week	O O B-toloc.city_name 
+atis_flight atis_flight atis_airfare 
+
+i	O O B-fromloc.city_name 
+am	O O B-depart_date.day_name 
+also	O O B-fromloc.city_name 
+interested	O O B-fromloc.city_name 
+in	O O B-fromloc.city_name 
+a	O O B-flight_mod 
+flight	O O B-flight_mod 
+that	O O B-flight_stop 
+runs	O O B-flight_stop 
+from	O O B-fromloc.city_name 
+st.	B-fromloc.city_name B-fromloc.city_name O 
+louis	I-fromloc.city_name I-fromloc.city_name B-fromloc.city_name 
+to	O O B-fromloc.city_name 
+las	B-toloc.city_name B-toloc.city_name B-toloc.airport_name 
+vegas	I-toloc.city_name I-toloc.city_name I-fromloc.city_name 
+atis_flight atis_flight atis_airport 
+
+what	O O B-flight_mod 
+is	O O B-fare_basis_code 
+the	O O B-flight_mod 
+fare	O O B-fare_basis_code 
+going	O O B-fromloc.city_name 
+one	B-round_trip B-round_trip B-cost_relative 
+way	I-round_trip I-round_trip O 
+on	O O B-fromloc.city_name 
+november	B-depart_date.month_name B-depart_date.month_name B-flight_mod 
+seventh	B-depart_date.day_number B-depart_date.day_number B-arrive_date.day_number 
+from	O O B-fromloc.city_name 
+denver	B-fromloc.city_name B-fromloc.city_name O 
+to	O O B-fromloc.city_name 
+oakland	B-toloc.city_name B-toloc.city_name B-fromloc.city_name 
+atis_airfare atis_airfare atis_flight 
+
+what	O O B-flight_mod 
+type	O O B-flight_stop 
+of	O O B-flight_mod 
+aircraft	O O I-flight_time 
+is	O O B-flight_mod 
+used	O O B-flight_mod 
+for	O O B-flight_mod 
+the	O O B-airline_name 
+american	B-airline_name B-airline_name B-airline_code 
+flight	O O I-round_trip 
+leaving	O O B-fromloc.city_name 
+at	O O B-depart_time.time 
+419	B-depart_time.time B-depart_time.time B-depart_time.time_relative 
+pm	I-depart_time.time I-depart_time.time B-depart_time.time 
+atis_aircraft atis_aircraft atis_flight 
+
+show	O O B-toloc.city_name 
+me	O O B-flight_mod 
+the	O O B-flight_mod 
+flights	O O B-fromloc.city_name 
+from	O O B-fromloc.city_name 
+pittsburgh	B-fromloc.city_name B-fromloc.city_name B-toloc.city_name 
+to	O O B-fromloc.city_name 
+san	B-toloc.city_name B-toloc.city_name B-toloc.airport_name 
+francisco	I-toloc.city_name I-toloc.city_name I-toloc.airport_name 
+for	O O B-toloc.city_name 
+thursday	B-depart_date.day_name B-depart_date.day_name B-arrive_date.day_name 
+night	B-depart_time.period_of_day B-depart_time.period_of_day B-arrive_time.period_of_day 
+or	B-or B-or O 
+friday	B-depart_date.day_name B-depart_date.day_name B-fromloc.city_name 
+atis_flight atis_flight atis_flight_time 
+
+show	O O B-fromloc.city_name 
+me	O O B-flight_mod 
+flights	O O B-fromloc.city_name 
+from	O O B-fromloc.city_name 
+pittsburgh	B-fromloc.city_name B-fromloc.city_name O 
+to	O O B-fromloc.city_name 
+san	B-toloc.city_name B-toloc.city_name B-toloc.airport_name 
+francisco	I-toloc.city_name I-toloc.city_name I-fromloc.city_name 
+on	O O B-toloc.city_name 
+friday	B-depart_date.day_name B-depart_date.day_name B-arrive_date.day_name 
+leaving	O O B-depart_time.period_of_day 
+after	B-depart_time.time_relative B-depart_time.time_relative B-round_trip 
+12	B-depart_time.time B-depart_time.time I-depart_date.today_relative 
+noon	I-depart_time.time I-depart_time.time B-depart_time.time 
+atis_flight atis_flight atis_distance 
+
+i	O O B-fromloc.city_name 
+would	O O B-flight_mod 
+like	O O B-flight_mod 
+an	O O B-flight_mod 
+early	B-depart_time.period_of_day B-depart_time.period_of_day B-depart_time.period_mod 
+morning	B-depart_time.period_of_day B-depart_time.period_of_day B-depart_time.period_mod 
+flight	O O B-flight_mod 
+from	O O B-fromloc.city_name 
+chicago	B-fromloc.city_name B-fromloc.city_name O 
+into	O O B-fromloc.city_name 
+seattle	B-toloc.city_name B-toloc.city_name B-fromloc.city_name 
+on	O O B-depart_date.day_name 
+continental	B-airline_name B-airline_name B-depart_date.day_name 
+airlines	I-airline_name I-airline_name B-flight_number 
+atis_flight atis_flight atis_flight_time 
+
+i	O O B-fromloc.city_name 
+need	O O B-flight_mod 
+information	O O B-flight_mod 
+on	O O B-flight_mod 
+flights	O O B-flight_mod 
+from	O O B-fromloc.city_name 
+washington	B-fromloc.city_name B-fromloc.city_name O 
+to	O O B-fromloc.city_name 
+boston	B-toloc.city_name B-toloc.city_name B-fromloc.city_name 
+that	O O I-toloc.city_name 
+leave	O O B-fromloc.city_name 
+on	O O B-fromloc.city_name 
+a	O O B-depart_date.day_name 
+saturday	B-depart_date.day_name B-depart_date.day_name B-arrive_date.day_name 
+atis_flight atis_flight atis_aircraft 
+
+list	O O B-fromloc.city_name 
+all	O O B-flight_mod 
+flights	O O B-fromloc.city_name 
+on	O O B-flight_mod 
+continental	B-airline_name B-airline_name B-round_trip 
+from	O O B-fromloc.city_name 
+denver	B-fromloc.city_name B-fromloc.city_name B-toloc.city_name 
+to	O O B-fromloc.city_name 
+chicago	B-toloc.city_name B-toloc.city_name O 
+which	O O B-depart_date.date_relative 
+depart	O O B-toloc.city_name 
+after	B-depart_time.time_relative B-depart_time.time_relative B-arrive_time.time_relative 
+934	B-depart_time.time B-depart_time.time I-depart_date.today_relative 
+pm	I-depart_time.time I-depart_time.time B-toloc.city_name 
+atis_flight atis_flight atis_flight_no 
+
+show	O O B-flight_mod 
+me	O O B-fromloc.city_name 
+some	O O B-fare_basis_code 
+information	O O B-flight_stop 
+on	O O B-fromloc.city_name 
+making	O O B-depart_date.date_relative 
+a	O O B-fromloc.city_name 
+reservation	O O B-flight_mod 
+from	O O B-fromloc.city_name 
+philadelphia	B-fromloc.city_name B-fromloc.city_name O 
+to	O O B-fromloc.city_name 
+denver	B-toloc.city_name B-toloc.city_name B-fromloc.city_name 
+on	O O B-fromloc.city_name 
+sunday	B-depart_date.day_name B-depart_date.day_name B-arrive_date.day_name 
+atis_flight atis_flight atis_airfare 
+
+what	O O I-round_trip 
+type	O O B-flight_mod 
+of	O O B-flight_mod 
+aircraft	O O I-flight_time 
+is	O O B-flight_mod 
+used	O O B-flight_mod 
+flying	O O B-flight_mod 
+from	O O B-fromloc.city_name 
+atlanta	B-fromloc.city_name B-fromloc.city_name O 
+to	O O B-fromloc.city_name 
+denver	B-toloc.city_name B-toloc.city_name B-fromloc.city_name 
+before	B-depart_time.time_relative B-depart_time.time_relative B-arrive_time.time_relative 
+12	B-depart_time.time B-depart_time.time B-arrive_time.time 
+noon	I-depart_time.time I-depart_time.time I-arrive_time.time 
+atis_aircraft atis_aircraft atis_flight 
+
+i	O O B-fromloc.city_name 
+would	O O B-flight_mod 
+like	O O B-flight_mod 
+to	O O B-fromloc.city_name 
+book	O O B-flight_mod 
+a	O O B-flight_mod 
+flight	O O B-flight_mod 
+from	O O B-fromloc.city_name 
+charlotte	B-fromloc.city_name B-fromloc.city_name O 
+to	O O B-fromloc.city_name 
+baltimore	B-toloc.city_name B-toloc.city_name B-fromloc.city_name 
+on	O O B-toloc.city_name 
+april	B-depart_date.month_name B-depart_date.month_name B-flight_mod 
+eighth	B-depart_date.day_number B-depart_date.day_number B-depart_date.month_name 
+atis_flight atis_flight atis_airfare 
+
+i	O O B-fromloc.city_name 
+want	O O B-fromloc.city_name 
+to	O O B-fromloc.city_name 
+leave	O O B-fromloc.city_name 
+chicago	B-fromloc.city_name B-fromloc.city_name B-toloc.city_name 
+next	B-depart_date.date_relative B-arrive_date.date_relative B-depart_date.date_relative 
+tuesday	B-depart_date.day_name B-depart_date.day_name B-arrive_date.day_name 
+and	O O B-fromloc.city_name 
+arrive	O O B-fromloc.city_name 
+in	O O B-toloc.city_name 
+detroit	B-toloc.city_name B-toloc.city_name I-toloc.city_name 
+around	B-arrive_time.time_relative B-arrive_time.time_relative B-arrive_date.day_name 
+6	B-arrive_time.time B-arrive_time.time B-arrive_time.time_relative 
+pm	I-arrive_time.time I-arrive_time.time B-arrive_time.time 
+atis_flight atis_flight atis_airline#atis_flight_no 
+
+i'm	O O B-fromloc.city_name 
+requesting	O O B-flight_mod 
+flight	O O B-flight_mod 
+information	O O B-flight_mod 
+on	O O B-flight_mod 
+a	O O B-flight_mod 
+flight	O O B-flight_mod 
+from	O O B-fromloc.city_name 
+denver	B-fromloc.city_name B-fromloc.city_name B-toloc.city_name 
+to	O O B-fromloc.city_name 
+san	B-toloc.city_name B-toloc.city_name B-fromloc.city_name 
+francisco	I-toloc.city_name I-toloc.city_name I-fromloc.city_name 
+on	O O B-toloc.city_name 
+wednesday	B-depart_date.day_name B-depart_date.day_name B-arrive_date.day_name 
+atis_flight atis_flight atis_aircraft 
+
+what	O O B-flight_mod 
+is	O O B-fare_basis_code 
+the	O O B-aircraft_code 
+cost	O O I-cost_relative 
+of	O O B-flight_number 
+round	B-round_trip B-round_trip B-class_type 
+trip	I-round_trip I-round_trip O 
+ticket	O O B-class_type 
+first	B-class_type B-class_type B-mod 
+class	I-class_type I-class_type B-class_type 
+between	O O B-fromloc.city_name 
+oakland	B-fromloc.city_name B-fromloc.city_name B-toloc.city_name 
+and	O O B-fromloc.city_name 
+atlanta	B-toloc.city_name B-toloc.city_name B-fromloc.city_name 
+atis_airfare atis_airfare atis_ground_fare 
+
+i	O O B-fromloc.city_name 
+would	O O B-flight_mod 
+like	O O B-flight_mod 
+to	O O B-fromloc.city_name 
+fly	O O B-flight_mod 
+from	O O B-fromloc.city_name 
+columbus	B-fromloc.city_name B-fromloc.city_name O 
+to	O O B-fromloc.city_name 
+phoenix	B-toloc.city_name B-toloc.city_name B-fromloc.city_name 
+through	O O B-connect 
+cincinnati	B-stoploc.city_name B-stoploc.city_name B-toloc.city_name 
+in	O O I-flight_mod 
+the	O O B-flight_mod 
+afternoon	B-depart_time.period_of_day B-depart_time.period_of_day O 
+atis_flight atis_flight atis_airport 
+
+i	O O B-fromloc.city_name 
+would	O O B-flight_mod 
+like	O O B-flight_mod 
+to	O O B-fromloc.city_name 
+have	O O B-toloc.city_name 
+the	O O B-flight_mod 
+airline	O O I-airline_name 
+that	O O I-flight_mod 
+flies	O O B-fromloc.city_name 
+toronto	B-fromloc.city_name B-fromloc.city_name O 
+detroit	B-toloc.city_name B-fromloc.city_name I-fromloc.city_name 
+and	O O B-fromloc.city_name 
+st.	B-toloc.city_name B-toloc.city_name B-fromloc.city_name 
+louis	I-toloc.city_name I-toloc.city_name I-fromloc.city_name 
+atis_airline atis_airline atis_flight 
+
+show	O O B-fromloc.city_name 
+me	O O B-flight_mod 
+all	O O B-flight_mod 
+flights	O O B-fromloc.city_name 
+from	O O B-fromloc.city_name 
+new	B-fromloc.city_name B-fromloc.city_name O 
+york	I-fromloc.city_name I-fromloc.city_name B-fromloc.city_name 
+to	O O B-fromloc.city_name 
+miami	B-toloc.city_name B-toloc.city_name B-fromloc.city_name 
+leaving	O O B-fromloc.city_name 
+on	O O B-fromloc.city_name 
+a	O O B-depart_date.day_name 
+tuesday	B-depart_date.day_name B-depart_date.day_name B-arrive_date.day_name 
+atis_flight atis_flight atis_airport 
+
+how	O O B-flight_mod 
+many	O O B-flight_mod 
+first	B-class_type B-class_type B-mod 
+class	I-class_type I-class_type I-economy 
+flights	O O B-fromloc.city_name 
+does	O O I-flight_time 
+united	B-airline_name B-airline_name B-round_trip 
+have	O O I-flight_stop 
+leaving	O O B-fromloc.city_name 
+from	O O B-fromloc.city_name 
+all	O O B-fromloc.city_name 
+cities	O O B-fromloc.city_name 
+today	B-depart_date.today_relative B-depart_date.today_relative B-depart_time.period_of_day 
+atis_quantity atis_quantity atis_flight 
+
+can	O O B-fromloc.city_name 
+i	O O B-flight_mod 
+go	O O B-flight_mod 
+from	O O B-fromloc.city_name 
+boston	B-fromloc.city_name B-fromloc.city_name O 
+to	O O B-fromloc.city_name 
+san	B-toloc.city_name B-toloc.city_name B-toloc.airport_name 
+francisco	I-toloc.city_name I-toloc.city_name I-fromloc.city_name 
+with	O O I-flight_mod 
+a	O O B-flight_mod 
+stopover	O O I-flight_stop 
+in	O O B-flight_mod 
+denver	B-stoploc.city_name B-stoploc.city_name B-city_name 
+atis_flight atis_flight atis_flight_time 
+
+what	O O I-flight_mod 
+airlines	O O I-airline_name 
+have	O O B-flight_mod 
+flights	O O B-fromloc.city_name 
+from	O O B-fromloc.city_name 
+boston	B-fromloc.city_name B-fromloc.city_name O 
+to	O O B-fromloc.city_name 
+philadelphia	B-toloc.city_name B-toloc.city_name B-fromloc.city_name 
+that	O O I-toloc.city_name 
+leave	O O B-fromloc.city_name 
+before	B-depart_time.time_relative B-depart_time.time_relative B-arrive_time.time_relative 
+630	B-depart_time.time B-depart_time.time B-arrive_time.time 
+am	I-depart_time.time I-depart_time.time I-arrive_time.time 
+atis_airline atis_airline atis_flight 
+
+what	O O B-fromloc.city_name 
+flights	O O B-fromloc.city_name 
+leave	O O B-fromloc.city_name 
+philadelphia	B-fromloc.city_name B-fromloc.city_name O 
+for	O O B-fromloc.city_name 
+dallas	B-toloc.city_name B-toloc.city_name B-fromloc.city_name 
+and	O O B-fromloc.city_name 
+depart	O O B-toloc.city_name 
+before	B-depart_time.time_relative B-depart_time.time_relative B-arrive_time.time_relative 
+noon	B-depart_time.time B-depart_time.time B-arrive_time.time 
+on	O O B-toloc.city_name 
+american	B-airline_name B-airline_name B-depart_date.day_name 
+airlines	I-airline_name I-airline_name O 
+atis_flight atis_flight atis_airline 
+
+what	O O B-flight_mod 
+are	O O B-flight_mod 
+the	O O B-flight_mod 
+latest	B-flight_mod B-flight_mod O 
+flights	O O B-fromloc.city_name 
+that	O O B-fromloc.city_name 
+i	O O B-fromloc.city_name 
+can	O O B-fromloc.city_name 
+take	O O B-flight_mod 
+from	O O B-fromloc.city_name 
+baltimore	B-fromloc.city_name B-fromloc.city_name O 
+to	O O B-fromloc.city_name 
+boston	B-toloc.city_name B-toloc.city_name B-fromloc.city_name 
+atis_flight atis_flight atis_aircraft 
+
+i'm	O O B-fromloc.city_name 
+sorry	O O B-flight_mod 
+i	O O B-fromloc.city_name 
+want	O O B-fromloc.city_name 
+to	O O B-fromloc.city_name 
+book	O O B-fromloc.city_name 
+a	O O B-flight_mod 
+flight	O O B-flight_mod 
+from	O O B-fromloc.city_name 
+atlanta	B-fromloc.city_name B-fromloc.city_name B-toloc.city_name 
+to	O O B-fromloc.city_name 
+denver	B-toloc.city_name B-toloc.city_name B-fromloc.city_name 
+colorado	B-toloc.state_name B-toloc.state_name I-toloc.airport_name 
+atis_flight atis_flight atis_meal 
+
+do	O O B-flight_mod 
+you	O O B-fare_basis_code 
+have	O O B-connect 
+the	O O B-flight_mod 
+fare	O O B-fromloc.city_name 
+for	O O B-fromloc.city_name 
+traveling	O O B-fare_basis_code 
+from	O O B-toloc.city_name 
+oakland	B-fromloc.airport_name B-fromloc.airport_name B-fromloc.city_name 
+airport	I-fromloc.airport_name I-fromloc.airport_name O 
+to	O O B-fromloc.city_name 
+oakland	B-toloc.city_name B-toloc.city_name B-toloc.airport_name 
+downtown	O O B-fromloc.city_name 
+atis_airfare atis_airfare atis_flight 
+
+i	O O B-fromloc.city_name 
+would	O O B-flight_mod 
+like	O O B-flight_mod 
+to	O O B-fromloc.city_name 
+fly	O O B-fare_basis_code 
+from	O O B-fromloc.city_name 
+denver	B-fromloc.city_name B-fromloc.city_name O 
+to	O O B-fromloc.city_name 
+atlanta	B-toloc.city_name B-toloc.city_name B-stoploc.city_name 
+by	O O I-toloc.city_name 
+way	O O B-round_trip 
+of	O O I-flight_mod 
+pittsburgh	B-stoploc.city_name B-stoploc.city_name B-fromloc.city_name 
+atis_flight atis_flight atis_aircraft 
+
+what	O O B-flight_mod 
+is	O O B-flight_mod 
+the	O O B-flight_mod 
+first	B-flight_mod B-flight_mod O 
+flight	O O I-flight_mod 
+after	B-depart_time.time_relative B-depart_time.time_relative B-arrive_time.time_relative 
+8	B-depart_time.time B-depart_time.time I-depart_date.today_relative 
+am	I-depart_time.time I-depart_time.time B-toloc.city_name 
+from	O O B-fromloc.city_name 
+boston	B-fromloc.city_name B-fromloc.city_name B-toloc.city_name 
+to	O O B-fromloc.city_name 
+san	B-toloc.city_name B-toloc.city_name B-toloc.airport_name 
+francisco	I-toloc.city_name I-toloc.city_name I-fromloc.city_name 
+atis_flight atis_flight atis_distance 
+
+what	O O I-flight_time 
+flights	O O B-fromloc.city_name 
+leave	O O B-fromloc.city_name 
+chicago	B-fromloc.city_name B-fromloc.city_name O 
+and	O O B-fromloc.city_name 
+arrive	O O B-toloc.city_name 
+in	O O B-toloc.city_name 
+detroit	B-toloc.city_name B-toloc.city_name I-toloc.city_name 
+around	B-arrive_time.time_relative B-arrive_time.time_relative B-arrive_date.day_name 
+6	B-arrive_time.time B-arrive_time.time B-arrive_time.time_relative 
+pm	I-arrive_time.time I-arrive_time.time B-arrive_time.time 
+next	B-arrive_date.date_relative B-arrive_date.date_relative B-depart_date.date_relative 
+tuesday	B-arrive_date.day_name B-arrive_date.day_name B-depart_date.day_name 
+atis_flight atis_flight atis_airline#atis_flight_no 
+
+i	O O B-fromloc.city_name 
+would	O O B-flight_mod 
+like	O O B-flight_mod 
+to	O O B-fromloc.city_name 
+fly	O O B-fromloc.city_name 
+from	O O B-fromloc.city_name 
+baltimore	B-fromloc.city_name B-fromloc.city_name O 
+to	O O B-fromloc.city_name 
+san	B-toloc.city_name B-toloc.city_name B-toloc.airport_name 
+francisco	I-toloc.city_name I-toloc.city_name I-fromloc.city_name 
+on	O O B-toloc.city_name 
+eastern	B-airline_name B-airline_name B-round_trip 
+airlines	I-airline_name I-airline_name B-flight_number 
+atis_flight atis_flight atis_airline 
+
+what	O O B-flight_mod 
+kind	O O B-flight_mod 
+of	O O I-flight_mod 
+aircraft	O O B-flight_time 
+is	O O B-flight_mod 
+used	O O B-fromloc.city_name 
+on	O O B-flight_mod 
+a	O O B-flight_mod 
+flight	O O B-flight_mod 
+from	O O B-fromloc.city_name 
+cleveland	B-fromloc.city_name B-fromloc.city_name O 
+to	O O B-fromloc.city_name 
+dallas	B-toloc.city_name B-toloc.city_name B-fromloc.city_name 
+atis_aircraft atis_aircraft atis_airfare 
+
+show	O O B-fromloc.city_name 
+me	O O B-flight_mod 
+the	O O B-round_trip 
+first	B-class_type B-class_type B-mod 
+class	I-class_type I-class_type I-economy 
+and	O O B-fromloc.city_name 
+coach	B-class_type B-class_type B-fromloc.airport_code 
+flights	O O B-fromloc.city_name 
+from	O O B-fromloc.city_name 
+kennedy	B-fromloc.airport_name B-fromloc.airport_name B-fromloc.airport_code 
+airport	I-fromloc.airport_name O I-fromloc.airport_name 
+to	O O B-fromloc.city_name 
+miami	B-toloc.city_name B-toloc.city_name B-toloc.airport_name 
+atis_flight atis_flight atis_airfare 
+
+what	O O B-flight_mod 
+is	O O B-flight_mod 
+the	O O B-flight_mod 
+cheapest	B-cost_relative B-cost_relative B-airline_code 
+flight	O O B-flight_mod 
+from	O O B-fromloc.city_name 
+denver	B-fromloc.city_name B-fromloc.city_name O 
+to	O O B-fromloc.city_name 
+pittsburgh	B-toloc.city_name B-toloc.city_name B-fromloc.city_name 
+on	O O B-fromloc.city_name 
+july	B-depart_date.month_name B-depart_date.month_name B-arrive_date.month_name 
+twenty	B-depart_date.day_number B-depart_date.day_number B-arrive_date.day_number 
+sixth	I-depart_date.day_number I-depart_date.day_number B-depart_date.year 
+atis_flight atis_flight atis_airfare 
+
+list	O O B-fromloc.city_name 
+all	O O B-flight_stop 
+nonstop	B-flight_stop B-flight_stop B-arrive_time.time_relative 
+flights	O O I-flight_time 
+on	O O I-flight_time 
+tuesday	B-arrive_date.day_name B-arrive_date.day_name B-arrive_time.time_relative 
+before	B-arrive_time.time_relative B-arrive_time.time_relative B-arrive_time.time 
+noon	B-arrive_time.time B-arrive_time.time B-arrive_time.time_relative 
+from	O O B-toloc.city_name 
+charlotte	B-fromloc.city_name B-fromloc.city_name B-toloc.city_name 
+to	O O I-fromloc.city_name 
+baltimore	B-toloc.city_name B-toloc.city_name B-fromloc.city_name 
+atis_flight atis_flight atis_airfare 
+
+please	O O B-toloc.city_name 
+find	O O B-flight_mod 
+a	O O B-flight_mod 
+flight	O O B-flight_mod 
+from	O O B-fromloc.city_name 
+san	B-fromloc.city_name B-fromloc.city_name O 
+diego	I-fromloc.city_name I-fromloc.city_name B-fromloc.city_name 
+to	O O B-fromloc.city_name 
+toronto	B-toloc.city_name B-toloc.city_name B-fromloc.city_name 
+on	O O I-toloc.city_name 
+alaska	B-airline_name B-airline_name B-round_trip 
+airlines	I-airline_name I-airline_name O 
+atis_flight atis_flight atis_aircraft 
+
+give	O O B-flight_mod 
+me	O O B-fromloc.city_name 
+the	O O B-flight_mod 
+flights	O O B-fromloc.city_name 
+from	O O B-fromloc.city_name 
+pittsburgh	B-fromloc.city_name B-fromloc.city_name B-toloc.city_name 
+to	O O B-fromloc.city_name 
+los	B-toloc.city_name B-toloc.city_name B-stoploc.city_name 
+angeles	I-toloc.city_name I-toloc.city_name I-fromloc.city_name 
+on	O O B-toloc.city_name 
+thursday	B-depart_date.day_name B-depart_date.day_name B-arrive_date.day_name 
+evening	B-depart_time.period_of_day B-depart_time.period_of_day B-arrive_time.period_of_day 
+atis_flight atis_flight atis_airfare 
+
+i	O O B-fromloc.city_name 
+want	O O B-fromloc.city_name 
+to	O O B-fromloc.city_name 
+leave	O O B-fromloc.city_name 
+philadelphia	B-fromloc.city_name B-fromloc.city_name B-toloc.city_name 
+and	O O B-fromloc.city_name 
+arrive	O O B-toloc.city_name 
+in	O O B-toloc.city_name 
+atlanta	B-toloc.city_name B-toloc.city_name B-fromloc.city_name 
+on	O O I-toloc.city_name 
+a	O O I-flight_time 
+thursday	B-arrive_date.day_name B-arrive_date.day_name B-depart_date.day_name 
+atis_flight atis_flight atis_airfare 
+
+is	O O B-fromloc.city_name 
+there	O O B-flight_mod 
+an	O O B-depart_date.day_name 
+early	B-depart_time.period_of_day B-depart_time.period_of_day B-depart_time.period_mod 
+morning	B-depart_time.period_of_day B-depart_time.period_of_day B-depart_time.period_mod 
+delta	B-airline_name B-airline_name B-depart_date.day_name 
+airlines	I-airline_name I-airline_name O 
+flight	O O I-flight_mod 
+between	O O B-fromloc.city_name 
+boston	B-fromloc.city_name B-fromloc.city_name B-toloc.city_name 
+and	O O B-fromloc.city_name 
+washington	B-toloc.city_name B-toloc.city_name B-toloc.airport_name 
+atis_flight atis_flight atis_flight_time 
+
+does	O O B-fromloc.city_name 
+united	B-airline_name B-airline_name B-airline_code 
+have	O O I-airline_name 
+a	O O B-flight_mod 
+flight	O O B-flight_mod 
+from	O O B-fromloc.city_name 
+miami	B-fromloc.city_name B-fromloc.city_name O 
+to	O O B-fromloc.city_name 
+washington	B-toloc.city_name B-toloc.city_name B-toloc.airport_name 
+dc	B-toloc.state_code B-toloc.state_code B-toloc.country_name 
+on	O O I-flight_time 
+wednesday	B-depart_date.day_name B-depart_date.day_name B-arrive_date.day_name 
+atis_flight atis_flight atis_flight_time 
+
+i	O O B-fromloc.city_name 
+would	O O B-flight_mod 
+like	O O B-flight_mod 
+to	O O B-fromloc.city_name 
+see	O O B-fromloc.city_name 
+the	O O B-fromloc.city_name 
+economy	B-economy B-economy B-class_type 
+fares	O O I-flight_mod 
+for	O O B-fromloc.city_name 
+denver	B-fromloc.city_name B-fromloc.city_name B-toloc.city_name 
+to	O O B-fromloc.city_name 
+philadelphia	B-toloc.city_name B-toloc.city_name B-fromloc.city_name 
+atis_airfare atis_airfare atis_flight 
+
+what	O O I-flight_time 
+flights	O O B-fromloc.city_name 
+from	O O B-fromloc.city_name 
+denver	B-fromloc.city_name B-fromloc.city_name O 
+to	O O B-fromloc.city_name 
+pittsburgh	B-toloc.city_name B-toloc.city_name B-fromloc.city_name 
+arrive	O O I-toloc.city_name 
+before	B-arrive_time.time_relative B-arrive_time.time_relative B-depart_time.time_relative 
+8	B-arrive_time.time B-arrive_time.time B-arrive_time.time_relative 
+in	O O B-toloc.city_name 
+the	O O B-toloc.city_name 
+morning	B-arrive_time.period_of_day B-arrive_time.period_of_day B-depart_time.period_of_day 
+atis_flight atis_flight atis_airfare 
+
+what	O O B-flight_mod 
+about	O O B-flight_mod 
+a	O O B-flight_mod 
+flight	O O B-flight_mod 
+from	O O B-fromloc.city_name 
+boston	B-fromloc.city_name B-fromloc.city_name O 
+to	O O B-fromloc.city_name 
+san	B-toloc.city_name B-toloc.city_name B-toloc.airport_name 
+francisco	I-toloc.city_name I-toloc.city_name B-toloc.state_name 
+stopping	O O B-depart_date.date_relative 
+in	O O B-flight_mod 
+denver	B-stoploc.city_name B-stoploc.city_name B-toloc.city_name 
+atis_flight atis_flight atis_aircraft 
+
+what	O O B-toloc.city_name 
+is	O O B-fare_basis_code 
+the	O O B-airport_code 
+ground	O O B-fare_basis_code 
+transportation	O O B-transport_type 
+from	O O B-toloc.city_name 
+philadelphia	B-fromloc.airport_name B-fromloc.airport_name B-airport_name 
+airport	I-fromloc.airport_name I-fromloc.airport_name O 
+to	O O I-fromloc.airport_name 
+the	O O B-toloc.city_name 
+city	O O I-fromloc.airport_name 
+proper	O I-fromloc.airport_name O 
+atis_ground_service atis_ground_service atis_distance 
+
+what	O O B-flight_mod 
+flights	O O B-flight_mod 
+are	O O B-flight_mod 
+there	O O B-fromloc.city_name 
+from	O O B-fromloc.city_name 
+atlanta	B-fromloc.city_name B-fromloc.city_name O 
+to	O O B-fromloc.city_name 
+washington	B-toloc.city_name B-toloc.city_name B-toloc.airport_name 
+early	B-depart_time.period_mod B-depart_time.period_mod B-arrive_time.period_mod 
+on	O O I-flight_time 
+thursday	B-depart_date.day_name B-depart_date.day_name B-arrive_date.day_name 
+mornings	B-depart_time.period_of_day B-depart_time.period_of_day B-arrive_time.period_of_day 
+atis_flight atis_flight atis_flight_time 
+
+could	O O B-flight_mod 
+i	O O B-fromloc.city_name 
+have	O O B-flight_mod 
+flight	O O B-flight_mod 
+information	O O B-flight_mod 
+on	O O B-flight_mod 
+flights	O O B-flight_mod 
+from	O O B-fromloc.city_name 
+pittsburgh	B-fromloc.city_name B-fromloc.city_name O 
+to	O O B-fromloc.city_name 
+phoenix	B-toloc.city_name B-toloc.city_name B-fromloc.city_name 
+please	O O B-toloc.city_name 
+atis_flight atis_flight atis_flight_no 
+
+what	O O I-flight_time 
+times	B-flight_time B-flight_time B-mod 
+does	O O I-flight_time 
+the	O O I-flight_time 
+late	B-depart_time.period_of_day B-depart_time.period_of_day B-depart_time.period_mod 
+afternoon	I-depart_time.period_of_day I-depart_time.period_of_day B-depart_time.period_of_day 
+flight	O O I-flight_time 
+leave	O O B-fromloc.city_name 
+from	O O B-fromloc.city_name 
+washington	B-fromloc.city_name B-fromloc.city_name O 
+for	O O B-fromloc.city_name 
+denver	B-toloc.city_name B-toloc.city_name B-fromloc.city_name 
+atis_flight_time atis_flight_time atis_flight 
+
+what	O O I-round_trip 
+flights	O O B-flight_mod 
+go	O O B-flight_mod 
+from	O O B-fromloc.city_name 
+boston	B-fromloc.city_name B-fromloc.city_name B-toloc.city_name 
+to	O O B-fromloc.city_name 
+pittsburgh	B-toloc.city_name B-toloc.city_name B-fromloc.city_name 
+after	B-depart_time.time_relative B-depart_time.time_relative B-arrive_time.time_relative 
+6	B-depart_time.time B-depart_time.time I-depart_date.today_relative 
+o'clock	I-depart_time.time I-depart_time.time B-depart_time.time 
+next	B-depart_date.date_relative B-depart_date.date_relative O 
+tuesday	B-depart_date.day_name B-depart_date.day_name O 
+atis_flight atis_flight atis_distance 
+
+what	O O B-flight_mod 
+are	O O B-flight_mod 
+all	O O B-flight_mod 
+the	O O B-flight_mod 
+flights	O O B-flight_mod 
+available	O O B-fromloc.city_name 
+between	O O B-fromloc.city_name 
+pittsburgh	B-fromloc.city_name B-fromloc.city_name B-toloc.city_name 
+and	O O B-fromloc.city_name 
+dallas	B-toloc.city_name B-toloc.city_name B-fromloc.city_name 
+fort	I-toloc.city_name I-toloc.city_name B-toloc.state_name 
+worth	I-toloc.city_name I-toloc.city_name B-toloc.state_name 
+atis_flight atis_flight atis_meal 
+
+i	O O B-fromloc.city_name 
+need	O O B-round_trip 
+flight	O O B-flight_stop 
+information	O O I-flight_time 
+leaving	O O B-fromloc.city_name 
+atlanta	B-fromloc.city_name B-fromloc.city_name O 
+and	O O B-fromloc.city_name 
+arriving	O O B-toloc.city_name 
+in	O O B-toloc.city_name 
+baltimore	B-toloc.city_name B-toloc.city_name B-fromloc.city_name 
+for	O O I-toloc.city_name 
+monday	B-arrive_date.day_name B-arrive_date.day_name B-depart_date.day_name 
+atis_flight atis_flight atis_aircraft 
+
+does	O O B-fromloc.city_name 
+any	O O B-airline_name 
+airline	O O B-airline_name 
+have	O O B-flight_mod 
+an	O O B-flight_mod 
+early	B-depart_time.period_of_day B-depart_time.period_of_day B-flight_mod 
+afternoon	B-depart_time.period_of_day B-depart_time.period_of_day I-depart_time.period_of_day 
+flight	O O B-flight_mod 
+from	O O B-fromloc.city_name 
+boston	B-fromloc.city_name B-fromloc.city_name O 
+to	O O B-fromloc.city_name 
+pittsburgh	B-toloc.city_name B-toloc.city_name B-fromloc.city_name 
+atis_airline atis_airline atis_flight 
+
+give	O O B-toloc.city_name 
+me	O O B-flight_mod 
+the	O O B-flight_mod 
+flights	O O B-flight_mod 
+from	O O B-fromloc.city_name 
+miami	B-fromloc.city_name B-fromloc.city_name O 
+to	O O B-fromloc.city_name 
+new	B-toloc.city_name B-toloc.city_name O 
+york	I-toloc.city_name I-toloc.city_name B-toloc.state_name 
+using	O O I-flight_mod 
+tower	B-airline_name B-airline_name B-depart_date.day_name 
+air	I-airline_name I-airline_name O 
+atis_flight atis_flight atis_airline 
+
+is	O O B-toloc.city_name 
+there	O O B-fare_basis_code 
+ground	O O B-fare_basis_code 
+transportation	O O I-fare_basis_code 
+from	O O B-toloc.city_name 
+san	B-fromloc.airport_name B-fromloc.airport_name B-airport_name 
+diego	I-fromloc.airport_name I-fromloc.airport_name I-airport_name 
+airport	I-fromloc.airport_name I-fromloc.airport_name I-airport_name 
+to	O O B-fromloc.city_name 
+the	O O B-toloc.city_name 
+downtown	O O B-toloc.city_name 
+area	O O B-toloc.city_name 
+atis_ground_service atis_ground_service atis_distance 
+
+show	O O B-toloc.city_name 
+me	O O B-fromloc.city_name 
+first	B-class_type B-class_type B-depart_date.day_number 
+class	I-class_type I-class_type B-class_type 
+flights	O O B-fromloc.city_name 
+from	O O B-fromloc.city_name 
+pittsburgh	B-fromloc.city_name B-fromloc.city_name O 
+to	O O B-fromloc.city_name 
+san	B-toloc.city_name B-toloc.city_name B-fromloc.city_name 
+francisco	I-toloc.city_name I-toloc.city_name I-fromloc.city_name 
+on	O O B-toloc.city_name 
+friday	B-depart_date.day_name B-depart_date.day_name B-arrive_date.day_name 
+atis_flight atis_flight atis_airfare 
+
+how	O O B-toloc.city_name 
+many	O O B-toloc.city_name 
+cities	O O B-flight_mod 
+are	O O B-flight_mod 
+served	O O B-flight_mod 
+by	O O B-depart_date.day_name 
+eastern	B-airline_name B-airline_name O 
+with	O O B-flight_number 
+first	B-class_type B-class_type B-mod 
+class	I-class_type I-class_type I-economy 
+flights	O O B-fromloc.city_name 
+atis_quantity atis_quantity atis_capacity 
+
+how	O O B-flight_mod 
+many	O O B-fare_basis_code 
+flights	O O B-flight_mod 
+does	O O B-fromloc.city_name 
+each	O O B-flight_stop 
+airline	O O B-aircraft_code 
+have	O O B-airline_code 
+with	O O B-flight_mod 
+first	B-class_type B-class_type B-mod 
+class	I-class_type I-class_type B-class_type 
+service	O O B-flight_stop 
+atis_quantity atis_quantity atis_capacity 
+
+and	O O B-flight_mod 
+flights	O O B-flight_mod 
+leaving	O O B-fromloc.city_name 
+from	O O B-fromloc.city_name 
+atlanta	B-fromloc.city_name B-fromloc.city_name O 
+to	O O B-fromloc.city_name 
+oakland	B-toloc.city_name B-toloc.city_name B-fromloc.city_name 
+leaving	O O B-fromloc.city_name 
+after	B-depart_time.time_relative B-depart_time.time_relative B-arrive_time.time_relative 
+5	B-depart_time.time B-depart_time.time I-depart_date.today_relative 
+pm	I-depart_time.time I-depart_time.time B-toloc.city_name 
+atis_flight atis_flight atis_aircraft 
+
+i	O O B-fromloc.city_name 
+want	O O B-fromloc.city_name 
+to	O O B-fromloc.city_name 
+make	O O B-toloc.city_name 
+a	O O B-flight_mod 
+trip	O O B-flight_stop 
+from	O O B-fromloc.city_name 
+washington	B-fromloc.city_name B-fromloc.city_name O 
+to	O O B-fromloc.city_name 
+san	B-toloc.city_name B-toloc.city_name B-fromloc.city_name 
+francisco	I-toloc.city_name I-toloc.city_name I-fromloc.city_name 
+atis_flight atis_flight atis_airfare 
+
+show	O O B-flight_mod 
+me	O O B-flight_mod 
+early	B-depart_time.period_mod B-depart_time.period_mod B-depart_time.period_of_day 
+friday	B-depart_date.day_name B-depart_date.day_name B-depart_time.period_of_day 
+morning	B-depart_time.period_of_day B-depart_time.period_of_day B-arrive_time.period_of_day 
+flights	O O B-fromloc.city_name 
+from	O O B-fromloc.city_name 
+san	B-fromloc.city_name B-fromloc.city_name B-toloc.city_name 
+francisco	I-fromloc.city_name I-fromloc.city_name B-fromloc.city_name 
+to	O O B-fromloc.city_name 
+boston	B-toloc.city_name B-toloc.city_name B-fromloc.city_name 
+atis_flight atis_flight atis_flight_time 
+
+i	O O B-fromloc.city_name 
+need	O O B-flight_mod 
+a	O O B-flight_mod 
+flight	O O B-flight_mod 
+from	O O B-fromloc.city_name 
+denver	B-fromloc.city_name B-fromloc.city_name O 
+to	O O B-fromloc.city_name 
+washington	B-toloc.city_name B-toloc.city_name B-toloc.airport_name 
+dc	B-toloc.state_code B-toloc.state_code B-toloc.country_name 
+on	O O B-toloc.city_name 
+wednesday	B-depart_date.day_name B-depart_date.day_name B-arrive_date.day_name 
+atis_flight atis_flight atis_aircraft 
+
+what	O O B-flight_mod 
+is	O O B-flight_mod 
+the	O O B-flight_mod 
+coach	B-class_type B-class_type B-mod 
+fare	O O I-cost_relative 
+between	O O B-fromloc.city_name 
+boston	B-fromloc.city_name B-fromloc.city_name O 
+and	O O B-fromloc.city_name 
+atlanta	B-toloc.city_name B-toloc.city_name B-fromloc.city_name 
+on	O O I-flight_mod 
+delta	B-airline_name B-airline_name B-depart_date.day_name 
+atis_airfare atis_airfare atis_flight 
+
+i'd	O O B-fromloc.city_name 
+like	O O B-flight_mod 
+to	O O B-fromloc.city_name 
+fly	O O B-fare_basis_code 
+from	O O B-fromloc.city_name 
+philadelphia	B-fromloc.city_name B-fromloc.city_name O 
+to	O O B-fromloc.city_name 
+san	B-toloc.city_name B-toloc.city_name B-toloc.airport_name 
+francisco	I-toloc.city_name I-toloc.city_name B-toloc.state_name 
+through	O O I-flight_mod 
+dallas	B-stoploc.city_name B-stoploc.city_name B-fromloc.city_name 
+atis_flight atis_flight atis_aircraft 
+
+show	O O B-toloc.city_name 
+me	O O B-flight_mod 
+the	O O B-flight_mod 
+cheapest	B-cost_relative B-cost_relative B-round_trip 
+one	B-round_trip B-round_trip O 
+way	I-round_trip I-round_trip O 
+flights	O O B-fromloc.city_name 
+from	O O B-fromloc.city_name 
+montreal	B-fromloc.city_name B-fromloc.city_name O 
+to	O O B-fromloc.city_name 
+orlando	B-toloc.city_name B-toloc.city_name B-stoploc.city_name 
+atis_flight atis_flight atis_airfare 
+
+please	O O B-flight_mod 
+find	O O B-flight_mod 
+a	O O B-flight_mod 
+flight	O O B-flight_mod 
+from	O O B-fromloc.city_name 
+st.	B-fromloc.city_name B-fromloc.city_name O 
+petersburg	I-fromloc.city_name I-fromloc.city_name B-fromloc.city_name 
+to	O O B-fromloc.city_name 
+miami	B-toloc.city_name B-toloc.city_name B-fromloc.city_name 
+on	O O I-toloc.city_name 
+thursday	B-depart_date.day_name B-depart_date.day_name B-arrive_date.day_name 
+atis_flight atis_flight atis_distance 
+
+what	O O I-flight_time 
+flights	O O B-flight_mod 
+are	O O B-flight_mod 
+currently	O O B-flight_mod 
+available	O O B-fromloc.city_name 
+between	O O B-fromloc.city_name 
+boston	B-fromloc.city_name B-fromloc.city_name B-toloc.city_name 
+and	O O B-fromloc.city_name 
+dallas	B-toloc.city_name B-toloc.city_name B-fromloc.city_name 
+fort	I-toloc.city_name I-toloc.city_name B-toloc.state_name 
+worth	I-toloc.city_name I-toloc.city_name I-fromloc.city_name 
+atis_flight atis_flight atis_meal 
+
+show	O O B-fromloc.city_name 
+me	O O B-fromloc.city_name 
+all	O O B-flight_mod 
+the	O O B-round_trip 
+one	B-round_trip B-round_trip O 
+way	I-round_trip I-round_trip O 
+fares	O O I-round_trip 
+from	O O B-fromloc.city_name 
+tacoma	B-fromloc.city_name B-fromloc.city_name O 
+to	O O B-fromloc.city_name 
+montreal	B-toloc.city_name B-toloc.city_name B-fromloc.city_name 
+atis_airfare atis_airfare atis_flight 
+
+do	O O B-flight_mod 
+you	O O B-flight_mod 
+have	O O B-flight_mod 
+an	O O B-flight_mod 
+819	B-depart_time.time O B-flight_mod 
+flight	O O I-flight_mod 
+from	O O B-fromloc.city_name 
+denver	B-fromloc.city_name B-fromloc.city_name O 
+to	O O B-fromloc.city_name 
+san	B-toloc.city_name B-toloc.city_name B-fromloc.city_name 
+francisco	I-toloc.city_name I-toloc.city_name I-fromloc.city_name 
+atis_flight atis_flight atis_flight_time 
+
+how	O O B-flight_mod 
+can	O O B-flight_mod 
+i	O O B-fromloc.city_name 
+go	O O B-fromloc.city_name 
+from	O O B-fromloc.city_name 
+minneapolis	B-fromloc.city_name B-fromloc.city_name O 
+to	O O B-fromloc.city_name 
+long	B-toloc.city_name B-toloc.city_name B-fromloc.city_name 
+beach	I-toloc.city_name I-toloc.city_name B-toloc.state_name 
+late	B-depart_time.period_mod B-depart_time.period_mod B-depart_time.period_of_day 
+tomorrow	B-depart_date.today_relative B-depart_date.today_relative B-toloc.state_code 
+atis_flight atis_flight atis_flight_time 
+
+flights	O O B-fromloc.city_name 
+from	O O B-fromloc.city_name 
+pittsburgh	B-fromloc.city_name B-fromloc.city_name B-toloc.city_name 
+to	O O B-fromloc.city_name 
+baltimore	B-toloc.city_name B-toloc.city_name B-fromloc.city_name 
+between	O O B-toloc.city_name 
+10	B-depart_time.start_time B-depart_time.start_time B-depart_time.end_time 
+am	I-depart_time.start_time I-depart_time.start_time I-depart_time.end_time 
+and	O O B-toloc.city_name 
+2	B-depart_time.end_time B-depart_time.end_time B-depart_date.today_relative 
+pm	I-depart_time.end_time I-depart_time.end_time I-arrive_time.end_time 
+atis_flight atis_flight atis_ground_service 
+
+what	O O I-flight_mod 
+time	B-flight_time B-flight_time O 
+is	O O I-flight_time 
+the	O O I-flight_time 
+last	B-flight_mod B-flight_mod B-flight_time 
+flight	O O I-flight_mod 
+from	O O B-fromloc.city_name 
+washington	B-fromloc.city_name B-fromloc.city_name O 
+to	O O B-fromloc.city_name 
+san	B-toloc.city_name B-toloc.city_name B-fromloc.city_name 
+francisco	I-toloc.city_name I-toloc.city_name I-fromloc.city_name 
+atis_flight_time atis_flight_time atis_city 
+
+can	O O B-fromloc.city_name 
+you	O O B-flight_mod 
+list	O O B-flight_mod 
+all	O O B-flight_mod 
+the	O O B-flight_mod 
+flights	O O B-flight_mod 
+between	O O B-fromloc.city_name 
+phoenix	B-fromloc.city_name B-fromloc.city_name B-toloc.city_name 
+and	O O B-fromloc.city_name 
+las	B-toloc.city_name B-toloc.city_name B-fromloc.city_name 
+vegas	I-toloc.city_name I-toloc.city_name I-fromloc.city_name 
+atis_flight atis_flight atis_airport 
+
+what	O O B-flight_mod 
+are	O O B-flight_mod 
+the	O O B-flight_mod 
+lowest	B-cost_relative B-cost_relative B-mod 
+one	B-round_trip B-round_trip O 
+way	I-round_trip I-round_trip O 
+fares	O O I-flight_mod 
+from	O O B-fromloc.city_name 
+atlanta	B-fromloc.city_name B-fromloc.city_name B-toloc.city_name 
+to	O O B-fromloc.city_name 
+denver	B-toloc.city_name B-toloc.city_name B-fromloc.city_name 
+atis_airfare atis_airfare atis_flight 
+
+is	O O B-fromloc.city_name 
+there	O O B-flight_mod 
+a	O O B-flight_mod 
+flight	O O B-flight_mod 
+on	O O B-flight_mod 
+continental	B-airline_name B-airline_name B-airline_code 
+airlines	I-airline_name I-airline_name B-flight_number 
+from	O O B-fromloc.city_name 
+boston	B-fromloc.city_name B-fromloc.city_name O 
+to	O O I-fromloc.city_name 
+denver	B-toloc.city_name B-toloc.city_name B-stoploc.city_name 
+atis_flight atis_flight atis_flight_no 
+
+list	O O B-fromloc.city_name 
+the	O O B-fare_basis_code 
+total	O O B-mod 
+number	O O B-airline_code 
+of	O O B-aircraft_code 
+flights	O O B-flight_mod 
+to	O O B-fromloc.city_name 
+all	O O B-toloc.city_name 
+airports	O O B-aircraft_code 
+by	O O B-flight_stop 
+delta	B-airline_name B-airline_name B-airline_code 
+atis_quantity atis_quantity atis_flight_no 
+
+flights	O O B-fromloc.city_name 
+from	O O B-fromloc.city_name 
+pittsburgh	B-fromloc.city_name B-fromloc.city_name B-toloc.city_name 
+to	O O B-fromloc.city_name 
+baltimore	B-toloc.city_name B-toloc.city_name B-fromloc.city_name 
+between	O O B-toloc.city_name 
+10	B-depart_time.start_time B-depart_time.start_time B-depart_time.end_time 
+am	I-depart_time.start_time I-depart_time.start_time I-depart_time.end_time 
+and	O O B-toloc.city_name 
+2	B-depart_time.end_time B-depart_time.end_time B-depart_date.today_relative 
+pm	I-depart_time.end_time I-depart_time.end_time I-arrive_time.end_time 
+atis_flight atis_flight atis_ground_service 
+
+flights	O O B-fromloc.city_name 
+from	O O B-fromloc.city_name 
+denver	B-fromloc.city_name B-fromloc.city_name B-toloc.city_name 
+to	O O B-fromloc.city_name 
+baltimore	B-toloc.city_name B-toloc.city_name B-fromloc.city_name 
+between	O O B-toloc.city_name 
+10	B-depart_time.start_time B-depart_time.start_time B-depart_time.end_time 
+am	I-depart_time.start_time I-depart_time.start_time I-depart_time.end_time 
+and	O O B-toloc.city_name 
+2	B-depart_time.end_time B-depart_time.end_time B-depart_date.today_relative 
+pm	I-depart_time.end_time I-depart_time.end_time I-arrive_time.end_time 
+atis_flight atis_flight atis_ground_service 
+
+list	O O B-fromloc.city_name 
+the	O O B-flight_mod 
+flights	O O B-flight_mod 
+from	O O B-fromloc.city_name 
+denver	B-fromloc.city_name B-fromloc.city_name O 
+to	O O B-fromloc.city_name 
+westchester	B-toloc.city_name B-toloc.city_name B-stoploc.city_name 
+county	I-toloc.city_name I-toloc.city_name B-toloc.state_name 
+on	O O B-toloc.city_name 
+june	B-depart_date.month_name B-depart_date.month_name B-arrive_date.month_name 
+seventh	B-depart_date.day_number B-depart_date.day_number B-arrive_date.day_number 
+atis_flight atis_flight atis_flight_time 
+
+what's	O O B-fare_basis_code 
+the	O O B-fare_basis_code 
+difference	O O B-fare_basis_code 
+between	O O B-fare_basis_code 
+fare	O O B-fare_basis_code 
+code	O O B-fare_basis_code 
+q	B-fare_basis_code B-fare_basis_code O 
+and	O O B-fare_basis_code 
+fare	O O B-fare_basis_code 
+code	O O B-fare_basis_code 
+f	B-fare_basis_code B-fare_basis_code O 
+atis_abbreviation atis_abbreviation atis_airfare 
+
+i'm	O O B-fromloc.city_name 
+interested	O O B-fromloc.city_name 
+in	O O B-fromloc.city_name 
+the	O O B-round_trip 
+cheapest	B-cost_relative B-cost_relative B-round_trip 
+fare	O O B-fromloc.city_name 
+from	O O B-fromloc.city_name 
+washington	B-fromloc.city_name B-fromloc.city_name O 
+to	O O B-fromloc.city_name 
+fort	B-toloc.city_name B-toloc.city_name B-stoploc.city_name 
+worth	I-toloc.city_name I-toloc.city_name B-toloc.state_name 
+atis_airfare atis_airfare atis_cheapest 
+
+list	O O B-fromloc.city_name 
+all	O O B-flight_mod 
+flights	O O B-fromloc.city_name 
+on	O O B-flight_mod 
+continental	B-airline_name B-airline_name B-airline_code 
+leaving	O O I-round_trip 
+denver	B-fromloc.city_name B-fromloc.city_name B-toloc.city_name 
+on	O O B-fromloc.city_name 
+sunday	B-depart_date.day_name B-depart_date.day_name B-depart_time.time_relative 
+after	B-depart_time.time_relative B-depart_time.time_relative B-depart_date.date_relative 
+2134	B-depart_time.time B-depart_time.time B-depart_time.period_of_day 
+atis_flight atis_flight atis_airfare 
+
+show	O O B-flight_mod 
+me	O O B-flight_mod 
+the	O O B-round_trip 
+one	B-round_trip B-round_trip B-airline_code 
+way	I-round_trip I-round_trip O 
+flights	O O B-fromloc.city_name 
+from	O O B-fromloc.city_name 
+detroit	B-fromloc.city_name B-fromloc.city_name O 
+to	O O I-fromloc.city_name 
+westchester	B-toloc.city_name B-toloc.city_name B-stoploc.city_name 
+county	I-toloc.city_name I-toloc.city_name B-toloc.state_name 
+atis_flight atis_flight atis_airfare 
+
+show	O O B-fare_basis_code 
+me	O O B-flight_mod 
+round	B-round_trip B-round_trip B-airline_code 
+trip	I-round_trip I-round_trip O 
+fares	O O I-round_trip 
+between	O O B-fromloc.city_name 
+san	B-fromloc.city_name B-fromloc.city_name O 
+francisco	I-fromloc.city_name I-fromloc.city_name B-fromloc.city_name 
+and	O O B-fromloc.city_name 
+washington	B-toloc.city_name B-toloc.city_name B-fromloc.city_name 
+dc	B-toloc.state_code B-toloc.state_code B-stoploc.state_code 
+atis_airfare atis_airfare atis_flight#atis_airfare 
+
+what	O O B-toloc.city_name 
+is	O O B-fare_basis_code 
+the	O O B-fare_basis_code 
+distance	O O B-fare_basis_code 
+between	O O B-toloc.city_name 
+pittsburgh	B-fromloc.airport_name B-fromloc.airport_name B-fromloc.city_name 
+airport	I-fromloc.airport_name I-fromloc.airport_name I-toloc.airport_name 
+and	O O B-fromloc.city_name 
+downtown	O O B-toloc.city_name 
+pittsburgh	B-toloc.city_name B-toloc.city_name B-fromloc.city_name 
+atis_distance atis_distance atis_ground_service 
+
+all	O O B-flight_mod 
+northwest	B-airline_name B-airline_name B-round_trip 
+and	O O I-flight_mod 
+united	B-airline_name B-airline_name B-round_trip 
+airlines	I-airline_name I-airline_name O 
+flights	O O B-flight_mod 
+with	O O B-flight_mod 
+stopovers	O O B-flight_stop 
+in	O O I-flight_mod 
+denver	B-stoploc.city_name B-stoploc.city_name B-toloc.city_name 
+atis_flight atis_flight atis_flight_no 
+
+when	O O B-flight_mod 
+is	O O B-fare_basis_code 
+the	O O B-flight_mod 
+first	B-flight_mod B-flight_mod O 
+flight	O O B-flight_mod 
+leaving	O O B-fromloc.city_name 
+from	O O B-fromloc.city_name 
+oakland	B-fromloc.city_name B-fromloc.city_name O 
+to	O O B-fromloc.city_name 
+boston	B-toloc.city_name B-toloc.city_name B-fromloc.city_name 
+atis_flight atis_flight atis_flight_time 
+
+i	O O B-toloc.city_name 
+need	O O B-flight_mod 
+information	O O B-flight_mod 
+on	O O B-flight_mod 
+flights	O O B-flight_mod 
+from	O O B-fromloc.city_name 
+toronto	B-fromloc.city_name B-fromloc.city_name O 
+to	O O B-fromloc.city_name 
+san	B-toloc.city_name B-toloc.city_name B-toloc.airport_name 
+diego	I-toloc.city_name I-toloc.city_name I-fromloc.city_name 
+atis_flight atis_flight atis_aircraft 
+
+what	O O I-flight_time 
+is	O O B-fare_basis_code 
+the	O O B-airport_code 
+cost	O O I-cost_relative 
+of	O O B-transport_type 
+limousine	B-transport_type B-transport_type I-transport_type 
+service	O O I-transport_type 
+at	O O B-transport_type 
+logan	B-airport_name B-airport_name B-transport_type 
+airport	I-airport_name I-airport_name B-airport_name 
+atis_ground_fare atis_ground_fare atis_airfare 
+
+what	O O B-flight_mod 
+is	O O B-fare_basis_code 
+the	O O B-flight_mod 
+most	B-cost_relative B-cost_relative B-mod 
+expensive	I-cost_relative I-cost_relative O 
+flight	O O B-fromloc.city_name 
+from	O O B-fromloc.city_name 
+boston	B-fromloc.city_name B-fromloc.city_name O 
+to	O O B-fromloc.city_name 
+dallas	B-toloc.city_name B-toloc.city_name B-fromloc.city_name 
+atis_flight atis_flight atis_airfare 
+
+what's	O O B-flight_mod 
+the	O O B-flight_mod 
+lowest	B-cost_relative B-cost_relative B-round_trip 
+round	B-round_trip B-round_trip B-airline_code 
+trip	I-round_trip I-round_trip O 
+fare	O O B-flight_number 
+from	O O B-fromloc.city_name 
+atlanta	B-fromloc.city_name B-fromloc.city_name O 
+to	O O B-fromloc.city_name 
+pittsburgh	B-toloc.city_name B-toloc.city_name B-fromloc.city_name 
+atis_airfare atis_airfare atis_flight 
+
+please	O O B-toloc.city_name 
+give	O O B-toloc.city_name 
+all	O O B-connect 
+flights	O O B-fromloc.city_name 
+from	O O B-fromloc.city_name 
+dallas	B-fromloc.city_name B-fromloc.city_name O 
+to	O O B-fromloc.city_name 
+oakland	B-toloc.city_name B-toloc.city_name B-fromloc.city_name 
+california	B-toloc.state_name B-toloc.state_name B-fromloc.state_name 
+monday	B-depart_date.day_name B-depart_date.day_name B-arrive_date.day_name 
+atis_flight atis_flight atis_flight#atis_airfare 
+
+show	O O B-fromloc.city_name 
+me	O O B-fromloc.city_name 
+the	O O B-flight_mod 
+first	B-class_type B-class_type B-depart_date.day_number 
+class	I-class_type I-class_type B-class_type 
+fares	O O I-flight_mod 
+from	O O B-fromloc.city_name 
+baltimore	B-fromloc.city_name B-fromloc.city_name O 
+to	O O B-fromloc.city_name 
+dallas	B-toloc.city_name B-toloc.city_name B-fromloc.city_name 
+atis_airfare atis_airfare atis_flight#atis_airfare 
+
+list	O O B-fromloc.city_name 
+all	O O B-flight_mod 
+flights	O O B-fromloc.city_name 
+from	O O B-fromloc.city_name 
+minneapolis	B-fromloc.city_name B-fromloc.city_name O 
+to	O O B-fromloc.city_name 
+long	B-toloc.city_name B-toloc.city_name B-fromloc.city_name 
+beach	I-toloc.city_name I-toloc.city_name I-fromloc.city_name 
+on	O O B-toloc.city_name 
+saturday	B-depart_date.day_name B-depart_date.day_name B-arrive_date.day_name 
+atis_flight atis_flight atis_meal 
+
+list	O O B-fromloc.city_name 
+the	O O B-flight_mod 
+earliest	B-flight_mod B-flight_mod O 
+flight	O O I-flight_mod 
+from	O O B-fromloc.city_name 
+st.	B-fromloc.city_name B-fromloc.city_name O 
+paul	I-fromloc.city_name I-fromloc.city_name B-fromloc.city_name 
+to	O O B-fromloc.city_name 
+san	B-toloc.city_name B-toloc.city_name B-toloc.airport_name 
+jose	I-toloc.city_name I-toloc.city_name I-fromloc.city_name 
+atis_flight atis_flight atis_flight_time 
+
+where	O O B-depart_date.day_name 
+does	O O B-connect 
+flight	O O B-airline_code 
+ua	B-airline_code B-airline_code B-flight_number 
+281	B-flight_number B-flight_number O 
+from	O O B-fromloc.city_name 
+boston	B-fromloc.city_name B-fromloc.city_name O 
+to	O O B-fromloc.city_name 
+oakland	B-toloc.city_name B-toloc.city_name B-fromloc.city_name 
+stop	B-flight_stop B-flight_stop O 
+atis_flight atis_flight atis_flight_no 
+
+list	O O B-fare_basis_code 
+all	O O B-flight_mod 
+the	O O B-aircraft_code 
+airlines	O O I-airline_name 
+that	O O I-flight_stop 
+fly	O O B-fare_basis_code 
+into	O O B-fromloc.city_name 
+general	B-toloc.airport_name B-fromloc.airport_name B-toloc.airport_name 
+mitchell	I-toloc.airport_name I-fromloc.airport_name I-toloc.airport_name 
+international	I-toloc.airport_name I-fromloc.airport_name I-toloc.airport_name 
+atis_airline atis_airline atis_flight 
+
+show	O O B-flight_mod 
+me	O O B-flight_mod 
+the	O O B-flight_mod 
+earliest	B-flight_mod B-flight_mod O 
+flight	O O I-flight_mod 
+from	O O B-fromloc.city_name 
+denver	B-fromloc.city_name B-fromloc.city_name O 
+to	O O B-fromloc.city_name 
+las	B-toloc.city_name B-toloc.city_name B-fromloc.city_name 
+vegas	I-toloc.city_name I-toloc.city_name B-toloc.state_name 
+atis_flight atis_flight atis_flight_time 
+
+list	O O B-fromloc.city_name 
+the	O O B-flight_mod 
+flights	O O B-flight_mod 
+from	O O B-fromloc.city_name 
+philadelphia	B-fromloc.city_name B-fromloc.city_name O 
+to	O O B-fromloc.city_name 
+san	B-toloc.city_name B-toloc.city_name B-toloc.airport_name 
+francisco	I-toloc.city_name I-toloc.city_name I-toloc.airport_name 
+via	O O I-airline_name 
+dallas	B-stoploc.city_name B-stoploc.city_name B-city_name 
+atis_flight atis_flight atis_restriction 
+
+show	O O B-fromloc.city_name 
+me	O O B-flight_mod 
+all	O O B-flight_mod 
+flights	O O B-fromloc.city_name 
+from	O O B-fromloc.city_name 
+san	B-fromloc.city_name B-fromloc.city_name O 
+diego	I-fromloc.city_name I-fromloc.city_name B-fromloc.city_name 
+to	O O B-fromloc.city_name 
+los	B-toloc.city_name B-toloc.city_name B-stoploc.city_name 
+angeles	I-toloc.city_name I-toloc.city_name I-fromloc.city_name 
+atis_flight atis_flight atis_airport 
+
+show	O O B-fromloc.city_name 
+me	O O B-flight_mod 
+all	O O B-flight_mod 
+the	O O B-flight_mod 
+saturday	B-depart_date.day_name B-depart_date.day_name B-depart_time.period_of_day 
+flights	O O B-fromloc.city_name 
+from	O O B-fromloc.city_name 
+pittsburgh	B-fromloc.city_name B-fromloc.city_name O 
+to	O O B-fromloc.city_name 
+baltimore	B-toloc.city_name B-toloc.city_name B-fromloc.city_name 
+atis_flight atis_flight atis_airfare 
+
+what	O O B-toloc.city_name 
+transportation	O O B-airport_code 
+is	O O B-fare_basis_code 
+available	O O B-fare_basis_code 
+from	O O B-fromloc.city_name 
+the	O O B-fare_basis_code 
+dallas	B-fromloc.airport_name B-fromloc.airport_name B-fromloc.city_name 
+airport	I-fromloc.airport_name I-fromloc.airport_name O 
+to	O O B-fromloc.city_name 
+downtown	O O B-toloc.city_name 
+atis_ground_service atis_ground_service atis_distance 
+
+what	O O B-flight_mod 
+is	O O B-fare_basis_code 
+the	O O B-flight_mod 
+most	B-cost_relative B-cost_relative B-mod 
+expensive	I-cost_relative I-cost_relative O 
+flight	O O B-fromloc.city_name 
+from	O O B-fromloc.city_name 
+dallas	B-fromloc.city_name B-fromloc.city_name O 
+to	O O B-fromloc.city_name 
+baltimore	B-toloc.city_name B-toloc.city_name B-fromloc.city_name 
+atis_flight atis_flight atis_airfare 
+
+what	O O B-toloc.city_name 
+are	O O B-flight_mod 
+all	O O B-flight_mod 
+flights	O O B-fromloc.city_name 
+to	O O B-fromloc.city_name 
+denver	B-toloc.city_name B-toloc.city_name B-fromloc.city_name 
+from	O O B-fromloc.city_name 
+philadelphia	B-fromloc.city_name B-fromloc.city_name B-toloc.city_name 
+on	O O B-fromloc.city_name 
+sunday	B-depart_date.day_name B-depart_date.day_name B-arrive_date.day_name 
+atis_flight atis_flight atis_airfare 
+
+what	O O B-airline_code 
+are	O O B-flight_mod 
+the	O O B-flight_mod 
+fares	O O I-fare_basis_code 
+for	O O B-flight_mod 
+flights	O O B-flight_mod 
+between	O O B-fromloc.city_name 
+atlanta	B-fromloc.city_name B-fromloc.city_name B-toloc.city_name 
+and	O O B-fromloc.city_name 
+dfw	B-toloc.airport_code B-toloc.airport_code O 
+atis_airfare atis_airfare atis_flight#atis_airfare 
+
+what	O O B-flight_mod 
+is	O O B-flight_mod 
+the	O O B-flight_mod 
+earliest	B-flight_mod B-flight_mod O 
+flight	O O I-flight_mod 
+from	O O B-fromloc.city_name 
+tampa	B-fromloc.city_name B-fromloc.city_name O 
+to	O O B-fromloc.city_name 
+milwaukee	B-toloc.city_name B-toloc.city_name B-depart_date.month_name 
+tomorrow	B-depart_date.today_relative B-depart_date.today_relative B-toloc.state_code 
+atis_flight atis_flight atis_flight_time 
+
+what	O O B-flight_mod 
+flights	O O B-flight_mod 
+are	O O B-flight_mod 
+available	O O B-fromloc.city_name 
+from	O O B-fromloc.city_name 
+denver	B-fromloc.city_name B-fromloc.city_name O 
+to	O O B-fromloc.city_name 
+philadelphia	B-toloc.city_name B-toloc.city_name B-fromloc.city_name 
+on	O O I-toloc.city_name 
+monday	B-depart_date.day_name B-depart_date.day_name B-arrive_date.day_name 
+atis_flight atis_flight atis_airfare 
+
+is	O O B-toloc.city_name 
+there	O O B-fare_basis_code 
+ground	O O B-airport_code 
+transportation	O O I-fare_basis_code 
+from	O O B-toloc.city_name 
+the	O O B-fare_basis_code 
+airport	O O I-fromloc.airport_name 
+to	O O B-fromloc.city_name 
+downtown	O O B-toloc.city_name 
+phoenix	B-toloc.city_name B-toloc.city_name B-fromloc.city_name 
+atis_ground_service atis_ground_service atis_distance 
+
+what	O O I-flight_time 
+are	O O B-flight_mod 
+the	O O B-flight_mod 
+flights	O O B-fromloc.city_name 
+from	O O B-fromloc.city_name 
+milwaukee	B-fromloc.city_name B-fromloc.city_name O 
+to	O O B-fromloc.city_name 
+orlando	B-toloc.city_name B-toloc.city_name B-fromloc.city_name 
+on	O O B-fromloc.city_name 
+wednesday	B-depart_date.day_name B-depart_date.day_name B-arrive_date.day_name 
+atis_flight atis_flight atis_meal 
+
+i'd	O O B-fromloc.city_name 
+like	O O B-flight_mod 
+a	O O B-flight_mod 
+limo	B-transport_type B-transport_type B-aircraft_code 
+in	O O I-flight_mod 
+denver	B-fromloc.city_name B-fromloc.city_name B-city_name 
+on	O O I-flight_time 
+august	B-depart_date.month_name B-depart_date.month_name B-airline_name 
+seventh	B-depart_date.day_number B-depart_date.day_number B-arrive_date.day_number 
+atis_ground_service atis_ground_service atis_flight 
+
+what	O O I-flight_time 
+is	O O B-fare_basis_code 
+the	O O B-aircraft_code 
+seating	O O B-mod 
+capacity	O O I-fare_basis_code 
+of	O O B-aircraft_code 
+the	O O B-aircraft_code 
+aircraft	O O B-aircraft_code 
+72s	B-aircraft_code B-aircraft_code B-flight_time 
+atis_capacity atis_capacity atis_ground_fare 
+
+list	O O B-fromloc.city_name 
+the	O O B-flight_mod 
+airlines	O O I-airline_name 
+with	O O B-flight_mod 
+flights	O O B-fromloc.city_name 
+to	O O B-fromloc.city_name 
+or	O O B-or 
+from	O O B-fromloc.city_name 
+denver	B-city_name B-fromloc.city_name B-fromloc.airport_name 
+atis_airline atis_airline atis_flight 
+
+show	O O B-flight_mod 
+me	O O B-flight_mod 
+all	O O B-flight_mod 
+flights	O O B-fromloc.city_name 
+from	O O B-fromloc.city_name 
+orlando	B-fromloc.city_name B-fromloc.city_name O 
+to	O O B-fromloc.city_name 
+montreal	B-toloc.city_name B-toloc.city_name B-fromloc.city_name 
+please	O O B-toloc.city_name 
+atis_flight atis_flight atis_airport 
+
+show	O O B-flight_mod 
+me	O O B-flight_mod 
+round	B-round_trip B-round_trip B-airline_code 
+trip	I-round_trip I-round_trip O 
+flights	O O B-fromloc.city_name 
+from	O O B-fromloc.city_name 
+orlando	B-fromloc.city_name B-fromloc.city_name B-toloc.city_name 
+to	O O B-fromloc.city_name 
+montreal	B-toloc.city_name B-toloc.city_name B-fromloc.city_name 
+atis_flight atis_flight atis_airfare 
+
+first	B-class_type B-class_type I-class_type 
+class	I-class_type I-class_type B-flight_number 
+round	B-round_trip B-round_trip I-round_trip 
+trip	I-round_trip I-round_trip O 
+airfare	O O I-flight_mod 
+from	O O B-fromloc.city_name 
+indianapolis	B-fromloc.city_name B-fromloc.city_name B-toloc.city_name 
+to	O O B-fromloc.city_name 
+memphis	B-toloc.city_name B-toloc.city_name B-fromloc.city_name 
+atis_airfare atis_airfare atis_airline#atis_flight_no 
+
+list	O O B-toloc.city_name 
+flights	O O B-fromloc.city_name 
+from	O O B-fromloc.city_name 
+baltimore	B-fromloc.city_name B-fromloc.city_name O 
+to	O O B-fromloc.city_name 
+san	B-toloc.city_name B-toloc.city_name B-toloc.airport_name 
+francisco	I-toloc.city_name I-toloc.city_name I-fromloc.city_name 
+on	O O I-flight_mod 
+friday	B-depart_date.day_name B-depart_date.day_name B-arrive_date.day_name 
+atis_flight atis_flight atis_flight_time 
+
+show	O O B-flight_mod 
+me	O O B-flight_mod 
+all	O O B-flight_mod 
+flights	O O B-fromloc.city_name 
+from	O O B-fromloc.city_name 
+san	B-fromloc.city_name B-fromloc.city_name O 
+francisco	I-fromloc.city_name I-fromloc.city_name B-fromloc.city_name 
+to	O O B-fromloc.city_name 
+atlanta	B-toloc.city_name B-toloc.city_name B-fromloc.city_name 
+atis_flight atis_flight atis_meal 
+
+what	O O B-toloc.city_name 
+are	O O B-flight_mod 
+the	O O B-flight_mod 
+flights	O O B-fromloc.city_name 
+from	O O B-fromloc.city_name 
+orlando	B-fromloc.city_name B-fromloc.city_name O 
+to	O O B-fromloc.city_name 
+kansas	B-toloc.city_name B-toloc.city_name B-fromloc.city_name 
+city	I-toloc.city_name I-toloc.city_name B-toloc.state_name 
+atis_flight atis_flight atis_airport 
+
+list	O O B-toloc.city_name 
+distance	O O B-flight_stop 
+from	O O B-fromloc.city_name 
+airports	O O B-fromloc.city_name 
+to	O O B-fromloc.city_name 
+downtown	O O B-fromloc.city_name 
+in	O O B-toloc.city_name 
+new	B-city_name B-toloc.city_name B-stoploc.city_name 
+york	I-city_name I-toloc.city_name B-toloc.state_name 
+atis_distance atis_flight atis_airport 
+
+find	O O B-flight_mod 
+a	O O B-flight_mod 
+flight	O O B-flight_mod 
+from	O O B-fromloc.city_name 
+boston	B-fromloc.city_name B-fromloc.city_name O 
+to	O O B-fromloc.city_name 
+washington	B-toloc.city_name B-toloc.city_name B-fromloc.city_name 
+on	O O I-toloc.city_name 
+monday	B-depart_date.day_name B-depart_date.day_name B-arrive_date.day_name 
+atis_flight atis_flight atis_aircraft 
+
+list	O O B-flight_mod 
+flights	O O B-fromloc.city_name 
+from	O O B-fromloc.city_name 
+philadelphia	B-fromloc.city_name B-fromloc.city_name O 
+to	O O B-fromloc.city_name 
+san	B-toloc.city_name B-toloc.city_name B-toloc.airport_name 
+francisco	I-toloc.city_name I-toloc.city_name I-toloc.airport_name 
+via	O O I-airline_name 
+dallas	B-stoploc.city_name B-stoploc.city_name B-city_name 
+atis_flight atis_flight atis_restriction 
+
+what	O O B-fromloc.city_name 
+is	O O B-fare_basis_code 
+the	O O B-flight_mod 
+cheapest	B-cost_relative B-cost_relative B-round_trip 
+fare	O O B-fromloc.city_name 
+from	O O B-fromloc.city_name 
+denver	B-fromloc.city_name B-fromloc.city_name O 
+to	O O B-fromloc.city_name 
+pittsburgh	B-toloc.city_name B-toloc.city_name B-fromloc.city_name 
+atis_airfare atis_airfare atis_cheapest 
+
+what	O O I-flight_time 
+flights	O O B-flight_mod 
+arrive	O O B-fromloc.city_name 
+in	O O B-fromloc.city_name 
+chicago	B-toloc.city_name B-toloc.city_name B-fromloc.city_name 
+on	O O I-toloc.city_name 
+sunday	B-arrive_date.day_name B-arrive_date.day_name B-depart_date.day_name 
+on	O O I-flight_stop 
+continental	B-airline_name B-airline_name B-round_trip 
+atis_flight atis_flight atis_airfare 
+
+what	O O I-flight_mod 
+ground	O O B-airport_code 
+transportation	O O B-flight_time 
+is	O O B-fare_basis_code 
+available	O O B-toloc.city_name 
+at	O O B-transport_type 
+the	O O B-airport_name 
+atlanta	B-airport_name B-airport_name B-fromloc.airport_name 
+airport	I-airport_name I-airport_name I-fromloc.airport_name 
+atis_ground_service atis_ground_service atis_ground_fare 
+
+does	O O B-depart_date.day_name 
+american	B-airline_name B-airline_name B-depart_date.day_name 
+airlines	I-airline_name I-airline_name O 
+fly	O O B-fromloc.city_name 
+to	O O B-fromloc.city_name 
+san	B-toloc.city_name B-toloc.city_name B-fromloc.city_name 
+francisco	I-toloc.city_name I-toloc.city_name I-fromloc.city_name 
+from	O O B-fromloc.city_name 
+atlanta	B-fromloc.city_name B-fromloc.city_name B-toloc.city_name 
+atis_flight atis_flight atis_airline 
+
+show	O O B-toloc.city_name 
+me	O O B-flight_mod 
+the	O O B-flight_mod 
+type	O O I-flight_time 
+of	O O I-flight_time 
+aircraft	O O I-flight_time 
+that	O O B-airline_code 
+cp	B-airline_code B-airline_code O 
+uses	O O I-flight_time 
+atis_aircraft atis_aircraft atis_aircraft#atis_flight#atis_flight_no 
+
+list	O O B-fare_basis_code 
+the	O O B-flight_mod 
+takeoffs	O O B-fare_basis_code 
+and	O O B-flight_mod 
+landings	O O B-airline_code 
+at	O O B-flight_number 
+general	B-airport_name B-airport_name B-toloc.airport_name 
+mitchell	I-airport_name I-airport_name I-toloc.airport_name 
+international	I-airport_name I-airport_name I-toloc.airport_name 
+atis_flight atis_flight atis_airline 
+
+what	O O B-flight_mod 
+is	O O B-flight_mod 
+the	O O B-flight_mod 
+earliest	B-flight_mod B-flight_mod O 
+flight	O O B-flight_mod 
+from	O O B-fromloc.city_name 
+boston	B-fromloc.city_name B-fromloc.city_name O 
+to	O O B-fromloc.city_name 
+philadelphia	B-toloc.city_name B-toloc.city_name B-fromloc.city_name 
+atis_flight atis_flight atis_flight_time 
+
+i	O O B-fromloc.city_name 
+would	O O B-flight_mod 
+like	O O B-flight_mod 
+to	O O B-fromloc.city_name 
+fly	O O B-fare_basis_code 
+from	O O B-fromloc.city_name 
+philadelphia	B-fromloc.city_name B-fromloc.city_name O 
+to	O O B-fromloc.city_name 
+dallas	B-toloc.city_name B-toloc.city_name B-fromloc.city_name 
+atis_flight atis_flight atis_aircraft 
+
+list	O O B-toloc.city_name 
+the	O O B-flight_mod 
+flights	O O B-fromloc.city_name 
+from	O O B-fromloc.city_name 
+toronto	B-fromloc.city_name B-fromloc.city_name O 
+to	O O B-fromloc.city_name 
+salt	B-toloc.city_name B-toloc.city_name B-toloc.airport_name 
+lake	I-toloc.city_name I-toloc.city_name B-toloc.state_name 
+city	I-toloc.city_name I-toloc.city_name B-toloc.state_name 
+atis_flight atis_flight atis_airport 
+
+show	O O B-flight_mod 
+me	O O B-flight_mod 
+all	O O B-flight_mod 
+flights	O O B-fromloc.city_name 
+from	O O B-fromloc.city_name 
+atlanta	B-fromloc.city_name B-fromloc.city_name B-toloc.city_name 
+to	O O B-fromloc.city_name 
+san	B-toloc.city_name B-toloc.city_name B-toloc.airport_name 
+francisco	I-toloc.city_name I-toloc.city_name I-fromloc.city_name 
+atis_flight atis_flight atis_airport 
+
+show	O O I-flight_time 
+me	O O B-flight_mod 
+the	O O B-flight_mod 
+airlines	O O I-airline_name 
+between	O O B-fromloc.city_name 
+boston	B-fromloc.city_name B-fromloc.city_name O 
+and	O O B-fromloc.city_name 
+toronto	B-toloc.city_name B-toloc.city_name B-fromloc.city_name 
+atis_airline atis_airline atis_airline#atis_flight_no 
+
+all	O O B-depart_date.day_name 
+delta	B-airline_name B-airline_name O 
+flights	O O B-fromloc.city_name 
+to	O O B-fromloc.city_name 
+everywhere	O O B-fromloc.city_name 
+if	O O B-fromloc.city_name 
+you	O O B-flight_mod 
+can	O O B-flight_mod 
+atis_flight atis_flight atis_quantity 
+
+show	O O B-flight_mod 
+me	O O B-flight_mod 
+the	O O B-flight_mod 
+flights	O O B-flight_mod 
+arriving	O O B-flight_mod 
+at	O O I-airline_name 
+love	B-toloc.airport_name B-toloc.airport_name B-fromloc.airport_name 
+field	I-toloc.airport_name I-toloc.airport_name I-fromloc.airport_name 
+atis_flight atis_flight atis_airline 
+
+i	O O B-fromloc.city_name 
+want	O O B-flight_mod 
+a	O O B-flight_mod 
+flight	O O B-flight_mod 
+from	O O B-fromloc.city_name 
+ontario	B-fromloc.city_name B-fromloc.city_name O 
+to	O O B-fromloc.city_name 
+chicago	B-toloc.city_name B-toloc.city_name B-fromloc.city_name 
+atis_flight atis_flight atis_aircraft 
+
+show	O O B-fromloc.city_name 
+me	O O B-flight_mod 
+flights	O O B-fromloc.city_name 
+from	O O B-fromloc.city_name 
+new	B-fromloc.city_name B-fromloc.city_name O 
+york	I-fromloc.city_name I-fromloc.city_name B-fromloc.city_name 
+to	O O B-fromloc.city_name 
+miami	B-toloc.city_name B-toloc.city_name B-stoploc.city_name 
+atis_flight atis_flight atis_airport 
+
+flights	O O B-fromloc.city_name 
+from	O O B-fromloc.city_name 
+kansas	B-fromloc.city_name B-fromloc.city_name O 
+city	I-fromloc.city_name I-fromloc.city_name B-fromloc.city_name 
+to	O O B-fromloc.city_name 
+cleveland	B-toloc.city_name B-toloc.city_name B-stoploc.city_name 
+on	O O I-toloc.city_name 
+wednesday	B-depart_date.day_name B-depart_date.day_name B-arrive_date.day_name 
+atis_flight atis_flight atis_airfare 
+
+list	O O B-fare_basis_code 
+all	O O B-flight_mod 
+the	O O B-aircraft_code 
+landings	O O B-airline_code 
+at	O O B-flight_number 
+general	B-toloc.airport_name B-toloc.airport_name B-airport_name 
+mitchell	I-toloc.airport_name I-toloc.airport_name I-fromloc.airport_name 
+international	I-toloc.airport_name I-toloc.airport_name I-fromloc.airport_name 
+atis_flight atis_flight atis_city 
+
+what	O O B-toloc.city_name 
+flights	O O B-fromloc.city_name 
+from	O O B-fromloc.city_name 
+denver	B-fromloc.city_name B-fromloc.city_name O 
+to	O O B-fromloc.city_name 
+salt	B-toloc.city_name B-toloc.city_name B-toloc.airport_name 
+lake	I-toloc.city_name I-toloc.city_name B-toloc.state_name 
+city	I-toloc.city_name I-toloc.city_name B-toloc.state_name 
+atis_flight atis_flight atis_airport 
+
+how	O O B-toloc.city_name 
+many	O O B-toloc.city_name 
+us	B-airline_name B-airline_name B-round_trip 
+air	I-airline_name I-airline_name O 
+flights	O O B-fromloc.city_name 
+leave	O O B-fromloc.city_name 
+from	O O B-fromloc.city_name 
+washington	B-fromloc.city_name B-fromloc.city_name B-toloc.city_name 
+atis_quantity atis_quantity atis_flight 
+
+what	O O B-toloc.city_name 
+are	O O B-flight_mod 
+the	O O B-flight_mod 
+flights	O O B-fromloc.city_name 
+from	O O B-fromloc.city_name 
+dallas	B-fromloc.city_name B-fromloc.city_name O 
+to	O O B-fromloc.city_name 
+baltimore	B-toloc.city_name B-toloc.city_name B-stoploc.city_name 
+atis_flight atis_flight atis_airfare 
+
+show	O O B-fromloc.city_name 
+me	O O B-flight_mod 
+all	O O B-flight_mod 
+flights	O O B-fromloc.city_name 
+from	O O B-fromloc.city_name 
+baltimore	B-fromloc.city_name B-fromloc.city_name O 
+to	O O B-fromloc.city_name 
+philadelphia	B-toloc.city_name B-toloc.city_name B-fromloc.city_name 
+atis_flight atis_flight atis_airport 
+
+show	O O B-flight_mod 
+me	O O B-flight_mod 
+the	O O B-flight_mod 
+flights	O O B-fromloc.city_name 
+from	O O B-fromloc.city_name 
+chicago	B-fromloc.city_name B-fromloc.city_name B-toloc.city_name 
+to	O O B-fromloc.city_name 
+indianapolis	B-toloc.city_name B-toloc.city_name B-stoploc.city_name 
+atis_flight atis_flight atis_airport 
+
+first	B-class_type B-class_type B-economy 
+class	I-class_type I-class_type B-class_type 
+price	O O I-flight_time 
+san	B-fromloc.city_name B-fromloc.city_name O 
+francisco	I-fromloc.city_name I-fromloc.city_name B-fromloc.city_name 
+pittsburgh	B-fromloc.city_name B-fromloc.city_name B-toloc.city_name 
+round	B-round_trip B-round_trip B-depart_time.time_relative 
+trip	I-round_trip I-round_trip O 
+atis_airfare atis_airfare atis_flight 
+
+which	O O B-fromloc.city_name 
+flights	O O B-flight_mod 
+are	O O B-flight_mod 
+between	O O B-fromloc.city_name 
+boston	B-fromloc.city_name B-fromloc.city_name B-toloc.city_name 
+and	O O B-fromloc.city_name 
+baltimore	B-toloc.city_name B-toloc.city_name B-fromloc.city_name 
+washington	B-toloc.state_name B-toloc.city_name B-toloc.state_name 
+atis_flight atis_flight atis_airline 
+
+show	O O B-flight_mod 
+me	O O B-flight_mod 
+delta	B-airline_name B-airline_name B-round_trip 
+flights	O O B-fromloc.city_name 
+from	O O B-fromloc.city_name 
+dallas	B-fromloc.city_name B-fromloc.city_name O 
+to	O O B-fromloc.city_name 
+denver	B-toloc.city_name B-toloc.city_name B-stoploc.city_name 
+atis_flight atis_flight atis_ground_service 
+
+show	O O B-fromloc.city_name 
+me	O O B-flight_mod 
+the	O O B-flight_mod 
+flights	O O B-fromloc.city_name 
+from	O O B-fromloc.city_name 
+boston	B-fromloc.city_name B-fromloc.city_name B-toloc.city_name 
+to	O O B-fromloc.city_name 
+baltimore	B-toloc.city_name B-toloc.city_name B-fromloc.city_name 
+atis_flight atis_flight atis_airport 
+
+what	O O B-toloc.city_name 
+are	O O B-flight_mod 
+the	O O B-flight_mod 
+flights	O O B-fromloc.city_name 
+from	O O B-fromloc.city_name 
+pittsburgh	B-fromloc.city_name B-fromloc.city_name O 
+to	O O B-fromloc.city_name 
+oakland	B-toloc.city_name B-toloc.city_name B-stoploc.city_name 
+atis_flight atis_flight atis_airport 
+
+flights	O O B-fromloc.city_name 
+from	O O B-fromloc.city_name 
+newark	B-fromloc.city_name B-fromloc.city_name B-fromloc.airport_name 
+new	B-fromloc.state_name B-fromloc.state_name I-fromloc.city_name 
+jersey	I-fromloc.state_name I-fromloc.state_name B-fromloc.state_name 
+to	O O B-fromloc.city_name 
+cleveland	B-toloc.city_name B-toloc.city_name B-toloc.airport_name 
+ohio	B-toloc.state_name B-toloc.state_name I-toloc.airport_name 
+atis_flight atis_flight atis_ground_service 
+
+show	O O B-depart_date.day_name 
+morning	B-depart_time.period_of_day B-depart_time.period_of_day B-depart_date.day_name 
+flights	O O B-fromloc.city_name 
+from	O O B-fromloc.city_name 
+philadelphia	B-fromloc.city_name B-fromloc.city_name B-toloc.city_name 
+to	O O B-fromloc.city_name 
+dallas	B-toloc.city_name B-toloc.city_name B-fromloc.city_name 
+atis_flight atis_flight atis_distance 
+
+what's	O O I-fare_basis_code 
+the	O O B-airport_code 
+ground	O O B-city_name 
+transportation	O O I-city_name 
+like	O O B-city_name 
+at	O O B-city_name 
+pittsburgh	B-city_name B-city_name B-airport_name 
+atis_ground_service atis_ground_service atis_ground_fare 
+
+show	O O B-fromloc.city_name 
+me	O O B-flight_mod 
+flights	O O B-fromloc.city_name 
+from	O O B-fromloc.city_name 
+pittsburgh	B-fromloc.city_name B-fromloc.city_name O 
+to	O O B-fromloc.city_name 
+philadelphia	B-toloc.city_name B-toloc.city_name B-fromloc.city_name 
+atis_flight atis_flight atis_airport 
+
+list	O O B-fare_basis_code 
+flights	O O B-flight_mod 
+from	O O B-fromloc.city_name 
+la	B-fromloc.airport_name B-fromloc.airport_name B-fromloc.city_name 
+guardia	I-fromloc.airport_name I-fromloc.airport_name I-toloc.airport_name 
+to	O O B-fromloc.city_name 
+burbank	B-toloc.city_name B-toloc.city_name B-toloc.airport_name 
+atis_flight atis_flight atis_ground_service 
+
+give	O O B-fromloc.city_name 
+me	O O B-flight_mod 
+flights	O O B-fromloc.city_name 
+from	O O B-fromloc.city_name 
+denver	B-fromloc.city_name B-fromloc.city_name O 
+to	O O B-fromloc.city_name 
+baltimore	B-toloc.city_name B-toloc.city_name B-fromloc.city_name 
+atis_flight atis_flight atis_airport 
+
+what	O O B-flight_mod 
+flights	O O B-flight_mod 
+go	O O B-flight_mod 
+from	O O B-fromloc.city_name 
+boston	B-fromloc.city_name B-fromloc.city_name O 
+to	O O B-fromloc.city_name 
+dallas	B-toloc.city_name B-toloc.city_name B-fromloc.city_name 
+atis_flight atis_flight atis_airfare 
+
+list	O O B-fromloc.city_name 
+the	O O B-flight_mod 
+cities	O O B-flight_mod 
+from	O O B-fromloc.city_name 
+which	O O B-fromloc.city_name 
+northwest	B-airline_name B-airline_name B-depart_date.month_name 
+flies	O O I-flight_mod 
+atis_city atis_city atis_flight 
+
+show	O O B-city_name 
+me	O O B-city_name 
+ground	O O B-city_name 
+transportation	O O B-city_name 
+in	O O B-city_name 
+san	B-city_name B-city_name B-stoploc.city_name 
+francisco	I-city_name I-city_name B-city_name 
+atis_ground_service atis_ground_service atis_ground_fare 
+
+what	O O I-fare_basis_code 
+ground	O O B-city_name 
+transportation	O O B-flight_time 
+is	O O B-airport_code 
+there	O O B-city_name 
+from	O O B-city_name 
+denver	B-city_name B-city_name B-fromloc.city_name 
+atis_ground_service atis_ground_service atis_flight_time 
+
+i	O O B-fromloc.city_name 
+want	O O B-fromloc.city_name 
+to	O O B-fromloc.city_name 
+fly	O O B-fromloc.city_name 
+boston	B-fromloc.city_name B-fromloc.city_name B-toloc.city_name 
+to	O O B-fromloc.city_name 
+dallas	B-toloc.city_name B-toloc.city_name B-fromloc.city_name 
+atis_flight atis_flight atis_airfare 
+
+list	O O B-fromloc.city_name 
+flights	O O B-fromloc.city_name 
+from	O O B-fromloc.city_name 
+las	B-fromloc.city_name B-fromloc.city_name O 
+vegas	I-fromloc.city_name I-fromloc.city_name B-fromloc.city_name 
+to	O O B-fromloc.city_name 
+denver	B-toloc.city_name B-toloc.city_name B-stoploc.city_name 
+atis_flight atis_flight atis_meal 
+
+let's	O O B-toloc.city_name 
+look	O O B-flight_mod 
+at	O O B-flight_stop 
+baltimore	B-fromloc.city_name B-fromloc.city_name B-toloc.city_name 
+to	O O B-fromloc.city_name 
+philadelphia	B-toloc.city_name B-toloc.city_name B-fromloc.city_name 
+again	O O I-toloc.city_name 
+atis_flight atis_flight atis_airfare 
+
+please	O O B-toloc.city_name 
+list	O O B-flight_mod 
+information	O O I-flight_time 
+regarding	O O B-flight_time 
+san	B-airport_name B-airport_name B-transport_type 
+francisco	I-airport_name I-airport_name B-airport_name 
+airport	I-airport_name I-airport_name I-fromloc.airport_name 
+atis_airport atis_airport atis_ground_service 
+
+which	O O B-toloc.city_name 
+airlines	O O I-airline_name 
+fly	O O B-fromloc.city_name 
+between	O O B-fromloc.city_name 
+boston	B-fromloc.city_name B-fromloc.city_name O 
+and	O O B-fromloc.city_name 
+philadelphia	B-toloc.city_name B-toloc.city_name B-stoploc.city_name 
+atis_airline atis_airline atis_flight 
+
+show	O O B-fromloc.city_name 
+me	O O B-flight_mod 
+flights	O O B-fromloc.city_name 
+from	O O B-fromloc.city_name 
+dallas	B-fromloc.city_name B-fromloc.city_name O 
+to	O O B-fromloc.city_name 
+atlanta	B-toloc.city_name B-toloc.city_name B-fromloc.city_name 
+atis_flight atis_flight atis_meal 
+
+need	O O B-flight_mod 
+a	O O B-flight_mod 
+flight	O O B-flight_mod 
+from	O O B-fromloc.city_name 
+pittsburgh	B-fromloc.city_name B-fromloc.city_name O 
+to	O O B-fromloc.city_name 
+denver	B-toloc.city_name B-toloc.city_name B-stoploc.city_name 
+atis_flight atis_flight atis_flight_no 
+
+kansas	B-fromloc.city_name B-fromloc.city_name B-city_name 
+city	I-fromloc.city_name I-fromloc.city_name I-toloc.city_name 
+to	O O B-fromloc.city_name 
+atlanta	B-toloc.city_name B-toloc.city_name B-fromloc.city_name 
+monday	B-depart_date.day_name B-depart_date.day_name B-arrive_date.day_name 
+morning	B-depart_time.period_of_day B-depart_time.period_of_day B-arrive_time.period_of_day 
+flights	O O B-depart_time.period_of_day 
+atis_flight atis_flight atis_airfare 
+
+which	O O B-flight_mod 
+united	B-airline_name B-airline_name B-round_trip 
+airlines	I-airline_name I-airline_name O 
+flights	O O B-flight_mod 
+go	O O B-flight_mod 
+through	O O B-flight_mod 
+denver	B-stoploc.city_name B-stoploc.city_name B-city_name 
+atis_flight atis_flight atis_airline 
+
+what	O O B-flight_mod 
+airlines	O O I-airline_name 
+fly	O O B-fare_basis_code 
+from	O O B-fromloc.city_name 
+boston	B-fromloc.city_name B-fromloc.city_name O 
+to	O O B-fromloc.city_name 
+denver	B-toloc.city_name B-toloc.city_name B-stoploc.city_name 
+atis_airline atis_airline atis_airfare 
+
+show	O O B-flight_mod 
+first	B-flight_mod B-flight_mod O 
+flight	O O B-flight_mod 
+from	O O B-fromloc.city_name 
+boston	B-fromloc.city_name B-fromloc.city_name O 
+to	O O B-fromloc.city_name 
+philadelphia	B-toloc.city_name B-toloc.city_name B-fromloc.city_name 
+atis_flight atis_flight atis_airfare 
+
+what	O O B-airline_code 
+is	O O B-fare_basis_code 
+fare	O O B-fare_basis_code 
+code	O O B-fare_basis_code 
+y	B-fare_basis_code B-fare_basis_code O 
+mean	O O B-fare_basis_code 
+atis_abbreviation atis_abbreviation atis_airfare 
+
+what	O O B-airline_code 
+does	O O B-fare_basis_code 
+flight	O O B-airline_code 
+code	O O B-fare_basis_code 
+us	B-airline_code B-airline_code B-airline_name 
+mean	O O B-flight_number 
+atis_flight atis_flight atis_abbreviation 
+
+show	O O B-flight_mod 
+flights	O O B-flight_mod 
+between	O O B-fromloc.city_name 
+boston	B-fromloc.city_name B-fromloc.city_name B-toloc.city_name 
+and	O O B-fromloc.city_name 
+philadelphia	B-toloc.city_name B-toloc.city_name B-fromloc.city_name 
+atis_flight atis_flight atis_meal 
+
+list	O O B-fromloc.city_name 
+flights	O O B-fromloc.city_name 
+from	O O B-fromloc.city_name 
+houston	B-fromloc.city_name B-fromloc.city_name O 
+to	O O B-fromloc.city_name 
+denver	B-toloc.city_name B-toloc.city_name B-fromloc.city_name 
+atis_flight atis_flight atis_airport 
+
+nashville	B-fromloc.city_name B-fromloc.city_name B-fromloc.airport_name 
+to	O O B-fromloc.city_name 
+cleveland	B-toloc.city_name B-toloc.city_name B-fromloc.city_name 
+sunday	B-depart_date.day_name B-depart_date.day_name B-depart_time.time_relative 
+before	B-depart_time.time_relative B-depart_time.time_relative B-arrive_time.time_relative 
+9	B-depart_time.time B-depart_time.time I-depart_date.today_relative 
+atis_flight atis_flight atis_flight_no 
+
+i'm	O O B-flight_mod 
+flying	O O B-flight_mod 
+from	O O B-fromloc.city_name 
+boston	B-fromloc.city_name B-fromloc.city_name B-toloc.city_name 
+to	O O B-fromloc.city_name 
+dallas	B-toloc.city_name B-toloc.city_name B-fromloc.city_name 
+atis_flight atis_flight atis_distance 
+
+list	O O B-fromloc.city_name 
+flights	O O B-fromloc.city_name 
+from	O O B-fromloc.city_name 
+newark	B-fromloc.city_name B-fromloc.city_name O 
+to	O O B-fromloc.city_name 
+houston	B-toloc.city_name B-toloc.city_name B-stoploc.city_name 
+atis_flight atis_flight atis_airport 
+
+flights	O O B-fromloc.city_name 
+from	O O B-fromloc.city_name 
+las	B-fromloc.city_name B-fromloc.city_name O 
+vegas	I-fromloc.city_name I-fromloc.city_name B-fromloc.city_name 
+to	O O B-fromloc.city_name 
+phoenix	B-toloc.city_name B-toloc.city_name B-fromloc.city_name 
+atis_flight atis_flight atis_flight_time 
+
+show	O O B-fromloc.city_name 
+flights	O O B-fromloc.city_name 
+from	O O B-fromloc.city_name 
+pittsburgh	B-fromloc.city_name B-fromloc.city_name B-toloc.city_name 
+to	O O B-fromloc.city_name 
+oakland	B-toloc.city_name B-toloc.city_name B-fromloc.city_name 
+atis_flight atis_flight atis_airport 
+
+please	O O B-toloc.city_name 
+list	O O B-city_name 
+ground	O O B-city_name 
+transportation	O O B-flight_time 
+in	O O B-city_name 
+atlanta	B-city_name B-city_name B-toloc.city_name 
+atis_ground_service atis_ground_service atis_flight_time 
+
+flights	O O B-fromloc.city_name 
+from	O O B-fromloc.city_name 
+new	B-fromloc.city_name B-fromloc.city_name O 
+york	I-fromloc.city_name I-fromloc.city_name B-fromloc.city_name 
+to	O O B-fromloc.city_name 
+miami	B-toloc.city_name B-toloc.city_name B-fromloc.city_name 
+atis_flight atis_flight atis_airport 
+
+ground	O O I-city_name 
+transportation	O O B-city_name 
+in	O O B-city_name 
+san	B-city_name B-city_name B-airport_name 
+jose	I-city_name I-city_name B-city_name 
+atis_ground_service atis_ground_service atis_ground_fare 
+
+list	O O B-city_name 
+ground	O O B-city_name 
+transportation	O O I-city_name 
+in	O O B-city_name 
+detroit	B-city_name B-city_name I-city_name 
+atis_ground_service atis_ground_service atis_ground_fare 
+
+what	O O B-toloc.city_name 
+is	O O B-fare_basis_code 
+fare	O O B-fare_basis_code 
+code	O O B-fare_basis_code 
+h	B-fare_basis_code B-fare_basis_code O 
+atis_abbreviation atis_abbreviation atis_airfare 
+
+does	O O B-flight_mod 
+midwest	B-airline_name B-airline_name B-airline_code 
+express	O O B-city_name 
+serve	O O B-fare_basis_code 
+baltimore	B-city_name B-city_name B-toloc.city_name 
+atis_flight atis_flight atis_ground_service 
+
+ground	O O I-city_name 
+transportation	O O B-airport_code 
+in	O O B-city_name 
+westchester	B-city_name B-city_name I-city_name 
+county	I-city_name I-city_name B-city_name 
+atis_ground_service atis_ground_service atis_ground_fare 
+
+does	O O B-flight_mod 
+delta	B-airline_name B-airline_name B-airline_code 
+aircraft	O O I-flight_stop 
+fly	O O I-fare_basis_code 
+dc10	B-aircraft_code B-aircraft_code O 
+atis_aircraft atis_aircraft atis_flight 
+
+flights	O O B-fromloc.city_name 
+from	O O B-fromloc.city_name 
+atlanta	B-fromloc.city_name B-fromloc.city_name O 
+please	O O B-toloc.city_name 
+atis_flight atis_flight atis_flight#atis_airfare 
+
+minneapolis	B-fromloc.city_name B-fromloc.city_name O 
+to	O O B-fromloc.city_name 
+pittsburgh	B-toloc.city_name B-toloc.city_name B-fromloc.city_name 
+flight	O O B-depart_date.date_relative 
+atis_flight atis_flight atis_flight_no 
+
+what	O O B-airline_code 
+airline	O O B-airline_code 
+is	O O B-airline_code 
+as	B-airline_code B-airline_code O 
+atis_airline atis_airline atis_abbreviation 
+
+ground	O O B-city_name 
+transportation	O O B-city_name 
+in	O O B-city_name 
+denver	B-city_name B-city_name B-airport_name 
+atis_ground_service atis_ground_service atis_ground_fare 
+
+which	O O I-fare_basis_code 
+airline	O O B-airline_code 
+is	O O B-airline_code 
+us	B-airline_code B-airline_code B-airline_name 
+atis_airline atis_airline atis_ground_fare 
+
+from	O O B-fromloc.city_name 
+washington	B-fromloc.city_name B-fromloc.city_name O 
+to	O O B-fromloc.city_name 
+atlanta	B-toloc.city_name B-toloc.city_name B-fromloc.city_name 
+atis_flight atis_flight atis_airfare 
+
+what	O O I-flight_time 
+is	O O B-airport_code 
+ewr	B-airport_code B-airport_code B-aircraft_code 
+atis_abbreviation atis_abbreviation atis_city 
+
+what	O O B-airline_code 
+is	O O B-airport_code 
+ff	B-airline_code B-airline_code B-airline_name 
+atis_abbreviation atis_abbreviation atis_flight_time 
+

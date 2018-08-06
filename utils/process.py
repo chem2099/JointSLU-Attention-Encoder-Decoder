@@ -111,7 +111,7 @@ def train(encoder, decoder, dataset, optim_mode,
 			torch.save(encoder, model_save_dir + 'encoder_.pth')
 			torch.save(decoder, model_save_dir + 'decoder_.pth')
 
-		if epoch % validate_each == 0:
+		if epoch % validate_each == 0 and not model_selection:
 			time_start = time.time()
 			
 			slot_accuracy, slot_f1, intent_accuracy = test(encoder, decoder, dataset)

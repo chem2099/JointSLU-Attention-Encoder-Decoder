@@ -73,15 +73,19 @@ model_selection = args.model_selection
 
 if __name__ == "__main__":
 	
-	if not model_selection:
-		print '命令参数格式解析正确. 使用加 Attention 机制的 Encoder-Decoder 模型训练 SLU.' 
-		print '其中 Encoder 是一个 {} 层的 双向(是否:{}) 的LSTM, 而 Decoder 是一个单向单层的 LSTM.'.format(num_layers, bidirectional)
-		print ""
-		print '使用初始学习率为 {:.6f} 的 {} 优化算法训练模型, 共训练 {} 轮, 每轮 batch 大小为 {}.'.format(learning_rate, optimizer, num_epoch, batch_size)
-		print '其中, 每 {} 轮训练打印 batch 的训练信息, 每 {} 轮训练打印测试集的精确度, 包括 Accuracy 和 F1,'.format(print_each, validate_each)
-		print '每 {} 轮训练保存模型. 此外, 使用嵌入词向量维度为 {}, 标注嵌入向量维度为 {}.'.format(save_model, word_embedding, slot_embedding)
-		print ""
-
+	
+	print '命令参数格式解析正确. 使用加 Attention 机制的 Encoder-Decoder 模型训练 SLU.' 
+	print '其中 Encoder 是一个 {} 层的 双向(是否:{}) 的LSTM, 而 Decoder 是一个单向单层的 LSTM.'.format(num_layers, bidirectional)
+	print ""
+	print '使用初始学习率为 {:.6f} 的 {} 优化算法训练模型, 共训练 {} 轮, 每轮 batch 大小为 {}.'.format(learning_rate, optimizer, num_epoch, batch_size)
+	print '其中, 每 {} 轮训练打印 batch 的训练信息, 每 {} 轮训练打印测试集的精确度, 包括 Accuracy 和 F1,'.format(print_each, validate_each)
+	print '每 {} 轮训练保存模型. 此外, 使用嵌入词向量维度为 {}, 标注嵌入向量维度为 {}.'.format(save_model, word_embedding, slot_embedding)
+	print ""
+	
+	if model_selection:
+		print "注意, 如果选择了 model_selection=True, 即处于服务器模式调参的模式的话. 那么为了节省"
+		print "时间, 将不会打印中间各个步骤的时间消耗以及每间隔模型在 test(测试集) 上的评分."
+		print "但保留每 print_each 步骤在 batch 上的损失, 以及最后会在开发集(dev) 上输出最终评测结果.\n"
 
 	data = Dataset(random_state=random_state)
 
