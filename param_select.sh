@@ -1,6 +1,7 @@
 #!bin/bash
 
-#python ./main.py -mse True
+# 激活环境.
+source ~/lbqin_python2/bin/activate
 
 for optimizer in sgd adam adagrad;
 do
@@ -20,15 +21,15 @@ do
 							do
 								log_dir=./logs/batch_${batch}_lr_${lr}_worddim_${worddim}_slotdim_${slotdim}_layers_${layers}_hidden_${hidden}/
 								mkdir -p ${log_dir}
-							#	echo "训练参数: 优化算法 ${optimizer}"
-							#	echo "          batch 尺寸 ${batch}"
-							#	echo "          学习率 ${lr}"
-							#	echo "          训练轮式 ${epochs}"
-							#	echo "          词向量维度 ${worddim}"
-							#	echo "          标注向量维度 ${slotdim}"
-							#	echo "          Encoder 层数 ${layers}"
-							#	echo "          LSTM 隐层数 ${layers}"
-							#	echo ""
+								echo "训练参数: 优化算法 ${optimizer}"
+								echo "          batch 尺寸 ${batch}"
+								echo "          学习率 ${lr}"
+								echo "          训练轮式 ${epochs}"
+								echo "          词向量维度 ${worddim}"
+								echo "          标注向量维度 ${slotdim}"
+								echo "          Encoder 层数 ${layers}"
+								echo "          LSTM 隐层数 ${layers}"
+								echo ""
 								CUDA_VISIBLE_DEVISES=3 python ./main.py -mse True -de ./data/atis.test.txt -ms ${log_dir} \
 								-lr ${lr} \
 								--num_epoch ${epochs} \
