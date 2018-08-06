@@ -28,7 +28,7 @@ def train(encoder, decoder, dataset, optim_mode,
 		encoder = encoder.cuda()
 		decoder = decoder.cuda()
 
-		print("模型 Encoder, Decoder 已加入 GPU, 共用时 {:.6f} 秒.\n\n".format(time.time() - time_start))
+		print "模型 Encoder, Decoder 已加入 GPU, 共用时 {:.6f} 秒.\n\n".format(time.time() - time_start)
 
 	criterion = NLLLoss()
 	if optim_mode == "adam":
@@ -61,9 +61,9 @@ def train(encoder, decoder, dataset, optim_mode,
 			intent_var = intent_var.cuda()
 			time_con = time.time() - time_start
 
-			print('batch {} 已载入 GPU, 用时 {:.6f} 秒, 正在前向计算和反馈更新.'.format(epoch, time_con))
+			print 'batch {} 已载入 GPU, 用时 {:.6f} 秒, 正在前向计算和反馈更新.'.format(epoch, time_con)
 		else:
-			print('batch {} 已载入 CPU, 正在前向计算和反馈更新.'.format(epoch))	
+			print 'batch {} 已载入 CPU, 正在前向计算和反馈更新.'.format(epoch)	
 
 		time_start = time.time()
 		hiddens, last_hidden = encoder(sent_var, seq_lens)
@@ -74,7 +74,7 @@ def train(encoder, decoder, dataset, optim_mode,
 		# 	exit(0)
 		slot_pred_list, intent_pred = decoder(last_hidden, hiddens, seq_lens)
 		time_con = time.time() - time_start
-		print('batch {} 的前向计算时间开销为 {:.6f} 秒.'.format(epoch, time_con))
+		print 'batch {} 的前向计算时间开销为 {:.6f} 秒.'.format(epoch, time_con)
 
 		time_start = time.time()
 		# 这里事实上只支持 NLLLoss 损失.
@@ -92,11 +92,11 @@ def train(encoder, decoder, dataset, optim_mode,
 		en_optimer.step()
 		de_optimer.step()
 		time_con = time.time() - time_start
-		print('batch {} 的回馈更新时间开销为 {:.6f} 秒.\n'.format(epoch, time_con))
+		print 'batch {} 的回馈更新时间开销为 {:.6f} 秒.\n'.format(epoch, time_con)
 
 		# 打印当前 batch 的损失.
 		if epoch % print_each == 0:
-			print('在第 {} 轮 batch 的平均损失为 {:.6f}.\n'.format(epoch, total_loss.cpu().data.numpy()[0]))
+			print '在第 {} 轮 batch 的平均损失为 {:.6f}.\n'.format(epoch, total_loss.cpu().data.numpy()[0])
 
 			if epoch % validate_each != 0:
 				time.sleep(5)
@@ -109,18 +109,18 @@ def train(encoder, decoder, dataset, optim_mode,
 			time_start = time.time()
 			
 			slot_accuracy, slot_f1, intent_accuracy = test(encoder, decoder, dataset)
-			print('在第 {} 轮验证数据集中 slot filling 的 准确率为 {:.6f}, F1 值为 {:6f}.'.format(epoch, slot_accuracy, slot_f1))
-			print('在第 {} 轮验证数据集中 intent detection 的 准确率为 {:.6f}.'.format(epoch, intent_accuracy))
+			print '在第 {} 轮验证数据集中 slot filling 的 准确率为 {:.6f}, F1 值为 {:6f}.'.format(epoch, slot_accuracy, slot_f1)
+			print'在第 {} 轮验证数据集中 intent detection 的 准确率为 {:.6f}.'.format(epoch, intent_accuracy)
 			
 			time_con = time.time() - time_start
 			print('在 {} 轮 batch 中, 用于在测试集上评测的时间为 {:.6f} 秒.'.format(epoch, time_con))
 
 			time.sleep(5)
 
-		print('\n')
+		print '\n' 
 
 	total_time_con = time.time() - total_time_start
-	print('本次训练 + 测试共计用时 {:.6f} 秒.'.format(total_time_con))
+	print '本次训练 + 测试共计用时 {:.6f} 秒.'.format(total_time_con)
 
 	return devset_evaluation(encoder, decoder, dataset)
 
@@ -197,9 +197,9 @@ def devset_evaluation(encoder, decoder, dataset):
 
 	time_con = time.time() - time_start
 
-	print('\n开发集(dev)的时间总开销(加载, 前向计算等)为 {:.6f} 秒.'.format(time_con))
-	print('其中在 slot filling 的任务上, 准确率为 {:.6f}, F1 得分为 {:.6f},'.format(slot_acc, slot_f1))
-	print('在 intent detection 的任务上, 准确率为 {:.6f}.'.format(intent_acc))
+	print '\n开发集(dev)的时间总开销(加载, 前向计算等)为 {:.6f} 秒.'.format(time_con)
+	print '其中在 slot filling 的任务上, 准确率为 {:.6f}, F1 得分为 {:.6f},'.format(slot_acc, slot_f1)
+	print '在 intent detection 的任务上, 准确率为 {:.6f}.'.format(intent_acc)
 
 	return slot_acc, slot_f1, intent_acc
 

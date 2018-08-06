@@ -70,13 +70,13 @@ hidden_size = args.hidden_size
 
 if __name__ == "__main__":
 
-	print('命令参数格式解析正确. 使用加 Attention 机制的 Encoder-Decoder 模型训练 SLU.')
-	print('其中 Encoder 是一个 {} 层的 双向(是否:{}) 的LSTM, 而 Decoder 是一个单向单层的 LSTM.'.format(num_layers, bidirectional))
-	print()
-	print('使用初始学习率为 {:.6f} 的 {} 优化算法训练模型, 共训练 {} 轮, 每轮 batch 大小为 {}.'.format(learning_rate, optimizer, num_epoch, batch_size))
-	print('其中, 每 {} 轮训练打印 batch 的训练信息, 每 {} 轮训练打印测试集的精确度, 包括 Accuracy 和 F1,'.format(print_each, validate_each))
-	print('每 {} 轮训练保存模型. 此外, 使用嵌入词向量维度为 {}, 标注嵌入向量维度为 {}.'.format(save_model, word_embedding, slot_embedding))
-	print()
+	print '命令参数格式解析正确. 使用加 Attention 机制的 Encoder-Decoder 模型训练 SLU.' 
+	print '其中 Encoder 是一个 {} 层的 双向(是否:{}) 的LSTM, 而 Decoder 是一个单向单层的 LSTM.'.format(num_layers, bidirectional)
+	print ""
+	print '使用初始学习率为 {:.6f} 的 {} 优化算法训练模型, 共训练 {} 轮, 每轮 batch 大小为 {}.'.format(learning_rate, optimizer, num_epoch, batch_size)
+	print '其中, 每 {} 轮训练打印 batch 的训练信息, 每 {} 轮训练打印测试集的精确度, 包括 Accuracy 和 F1,'.format(print_each, validate_each)
+	print '每 {} 轮训练保存模型. 此外, 使用嵌入词向量维度为 {}, 标注嵌入向量维度为 {}.'.format(save_model, word_embedding, slot_embedding)
+	print ""
 
 
 	data = Dataset(random_state=random_state)
@@ -86,7 +86,7 @@ if __name__ == "__main__":
 				     test_path=test_file,
 				     all_path=all_file,
 				     dev_path=dev_file)
-	print('训练集, 测试集, 全集数据, 开发集全部读取完毕, 共耗时 {:.6} 秒.\n'.format(time.time() - time_start))
+	print '训练集, 测试集, 全集数据, 开发集全部读取完毕, 共耗时 {:.6} 秒.\n'.format(time.time() - time_start)
 	# data.quick_build()
 	word_dict, label_dict, intent_dict = data.get_alphabets()
 
