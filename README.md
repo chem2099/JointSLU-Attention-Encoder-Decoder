@@ -6,6 +6,8 @@ Attention-based RNN 模型。代码运行的环境是：Win10 + Pytorch 0.1 + Py
 win10 版本中没有的命令行参数 model_selection，它在脚本执行 main.py 时被设置为 True，停止在训练过程中输出各个步
 骤的时间开销以及每间隔步的测试集(test)评分。但保留了每间隔步的 batch 损失以及最终开发集(dev)的评分。
 
+使用默认数据集 atis.--.txt 的同学在选参数时可以参照我在服务器上的调参结果 server_result.txt。
+
 ## 仓库结构
 文件 .gitignore 和 .editorconfig 均是用来配置仓库环境的，可以忽略。而三个大文件夹：
 > + **data** 包括了训练数据、测试数据、全集数据、开发数据的默认储存地址(当命令行参数未给出时)。
